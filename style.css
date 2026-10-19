@@ -14,25 +14,37 @@
 *{
   font-family: "DM-Sans-Medium";
   background-color: #FAF7F0;
+  color: #394B32;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-h1{
+h1,h2{
   font-family: "Play-fairDisplay-Medium";
   font-weight:normal;
 }
 
-i,span,small{
+i,span{
   display: inline-block;
   font-family: "DM-Sans-Medium";
 }
+small{
+  display: inline-block;
+  font-size: x-small;
+  font-weight: normal;
+  position: relative;
+  bottom: 2px;
+  font-family: "DM-Sans-Regular";
+
+}
+
 a,li{
   text-decoration: none;
   list-style: none;
   color: #394B32;
 }
 header{
+  border-bottom: solid 1px #394B32;
   #upper-header{
     background: #394B32;
     color: #FFFFFF;
@@ -87,4 +99,25 @@ header{
       }
     }
   }
+}
+
+main{
+  #main-links{
+    font-size: x-small;
+    font-family: "DM-Sans-Medium";
+    padding: 1rem 1rem 0 1rem;
+    .links1-2{
+
+    }
+  }
+  /* #hero-section{
+    padding: ;
+  } */
+  #byCoffe-sec{
+    padding: 1rem;
+    #coffe-articl{
+      background-color: #E8DBC7;
+    }
+  }
+
 }
