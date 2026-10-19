@@ -1,0 +1,90 @@
+@font-face {
+  font-family: DM-Sans-Medium;
+  src: url(./fonts/DMSans_18pt-Medium.ttf);
+}
+@font-face {
+  font-family: DM-Sans-Regular;
+  src: url(./fonts/DMSans_18pt-Regular.ttf);
+}
+@font-face {
+  font-family: Play-fairDisplay-Medium ;
+  src: url(./fonts/PlayfairDisplay-Medium.ttf);
+}
+
+*{
+  font-family: "DM-Sans-Medium";
+  background-color: #FAF7F0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h1{
+  font-family: "Play-fairDisplay-Medium";
+  font-weight:normal;
+}
+
+i,span,small{
+  display: inline-block;
+  font-family: "DM-Sans-Medium";
+}
+a,li{
+  text-decoration: none;
+  list-style: none;
+  color: #394B32;
+}
+header{
+  #upper-header{
+    background: #394B32;
+    color: #FFFFFF;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    font-family: "DM-Sans-Regular";
+    font-weight:lighter;
+    display: none;
+  }
+  #nav-wrapper{
+    padding:1rem 0.7rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    #logo-spn{
+      #logo-icon{
+        display: inline-block;
+        height: 2rem;
+        width: auto;
+        margin-right: 0.7rem;
+        position: relative;
+        top: 3px;
+      }
+      #logo-text{
+        display: inline-block;
+      }
+    }
+
+    nav{
+      ul{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        display: none;
+      }
+    }
+
+    #cart-spn{
+      #cart-logo{
+        height: 1.3rem;
+        width: auto;
+        margin-right: 0.5rem;
+      }
+      #cart-counter{
+        font-size: large;
+        position: relative;
+        bottom: 2px;
+        font-family: "DM-Sans-Regular";
+      }
+    }
+  }
+}
