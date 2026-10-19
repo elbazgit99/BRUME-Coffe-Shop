@@ -199,6 +199,14 @@ main{
             width: 5rem;
           }
           /* style radio herer  */
+          input[type="radio"]{
+            appearance: none;
+            background-color: #E9EEDC;
+            border: solid 1px #394B32;
+            height: 3.5rem;
+            width: 7rem;
+            border-radius: 1rem;
+          }
           .labels-wrapper{
             text-justify: center;
             display: flex;
