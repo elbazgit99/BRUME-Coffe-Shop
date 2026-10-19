@@ -33,32 +33,111 @@
   </header>
 
   <main>
-    <span id="main-links">
-      <a href="" class="link1 links1-2">01 Personnaliser</a>
-      <small>—</small>
-      <a href="" class="link2 links1-2">02 Récapitulatif</a>
-    </span>
+    
+    <section id="coffe-sec">
+      <span id="main-links">
+        <a href="" class="link1 links1-2">01 Personnaliser</a>
+        <i>—</i>
+        <a href="" class="link2 links1-2">02 Récapitulatif</a>
+      </span>
 
-    <section id="byCoffe-sec">
-
-      <article id="coffe-articl">
-        <span>
-          <span >LE CAFÉ, À VOTRE FAÇON</span>
+      <article id="coffe-card">
+        <div id="upper-coffe-div">
+          <small id="coffe-badge">LE CAFÉ, À VOTRE FAÇON</small>
           <small>01 / 04</small>
-        </span>
-        <img src="./assets/images/Café M.png" alt="">
-        <span>
-          <p>Un petit rituel. Beaucoup de vous.</p>
-          <small>ESPRESSO · M · AVOINE · CARAMEL</small>
-        </span>
+        </div>
+
+        <div id="lower-coffe-div">
+          <img id="coffe-img" src="./assets/images/Café M.png" alt="cup-of-coffe">
+          <span>
+            <h4>Un petit rituel. Beaucoup de vous.</h4>
+            <small>ESPRESSO · M · AVOINE · CARAMEL</small>
+          </span>
+
+        </div>
       </article>
 
+      <div id="byCoffe-form">
+        <span>
+          <small>VOTRE COFFEE SHOP, AUTREMENT.</small>
+          <h2>Votre pause, <br>
+            votre signature.</h2>
+          <small id="sml2">Quelques envies, un café unique. <br> À vous de composer la suite.</small>
+        </span>
+  
+        <fieldset aria-labelledby="aria-labelled"> 
+          <!-- form1 -->
+          <form action="" class="form1-4">
+            <span class="labels-wrapper">
+              <label  for="expresso">01  La base</label>
+              <small class="Choix">Choix unique</small>
+            </span>
+    
+            <span class="upper&lower-inpts">
+              <input type="radio" name="labase" id="expresso">
+              <input type="radio" name="labase" id="filtre">
+            </span>
+          </form>
+  
+          <!-- form2 -->
+          <form action="" class="form2-3">
+            <span class="labels-wrapper">
+              <label  for="expresso">02  La taille</label>
+              <small class="Choix">Choix unique</small>
+            </span>
+            
+            <span class="upper&lower-inpts">
+              <input type="radio" name="labase" id="expresso">
+              <input type="radio" name="labase" id="filtre">
+              <input type="radio" name="labase" id="filtre">
+            </span>
+          </form>
+    
+          <!-- form3 -->
+          <form action="" class="form2-3">
+            <span class="labels-wrapper">
+              <label  for="expresso">03  Le lait</label>
+              <small class="Choix">Choix unique</small>
+            </span>
+            
+            <span class="upper&lower-inpts">
+              <input type="radio" name="labase" id="expresso">
+              <input type="radio" name="labase" id="filtre">
+              <input type="radio" name="labase" id="filtre">
+            </span>
+          </form>
+          
+          <!-- form4 -->
+          <form action="" class="form1-4">
+            <span class="labels-wrapper">
+              <label  for="expresso">04  La touche en plus</label>
+              <small class="Choix">Plusieurs choix</small>
+            </span>
+    
+            <span class="upper&lower-inpts">
+              <input type="radio" name="labase" id="expresso">
+              <input type="radio" name="labase" id="filtre">
+            </span>
+          </form>
+        </fieldset>
+        
+        <small id="aria-labelled">Le prix évolue selon vos choix. Vous pourrez les modifier au récapitulatif.</small>
+      </div>
+
     </section>
-    <!-- <section id="hero-section">
-      <small>VOTRE CRÉATION EST PRÊTE</small>
-      <h2>Votre moment café, <br>
-        exactement comme vous l’aimez.</h2>
-    </section> -->
+
+    <div id="total-sec">
+      <span>
+        <small id="total-word">Total</small>
+        <small id="price">29,00 DH</small>
+      </span>
+
+      <button>Ajouter au panier</button>
+    </div>
+    
+    <span id="lowest-spn">
+      <small>BRUME — Le goût de votre rythme.</small>
+    </span>
 
   </main>
 
@@ -69,3 +148,8 @@
 </body>
 
 </html>
+    <!-- <section id="hero-section">
+      <small>VOTRE CRÉATION EST PRÊTE</small>
+      <h2>Votre moment café, <br>
+        exactement comme vous l’aimez.</h2>
+    </section> -->

@@ -10,16 +10,21 @@
   font-family: Play-fairDisplay-Medium ;
   src: url(./fonts/PlayfairDisplay-Medium.ttf);
 }
-
+@font-face {
+  font-family: DM-Sans-Bold;
+  src: url(./fonts/DMSans_18pt-Bold.ttf);
+}
 *{
   font-family: "DM-Sans-Medium";
-  background-color: #FAF7F0;
   color: #394B32;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-h1,h2{
+body{
+  background-color: #FAF7F0;
+}
+h1,h2,h4{
   font-family: "Play-fairDisplay-Medium";
   font-weight:normal;
 }
@@ -45,6 +50,7 @@ a,li{
 }
 header{
   border-bottom: solid 1px #394B32;
+
   #upper-header{
     background: #394B32;
     color: #FFFFFF;
@@ -105,19 +111,151 @@ main{
   #main-links{
     font-size: x-small;
     font-family: "DM-Sans-Medium";
-    padding: 1rem 1rem 0 1rem;
+    padding-bottom: 1rem;
     .links1-2{
-
+      i{
+        width: auto;
+      }
     }
   }
   /* #hero-section{
     padding: ;
   } */
-  #byCoffe-sec{
-    padding: 1rem;
-    #coffe-articl{
+
+   /* FIRST SECTION */
+  #coffe-sec{
+    padding: 1rem 1rem 0 1rem;
+    /* 1 */
+    #coffe-card{
       background-color: #E8DBC7;
+      border-radius: 20px;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+
+      #upper-coffe-div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: auto ;
+        margin-right: 1rem;
+      }
+      #coffe-badge{
+        margin: 1rem;
+        height: 2rem;
+        width: 9rem;
+        background-color: #FFFFFF;
+        color: #394B32;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2rem;
+      }
+      #lower-coffe-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        #coffe-img{
+          background: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        span{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          h4{
+            font-size: x-large;
+            text-align: center;
+          }
+          small{
+            margin-top: 5px;
+          }
+        }
+      }
     }
+    /* 2 */
+    #byCoffe-form{
+  
+      span{
+        margin-bottom: 1rem;
+        h2{
+          font-size:xx-large;
+          margin-bottom: 0.8rem;
+        }
+        #sml2{
+          font-size:small;
+        }
+      }
+      fieldset{
+        border: none;
+        form{
+          display: grid;
+  
+          input{
+            display: inline-block;
+            height: 1rem;
+            width: 5rem;
+          }
+          /* style radio herer  */
+          .labels-wrapper{
+            text-justify: center;
+            display: flex;
+            justify-content: space-between;
+            label{
+              font-family: "DM-Sans-Bold";
+              font-size: 15px;
+            }
+            small{
+              font-size: 12px;
+              position: relative;
+              top: 3px;
+            }
+          }
+        }
+  
+        .form1-4{
+          width: auto;
+        }
+        .form2-3{
+          width: auto;
+        }
+      }
+      #aria-labelled{
+        font-size: x-small;
+        font-family: "DM-Sans-Medium";
+        width: 20rem;
+      }
+    }
+    /* 3 */
   }
 
+  /* SECOND SECTION */
+  #total-sec{
+    padding: 1rem;
+    background-color: #FFFFFF;
+    #total-word{
+      color: #796A59;
+    }
+    #price{
+      color: #30291F;
+    }
+    button{
+      color: #FFFFFF;
+      background-color: #394B32;
+      border-radius: 1rem;
+      height: 3rem;
+      width: 50%;
+      border: #394B32;
+    }
+  }
+  /* THIRD SECTION */
+  #lowest-spn{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #FAF7F0;
+  }
 }
