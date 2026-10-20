@@ -346,13 +346,13 @@ main {
       font-size: medium;
     }
 
-    #price {
+    #total-price {
       color: #30291F;
       font-size: xx-large;
       font-weight: bold;
     }
 
-    button {
+    #add-to-cart-btn {
       color: #FFFFFF;
       background-color: #394B32;
       border-radius: 1rem;
@@ -362,19 +362,7 @@ main {
     }
   }
 
-  /* THIRD SECTION */
-  #lowest-footer {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-    background-color: #FAF7F0;
-    margin: 0;
 
-    small {
-      font-size: small;
-    }
-  }
 
   .hidden {
 
@@ -392,6 +380,8 @@ main {
     }
 
     .recapitulatif-hidden-card {
+      display: grid;
+      gap: 1rem;
       background-color: #FFFFFF;
       border-radius: 20px;
       padding: 1rem;
@@ -400,6 +390,11 @@ main {
       .price-smalls {
         font-size: 13px;
         color: #796A59;
+      }
+
+      .calc-row-spn {
+        display: flex;
+        margin: 0;
       }
 
       .recapitulatif-badge {
@@ -433,43 +428,56 @@ main {
         }
       }
 
-      #Creer-btn {
-        border: #394B32;
-        border-radius: 1rem;
-        background-color: #394B32;
-        color: #FFFFFF;
-        height: 3.5rem;
-        width: 100%;
-      }
-
-      #lastSmall {
-        height: 3.5rem;
-        width: 100%;
-        background-color: #E9EEDC;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 1rem;
-      }
-
-      #lastSmall:checked::after {
-        content: "✓";
-      }
     }
   }
 }
 
+#Creer-btn {
+  border: #394B32;
+  border-radius: 1rem;
+  background-color: #394B32;
+  color: #FFFFFF;
+  height: 3.5rem;
+  width: 100%;
+}
 
-@media(prefers-color-scheme: dark){
-  body{
-    background-color: #394B32;
+#lastSmall::before {
+  content: "✓";
+  margin-right: 1rem;
+  font-size: large;
+}
+
+#lastSmall {
+  height: 3.5rem;
+  width: 100%;
+  background-color: #E9EEDC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+#lowest-footer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #FAF7F0;
+  margin: 0;
+
+  small {
+    font-size: small;
   }
 }
 
-@media  only screen and (min-width : 720px) {
-  /* body{
-    background-color: black;
-  } */
+/* @media(prefers-color-scheme: dark){
+  body{
+    background-color: #394B32;
+  }
+} */
+
+@media only screen and (min-width : 720px) {
+
   #upper-header {
     display: block;
   }

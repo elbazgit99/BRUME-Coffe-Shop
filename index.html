@@ -41,7 +41,7 @@
       <a href="" class="link2 links1-2">02 Récapitulatif</a>
     </section>
 
-    <section class=" show">
+    <section class=" showCard">
       <div class="coffeAndForm-section">
         <article class="coffe-card">
           <div id="upper-coffe-div">
@@ -131,20 +131,15 @@
       <div id="total-sec">
         <span>
           <small id="total-word">Total</small>
-          <small id="price">29,00 DH</small>
+          <small id="total-price">29,00 DH</small>
         </span>
-        <button>Ajouter au panier</button>
+        <button id="add-to-cart-btn">Ajouter au panier</button>
       </div>
 
     </section>
 
-    <footer id="lowest-footer">
-      <small>BRUME — Le goût de votre rythme.</small>
-    </footer>
-
-
     <!-- HIDDEN SECTION -->
-    <section class="coffeAndForm-section hidden">
+    <section class="coffeAndForm-section hiddenCard">
 
       <div class="first-hidden-card">
         <span class="votre-pauseANDvotre-moment">
@@ -183,7 +178,7 @@
 
       <div class="recapitulatif-hidden-card">
 
-        <span class="recapitulatif-badge">✓  Sélection ajoutée</span>
+        <span class="recapitulatif-badge">✓ Sélection ajoutée</span>
         <h5>Votre récapitulatif</h5>
         <small class="price-smalls">Une création personnalisée · Quantité : 1</small>
         <small class="line"></small>
@@ -197,14 +192,14 @@
             <small>18,00 DH</small>
           </span>
 
-          <spanc class="calc-row-spn">
+          <span class="calc-row-spn">
             <span>
               <small>Taille</small>
               <small>·</small>
               <small>M / 250 ml</small>
             </span>
             <small>4,00 DH</small>
-          </spanc>
+          </span>
 
           <span class="calc-row-spn">
             <span>
@@ -230,8 +225,8 @@
           <span>29,00 DH</span>
         </span>
         <small>Prix de cette sélection · aucun paiement effectué.</small>
-        <button id="Creer-btn">Créer un autre café   →</button>
-        <small id="lastSmall">  Votre sélection reste modifiable à tout moment.</small>
+        <button id="Creer-btn">Créer un autre café →</button>
+        <small id="lastSmall"> Votre sélection reste modifiable à tout moment.</small>
       </div>
 
 
@@ -239,11 +234,13 @@
 
   </main>
 
-  <footer>
+
+  <footer id="lowest-footer">
+    <small>BRUME — Le goût de votre rythme.</small>
 
   </footer>
 
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 
