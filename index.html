@@ -33,111 +33,161 @@
   </header>
 
   <main>
-    
-    <section id="coffe-sec">
-      <span id="main-links">
-        <a href="" class="link1 links1-2">01 Personnaliser</a>
-        <i>—</i>
-        <a href="" class="link2 links1-2">02 Récapitulatif</a>
-      </span>
 
-      <article id="coffe-card">
-        <div id="upper-coffe-div">
-          <small id="coffe-badge">LE CAFÉ, À VOTRE FAÇON</small>
-          <small>01 / 04</small>
-        </div>
+    <section class="small-hero">
+      <a href="" class="link1 links1-2">01 Personnaliser</a>
+      <i>—</i>
+      <a href="" class="link2 links1-2">02 Récapitulatif</a>
+    </section>
 
-        <div id="lower-coffe-div">
-          <img id="coffe-img" src="./assets/images/Café M.png" alt="cup-of-coffe">
-          <span>
-            <h4>Un petit rituel. Beaucoup de vous.</h4>
-            <small>ESPRESSO · M · AVOINE · CARAMEL</small>
+    <section class=" show">
+      <div class="coffeAndForm-section">
+        <article class="coffe-card">
+          <div id="upper-coffe-div">
+            <small id="coffe-badge">LE CAFÉ, À VOTRE FAÇON</small>
+            <small>01 / 04</small>
+          </div>
+
+          <div id="lower-coffe-div">
+            <img id="coffe-img" src="./assets/images/Café M.png" alt="cup-of-coffe">
+            <span>
+              <h4>Un petit rituel. Beaucoup de vous.</h4>
+              <small>ESPRESSO · M · AVOINE · CARAMEL</small>
+            </span>
+
+          </div>
+        </article>
+
+        <div id="byCoffe-form">
+          <span class="votre-pauseANDvotre-moment">
+            <small>VOTRE COFFEE SHOP, AUTREMENT.</small>
+            <h2>Votre pause, <br>
+              votre signature.</h2>
+            <small id="sml2">Quelques envies, un café unique. <br> À vous de composer la suite.</small>
           </span>
 
-        </div>
-      </article>
+          <fieldset aria-labelledby="aria-labelled">
+            <!-- form1 -->
+            <form action="./script.js" class="form1-4">
+              <span class="labels-wrapper">
+                <label for="expresso">01 La base</label>
+                <small class="Choix">Choix unique</small>
+              </span>
 
-      <div id="byCoffe-form">
+              <span class="upper&lower-inpts">
+                <input type="radio" name="labase" id="expresso" placeholder="✓  Espresso" pattern="[Az-aZ]" minlength=""
+                  maxlength="" checked>
+                <input type="radio" name="labase" id="filtre">
+              </span>
+            </form>
+
+            <!-- form2 -->
+            <form action="" class="form2-3">
+              <span class="labels-wrapper">
+                <label for="tail1">02 La taille</label>
+                <small class="Choix">Choix unique</small>
+              </span>
+
+              <span class="upper&lower-inpts">
+                <input type="radio" name="La-taille" id="tail1">
+                <input type="radio" name="La-taille" id="tail2">
+                <input type="radio" name="La-taille" id="tail3">
+              </span>
+            </form>
+
+            <!-- form3 -->
+            <form action="" class="form2-3">
+              <span class="labels-wrapper">
+                <label for="lait1">03 Le lait</label>
+                <small class="Choix">Choix unique</small>
+              </span>
+
+              <span class="upper&lower-inpts">
+                <input type="radio" name="Le-lait" id="lait1">
+                <input type="radio" name="Le-lait" id="lait2">
+                <input type="radio" name="Le-lait" id="lait3">
+              </span>
+            </form>
+
+            <!-- form4 -->
+            <form action="" class="form1-4">
+              <span class="labels-wrapper">
+                <label for="expresso">04 La touche en plus</label>
+                <small class="Choix">Plusieurs choix</small>
+              </span>
+
+              <span class="upper&lower-inpts">
+                <input type="checkbox" name="Plusieurs-choix" id="Caramel">
+                <input type="checkbox" name="Plusieurs-choix" id="Vanille">
+              </span>
+            </form>
+          </fieldset>
+
+          <small id="aria-labelled">Le prix évolue selon vos choix. Vous pourrez les modifier au récapitulatif.</small>
+        </div>
+      </div>
+
+      <div id="total-sec">
         <span>
-          <small>VOTRE COFFEE SHOP, AUTREMENT.</small>
-          <h2>Votre pause, <br>
-            votre signature.</h2>
-          <small id="sml2">Quelques envies, un café unique. <br> À vous de composer la suite.</small>
+          <small id="total-word">Total</small>
+          <small id="price">29,00 DH</small>
         </span>
-  
-        <fieldset aria-labelledby="aria-labelled"> 
-          <!-- form1 -->
-          <form action="./script.js" class="form1-4">
-            <span class="labels-wrapper">
-              <label  for="expresso">01  La base</label>
-              <small class="Choix">Choix unique</small>
-            </span>
-    
-            <span class="upper&lower-inpts">
-              <input type="radio" name="labase" id="expresso" placeholder="✓  Espresso" pattern="[Az-aZ]" minlength="" maxlength="" checked>
-              <input type="radio" name="labase" id="filtre">
-            </span>
-          </form>
-  
-          <!-- form2 -->
-          <form action="" class="form2-3">
-            <span class="labels-wrapper">
-              <label  for="tail1">02  La taille</label>
-              <small class="Choix">Choix unique</small>
-            </span>
-            
-            <span class="upper&lower-inpts">
-              <input type="radio" name="La-taille" id="tail1">
-              <input type="radio" name="La-taille" id="tail2">
-              <input type="radio" name="La-taille" id="tail3">
-            </span>
-          </form>
-    
-          <!-- form3 -->
-          <form action="" class="form2-3">
-            <span class="labels-wrapper">
-              <label  for="lait1">03  Le lait</label>
-              <small class="Choix">Choix unique</small>
-            </span>
-            
-            <span class="upper&lower-inpts">
-              <input type="radio" name="Le-lait" id="lait1">
-              <input type="radio" name="Le-lait" id="lait2">
-              <input type="radio" name="Le-lait" id="lait3">
-            </span>
-          </form>
-          
-          <!-- form4 -->
-          <form action="" class="form1-4">
-            <span class="labels-wrapper">
-              <label  for="expresso">04  La touche en plus</label>
-              <small class="Choix">Plusieurs choix</small>
-            </span>
-    
-            <span class="upper&lower-inpts">
-              <input type="radio" name="Plusieurs-choix" id="Caramel">
-              <input type="radio" name="Plusieurs-choix" id="Vanille">
-            </span>
-          </form>
-        </fieldset>
-        
-        <small id="aria-labelled">Le prix évolue selon vos choix. Vous pourrez les modifier au récapitulatif.</small>
+        <button>Ajouter au panier</button>
       </div>
 
     </section>
 
-    <div id="total-sec">
-      <span>
-        <small id="total-word">Total</small>
-        <small id="price">29,00 DH</small>
-      </span>
-
-      <button>Ajouter au panier</button>
-    </div>
-    
-    <span id="lowest-spn">
+    <footer id="lowest-footer">
       <small>BRUME — Le goût de votre rythme.</small>
-    </span>
+    </footer>
+
+
+    <!-- HIDDEN SECTION -->
+    <section class="coffeAndForm-section hidden">
+
+      <div class="first-hidden-card">
+        <span class="votre-pauseANDvotre-moment">
+          <small>VOTRE CRÉATION EST PRÊTE</small>
+          <h2>Votre moment café, <br>
+            exactement comme vous l’aimez.</h2>
+        </span>
+
+        <div class="hidden-page-card">
+
+          <article class="coffe-card">
+            <div id="upper-coffe-div">
+              <small id="coffe-badge">LE CAFÉ, À VOTRE FAÇON</small>
+              <small>01 / 04</small>
+            </div>
+
+            <div id="lower-coffe-div">
+              <img id="coffe-img" src="./assets/images/Café M.png" alt="cup-of-coffe">
+              <span>
+                <h4>Un petit rituel. Beaucoup de vous.</h4>
+                <small>ESPRESSO · M · AVOINE · CARAMEL</small>
+              </span>
+
+            </div>
+          </article>
+
+          <div class="div-underCofferCard">
+            <span>
+              <h5>Votre café signature</h5>
+              <small>Espresso · M · Avoine · Caramel</small>
+            </span>
+            <a class="a-with-underLine" href="">Modifier</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="recapitulatif-hidden-card">
+        <span class="recapitulatif-badge">✓  Sélection ajoutée</span>
+        <h5>Votre récapitulatif</h5>
+        <small>Une création personnalisée · Quantité : 1</small>
+      </div>
+
+
+    </section>
 
   </main>
 
@@ -145,14 +195,12 @@
 
   </footer>
 
-  <script src="./script.js">
-
-  </script>
+  <script src="./script.js"></script>
 
 </body>
 
 </html>
-    <!-- <section id="hero-section">
+<!-- <section id="hero-section">
       <small>VOTRE CRÉATION EST PRÊTE</small>
       <h2>Votre moment café, <br>
         exactement comme vous l’aimez.</h2>
