@@ -347,7 +347,8 @@ main {
 
   #hiddenSection {
 
-    /* display: none; */
+
+    display: none;
     .recapitulatif-hidden-card {
       display: grid;
       row-gap: 1rem;

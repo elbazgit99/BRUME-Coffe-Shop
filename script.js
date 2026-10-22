@@ -24,14 +24,14 @@ let espresso = document.getElementById("espresso")
 let espressoPrice = document.getElementById("espressoPrice")
 
 
-espresso.innerHTML = coffeShop.base.espresso.name
-espressoPrice.innerHTML = coffeShop.base.espresso.price
+// espresso.innerHTML = coffeShop.base.espresso.name
+// espressoPrice.innerHTML = coffeShop.base.espresso.price
 
 
 // form1
-let expresso = document.getElementById("expresso")
+// let expresso = document.getElementById("expresso")
 
-showData.innerHTML = coffeShop.base.espresso.name
+// showData.innerHTML = coffeShop.base.espresso.name
 
 
 
@@ -56,13 +56,6 @@ let Vanille = document.getElementById("Vanille")
 
 
 
-
-
-
-
-
-
-
 // display cards
 let showCard = document.getElementById("showCard")
 let addToCartBtn = document.getElementById("add-to-cart-btn")
@@ -70,6 +63,10 @@ let addToCartBtn = document.getElementById("add-to-cart-btn")
 let hiddenCard = document.getElementById("hiddenCard")
 let creatCoffeBtn = document.getElementById("create-other-coffe-btn")
 
+let showState = () => hiddenCard.style.display = "block"
+
+
+addToCartBtn.addEventListener("clikc", showState)
 
 
 // let hiddState = () => {
@@ -78,10 +75,10 @@ let creatCoffeBtn = document.getElementById("create-other-coffe-btn")
 // addToCartBtn.addEventListener("click", hiddState)
 
 
-let showState = () =>{
-  showCard.remove()
-}
-addToCartBtn.addEventListener("click" , showState)
+// let showState = () =>{
+//   showCard.remove()
+// }
+// addToCartBtn.addEventListener("click" , showState)
 
 // function state () {
 //   if(showState == true) {
