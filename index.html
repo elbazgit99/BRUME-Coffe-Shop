@@ -14,7 +14,7 @@
     <span id="upper-header">Du grain à votre tasse. Un café qui vous ressemble.</span>
     <figure id="nav-wrapper">
       <span id="logo-spn">
-        <img id="logo-icon" src="./assets/icons/logo.png" alt="brume logo">
+        <img id="logo-icon" src="./assets/icons/logo.png" alt="coffe-logo">
         <h1 id="logo-text">BRUME</h1>
       </span>
 
@@ -41,7 +41,7 @@
       <a href="" class="link2 links1-2">02 Récapitulatif</a>
     </section>
 
-    <section class=" showCard">
+    <section id="showCard">
       <div class="coffeAndForm-section">
         <article class="coffe-card">
           <div id="upper-coffe-div">
@@ -69,16 +69,16 @@
 
           <fieldset aria-labelledby="aria-labelled">
             <!-- form1 -->
-            <form action="./script.js" class="form1-4">
+            <form action="" class="form1-4">
               <span class="labels-wrapper">
                 <label for="expresso">01 La base</label>
                 <small class="Choix">Choix unique</small>
               </span>
 
-              <span class="upper&lower-inpts">
-                <input type="radio" name="labase" id="expresso" placeholder="✓  Espresso" pattern="[Az-aZ]" minlength=""
-                  maxlength="" checked>
-                <input type="radio" name="labase" id="filtre">
+              <span class="base-plus-inpts-spn">
+                <input class="base-plus-inputs" type="radio" name="labase" id="expresso" pattern="[Az-aZ]" minlength=""
+                  maxlength="">
+                <input class="base-plus-inputs" type="radio" name="labase" id="filtre" placeholder="cklick-me">
               </span>
             </form>
 
@@ -89,7 +89,7 @@
                 <small class="Choix">Choix unique</small>
               </span>
 
-              <span class="upper&lower-inpts">
+              <span class="tail-lait-inpts-spn">
                 <input type="radio" name="La-taille" id="tail1">
                 <input type="radio" name="La-taille" id="tail2">
                 <input type="radio" name="La-taille" id="tail3">
@@ -103,7 +103,7 @@
                 <small class="Choix">Choix unique</small>
               </span>
 
-              <span class="upper&lower-inpts">
+              <span class="tail-lait-inpts-spn">
                 <input type="radio" name="Le-lait" id="lait1">
                 <input type="radio" name="Le-lait" id="lait2">
                 <input type="radio" name="Le-lait" id="lait3">
@@ -117,9 +117,9 @@
                 <small class="Choix">Plusieurs choix</small>
               </span>
 
-              <span class="upper&lower-inpts">
-                <input type="checkbox" name="Plusieurs-choix" id="Caramel">
-                <input type="checkbox" name="Plusieurs-choix" id="Vanille">
+              <span class="base-plus-inpts-spn">
+                <input class="base-plus-inputs" type="checkbox" name="Plusieurs-choix" id="Caramel">
+                <input class="base-plus-inputs" type="checkbox" name="Plusieurs-choix" id="Vanille">
               </span>
             </form>
           </fieldset>
@@ -139,8 +139,8 @@
     </section>
 
     <!-- HIDDEN SECTION -->
-    <section class="coffeAndForm-section hiddenCard">
-
+    <section class="coffeAndForm-section " id="hiddenCard">
+      <!-- 1 -->
       <div class="first-hidden-card">
         <span class="votre-pauseANDvotre-moment">
           <small>VOTRE CRÉATION EST PRÊTE</small>
@@ -166,78 +166,76 @@
             </div>
           </article>
 
-          <div class="div-underCofferCard">
+          <span class="signature-spn">
             <span>
               <h5>Votre café signature</h5>
               <small>Espresso · M · Avoine · Caramel</small>
             </span>
             <a class="a-with-underLine" href="">Modifier</a>
-          </div>
+          </span>
         </div>
       </div>
-
+      <!-- 2 -->
       <div class="recapitulatif-hidden-card">
 
         <span class="recapitulatif-badge">✓ Sélection ajoutée</span>
         <h5>Votre récapitulatif</h5>
         <small class="price-smalls">Une création personnalisée · Quantité : 1</small>
         <small class="line"></small>
+
         <div id="calc-div">
-          <span class="calc-row-spn">
+          <span class="calc-rows-spn">
             <span>
               <small>Base</small>
               <small>·</small>
               <small>Espresso</small>
             </span>
-            <small>18,00 DH</small>
+            <small class="second-card-prices base-price">18,00 DH</small>
           </span>
 
-          <span class="calc-row-spn">
+          <span class="calc-rows-spn">
             <span>
               <small>Taille</small>
               <small>·</small>
               <small>M / 250 ml</small>
             </span>
-            <small>4,00 DH</small>
+            <small class="second-card-prices taille-price">4,00 DH</small>
           </span>
 
-          <span class="calc-row-spn">
+          <span class="calc-rows-spn">
             <span>
               <small>Lait</small>
               <small>·</small>
               <small>Avoine</small>
             </span>
-            <small>4,00 DH</small>
+            <small class="second-card-prices lait-price">4,00 DH</small>
           </span>
 
-          <span class="calc-row-spn">
+          <span class="calc-rows-spn">
             <span>
               <small>Supplément</small>
               <small>·</small>
               <small>Caramel</small>
             </span>
-            <small>3,00 DH</small>
+            <small class="second-card-prices plus-price">3,00 DH</small>
           </span>
 
         </div>
         <span class="total-spn">
           <span>Total</span>
-          <span>29,00 DH</span>
+          <span id="second-card-price">29,00 DH</span>
         </span>
         <small>Prix de cette sélection · aucun paiement effectué.</small>
-        <button id="Creer-btn">Créer un autre café →</button>
+        <button id="create-other-coffe-btn">Créer un autre café →</button>
         <small id="lastSmall"> Votre sélection reste modifiable à tout moment.</small>
       </div>
-
 
     </section>
 
   </main>
 
-
   <footer id="lowest-footer">
     <small>BRUME — Le goût de votre rythme.</small>
-
   </footer>
 
   <script src="script.js"></script>
@@ -245,8 +243,3 @@
 </body>
 
 </html>
-<!-- <section id="hero-section">
-      <small>VOTRE CRÉATION EST PRÊTE</small>
-      <h2>Votre moment café, <br>
-        exactement comme vous l’aimez.</h2>
-    </section> -->
