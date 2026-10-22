@@ -118,13 +118,14 @@ header {
 
     }
   }
-  nav{
+
+  nav {
     display: none;
   }
 }
 
 main {
-  .small-hero {
+  #small-hero {
     font-size: x-small;
     font-family: "DM-Sans-Medium";
     padding: 1rem;
@@ -238,6 +239,7 @@ main {
     /* 2 */
     #byCoffe-form {
       padding-bottom: 1rem;
+
       fieldset {
         border: none;
 
@@ -251,7 +253,7 @@ main {
             content: "✓";
             position: relative;
             top: 8px;
-            left: 10px;
+            left: 15px;
           }
 
           .labels-wrapper {
@@ -277,18 +279,19 @@ main {
         font-family: "DM-Sans-Medium";
       }
     }
+
     input {
-        appearance: none;
-        border: solid 1px #DFD5C8;
-        height: 4rem;
-        width: 100%;
-        border-radius: 1rem;
+      appearance: none;
+      border: solid 1px #DFD5C8;
+      height: 4rem;
+      width: 100%;
+      border-radius: 1rem;
     }
+
     .base-plus-inpts-spn {
       display: flex;
       gap: 0.5rem;
       justify-content: space-between;
-      grid-auto-flow: rows;
 
     }
 
@@ -342,7 +345,9 @@ main {
 
 
 
-  #hiddenCard {
+  #hiddenSection {
+
+    /* display: none; */
     .recapitulatif-hidden-card {
       display: grid;
       row-gap: 1rem;
@@ -455,11 +460,6 @@ main {
   }
 }
 
-/* @media(prefers-color-scheme: dark){
-  body{
-    background-color: #394B32;
-  }
-} */
 
 @media screen and (min-width : 720px) {
 
@@ -476,43 +476,73 @@ main {
     font-size: small;
     font-weight: lighter;
   }
-  #nav-wrapper{
+
+  #nav-wrapper {
     padding: 1rem !important;
   }
+
   nav {
     display: block !important;
-    ul{
+
+    ul {
       display: flex;
       font-size: small;
       column-gap: 2rem;
       white-space: nowrap;
-      a:visited{
+
+      a:visited {
         color: #394B32;
-      } 
+      }
     }
   }
-  .hiddenCard{
-    display: flex;
+
+  #small-hero {
+    padding: 1rem 3rem !important;
+  }
+
+  #coffe-and-form-1-id {
+    padding: 1rem 3rem;
+    display: flex !important;
+    justify-content: space-between !important;
+    column-gap: 2rem;
+  }
+
+  #total-sec {
+    padding: 1rem 3rem !important;
+  }
+
+  #hiddenSection {
+    padding: 1rem 3rem !important;
 
   }
-  .coffeAndForm-section{
+
+  #coffe-card-and-invoice {
     display: flex;
-    width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
     column-gap: 2rem;
-    padding: 2rem !important;
-    #byCoffe-form{
-      width: 50%;
-    }
   }
-  .hidden-page-card{
-    width: 100% !important;
-  }
-  .coffe-card{
-      width: 50% !important;
-      max-height: 80vh;
-  }
-  .recapitulatif-hidden-card{
+
+  #byCoffe-form {
     width: 50%;
   }
+
+  .hidden-page-card {
+    width: 100% !important;
+  }
+
+  .coffe-card {
+    width: 50% !important;
+    max-height: 70vh;
+  }
+
+  .recapitulatif-hidden-card {
+    width: 50% !important;
+  }
+
+  #coffe-card-2 {
+    height: 80vh !important;
+    width: 45vw !important;
+
+  }
+
 }

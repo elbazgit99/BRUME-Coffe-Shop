@@ -35,14 +35,14 @@
 
   <main>
 
-    <section class="small-hero">
+    <section id="small-hero">
       <a href="" class="link1 links1-2">01 Personnaliser</a>
       <i>—</i>
       <a href="" class="link2 links1-2">02 Récapitulatif</a>
     </section>
 
     <section id="showCard">
-      <div class="coffeAndForm-section">
+      <div class="coffeAndForm-section" id="coffe-and-form-1-id">
         <article class="coffe-card">
           <div id="upper-coffe-div">
             <small id="coffe-badge">LE CAFÉ, À VOTRE FAÇON</small>
@@ -71,13 +71,12 @@
             <!-- form1 -->
             <form action="" class="form1-4">
               <span class="labels-wrapper">
-                <label for="expresso">01 La base</label>
+                <label for="espresso">01 La base</label>
                 <small class="Choix">Choix unique</small>
               </span>
 
               <span class="base-plus-inpts-spn">
-                <input class="base-plus-inputs" type="radio" name="labase" id="expresso" pattern="[Az-aZ]" minlength=""
-                  maxlength="">
+                <input class="base-plus-inputs" type="radio" name="labase" id="espresso" >
                 <input class="base-plus-inputs" type="radio" name="labase" id="filtre" placeholder="cklick-me">
               </span>
             </form>
@@ -90,9 +89,9 @@
               </span>
 
               <span class="tail-lait-inpts-spn">
-                <input type="radio" name="La-taille" id="tail1">
-                <input type="radio" name="La-taille" id="tail2">
-                <input type="radio" name="La-taille" id="tail3">
+                <input type="radio" name="La-taille" id="taille1">
+                <input type="radio" name="La-taille" id="taille2">
+                <input type="radio" name="La-taille" id="taille3">
               </span>
             </form>
 
@@ -113,7 +112,7 @@
             <!-- form4 -->
             <form action="" class="form1-4">
               <span class="labels-wrapper">
-                <label for="expresso">04 La touche en plus</label>
+                <label for="Caramel">04 La touche en plus</label>
                 <small class="Choix">Plusieurs choix</small>
               </span>
 
@@ -139,18 +138,20 @@
     </section>
 
     <!-- HIDDEN SECTION -->
-    <section class="coffeAndForm-section " id="hiddenCard">
+    <section class="coffeAndForm-section " id="hiddenSection">
       <!-- 1 -->
-      <div class="first-hidden-card">
-        <span class="votre-pauseANDvotre-moment">
-          <small>VOTRE CRÉATION EST PRÊTE</small>
-          <h2>Votre moment café, <br>
-            exactement comme vous l’aimez.</h2>
-        </span>
+      <span class="votre-pauseANDvotre-moment">
+        <small>VOTRE CRÉATION EST PRÊTE</small>
+        <h2>Votre moment café, <br>
+          exactement comme vous l’aimez.</h2>
+      </span>
+      <!-- 2 -->
+       <div id="coffe-card-and-invoice">
+        <div class="first-hidden-card">
 
         <div class="hidden-page-card">
 
-          <article class="coffe-card">
+          <article class="coffe-card" id="coffe-card-2">
             <div id="upper-coffe-div">
               <small id="coffe-badge">LE CAFÉ, À VOTRE FAÇON</small>
               <small>01 / 04</small>
@@ -175,7 +176,7 @@
           </span>
         </div>
       </div>
-      <!-- 2 -->
+      <!-- 3 -->
       <div class="recapitulatif-hidden-card">
 
         <span class="recapitulatif-badge">✓ Sélection ajoutée</span>
@@ -229,6 +230,8 @@
         <button id="create-other-coffe-btn">Créer un autre café →</button>
         <small id="lastSmall"> Votre sélection reste modifiable à tout moment.</small>
       </div>
+       </div>
+      
 
     </section>
 
