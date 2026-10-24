@@ -24,15 +24,46 @@ let espresso = document.getElementById("espresso")
 let espressoPrice = document.getElementById("espressoPrice")
 
 
-// espresso.innerHTML = coffeShop.base.espresso.name
-// espressoPrice.innerHTML = coffeShop.base.espresso.price
+
+// let summ=document.querySelector('.summ');
+
+// let inputs = document.querySelectorAll('input');
+
+// inputs.forEach(inp => {
+//     inp.addEventListener("change",claculeOption);
+// });
+
+// let orderTicket = [];
+  
+// function claculeOption(event){
+//     // select all checked items
+//     let selectedItems = document.querySelectorAll("input")
+//     let sum = 0 ;
+//     orderTicket = [];
+//     selectedItems.forEach(input => {
+//         if(input.checked) {
+//             // get price
+//             let name = input.parentElement.querySelector("span").textContent;
+//             let price = Number(input.parentElement.querySelector("p").textContent.replace("DH",""));
+//             orderTicket.push({name, price})
+//             sum += price;
+//         }
+//     })
+//     // sum
+//     summ.textContent= sum
+//     // console.log(sum, orderTicket);
+//     //
+// }
 
 
-// form1
-// let expresso = document.getElementById("expresso")
-
-// showData.innerHTML = coffeShop.base.espresso.name
-
+// arr = [2,4,5]
+// of => 2,4,5
+// in => 0,1,2
+// of(item) / in(index) 
+for(item of orderTicket){
+    // item = {name, price}
+    //item.name
+}
 
 
 let filtre = document.getElementById("filtre")
@@ -56,14 +87,7 @@ let Vanille = document.getElementById("Vanille")
 
 
 
-// display cards
-let showCard = document.getElementById("showCard")
-let addToCartBtn = document.getElementById("add-to-cart-btn")
 
-let hiddenCard = document.getElementById("hiddenCard")
-let creatCoffeBtn = document.getElementById("create-other-coffe-btn")
-
-let showState = () => hiddenCard.style.display = "block"
 
 
 addToCartBtn.addEventListener("clikc", showState)
