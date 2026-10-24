@@ -19,9 +19,35 @@ const coffeShop = {
     vanille: { name: "Vanille", price: 3 }
   }
 };
-// tst
-let espresso = document.getElementById("espresso")
-let espressoPrice = document.getElementById("espressoPrice")
+
+let addToCartBtn = document.getElementById("add-to-cart-btn");
+let hiddenSection = document.getElementById("hiddenSection")
+let visibleSection = document.getElementById("visibleSection")
+
+addToCartBtn.addEventListener("click" , () => hiddenSection.style.display = "block" && visibleSection.remove())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -56,61 +82,11 @@ let espressoPrice = document.getElementById("espressoPrice")
 // }
 
 
-// arr = [2,4,5]
-// of => 2,4,5
-// in => 0,1,2
-// of(item) / in(index) 
-for(item of orderTicket){
-    // item = {name, price}
-    //item.name
-}
-
-
-let filtre = document.getElementById("filtre")
-// form2
-let taille1 = document.getElementById("taille1")
-let taille2 = document.getElementById("taille2")
-let taille3 = document.getElementById("taille3")
-// form3
-let lait1 = document.getElementById("lait1")
-let lait2 = document.getElementById("lait2")
-let lait3 = document.getElementById("lait3")
-// form4
-let Caramel = document.getElementById("Caramel")
-let Vanille = document.getElementById("Vanille")
-
-
-
-
-
-
-
-
-
-
-
-
-addToCartBtn.addEventListener("clikc", showState)
-
-
-// let hiddState = () => {
-//   showCard.style.display = "block"
-// } 
-// addToCartBtn.addEventListener("click", hiddState)
-
-
-// let showState = () =>{
-//   showCard.remove()
+// // arr = [2,4,5]
+// // of => 2,4,5
+// // in => 0,1,2
+// // of(item) / in(index) 
+// for(item of orderTicket){
+//     // item = {name, price}
+//     //item.name
 // }
-// addToCartBtn.addEventListener("click" , showState)
-
-// function state () {
-//   if(showState == true) {
-//     hiddenCard.style.display = "block"
-//   }
-//   else{
-//     showCard.style.display = "none"
-//   }
-// }
-
-
