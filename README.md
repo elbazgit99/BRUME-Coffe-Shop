@@ -1,20 +1,29 @@
-# COFFE SHOP
 
-## PLANIFICATION
+# BRUM | COFFE SHOP  
 
 
-## Project context  
-To increase customer engagement, a company an artisanal coffee shop   
-wants to launch an online interface where the customer "builds" their ideal product.  
+## Project purpose :  
 
-The user must be able to interact with the page to choose their options in real time,  
- see the price update, and validate their selection.    
+The goal of this project is to design and develop a two-page interactive web application allowing users to personalize their product (a coffee drink or makeup item) before adding it to the cart.
+The project emphasizes DOM manipulation with JavaScript, excellent UX/UI, and strict versioning management via GitFlow.  
 
-The work will be done following a professional development process structured in 4 key stages.    
+## About The Project : 
 
-### Realization Steps  
-Step 0: Planning, Automation & Organization (GitFlow)  
-Before writing a single line of code, you need to set up the work environment.  
+To increase customer engagement, a coffee shop  wants to launch an online interface where the customer "builds" their ideal product.
+
+The user must be able to interact with the page to choose their options in real time, see the price update, and validate their selection.
+
+The work will be done following a professional development process structured in 4 key stages.
+## TECHNOLOGIRS  :  
+The Project Made By  Technologies such as  :  
+**UI/UX**: HTML5, css, Flex box, grid, JavaScript
+**Planification using** : Jira scrum kanban framework  
+**Distribution** : Git/Github  
+
+## The Mession  :  
+in 5 days
+Submission deadline: 10/23/2026 at 5:00 a.m  
+
 
 #### Initialization: Creation of the GitHub repository.  
 **GitFlow**: Implementation of the main (production),  
@@ -40,4 +49,29 @@ Event headphones: Capture clicks on the different options (eg: coffee size, lips
 **Coffee:** Change the cup image or icon depending on the size chosen. View selected supplements.  
 **Makeup:** Change the color of the product preview depending on the tablet clicked.  
 Dynamic calculation: The total price must be updated instantly each time the option changes.  
-**Storage:** When clicking on "Validate/Add to cart", save the configuration (via localStorage or sessionStorage) and redirect to Page 2 (Summary), which will read this data to display the final order. (Bonus)
+**Storage:** When clicking on "Validate/Add to cart", save the configuration (via localStorage or sessionStorage) and redirect to Page 2 (Summary), which will read this data to display the final order. (Bonus)  
+
+## Planification : 
+the product planification where based on jira platform, under Scrum, Kanban Framwork, creating **product backlog**,  
+based on **user story** ,  
+
+managing sprints with **Sprint Backlog**, by sprading the sprint to tickets  .
+
+
+---   
+## Project Structure  
+
+BRUM  
+├── assets/  
+│     ├── icons/  
+│     │     └── icons.png  
+│     └── images/  
+│           └── images.png  
+├── fonts  
+│     └── fonts.ttf   
+├── index.html  
+├── mainStyle.css  
+├── hiddenStyle.css  
+├── responsive.css  
+├── script.js  
+└── README.md  

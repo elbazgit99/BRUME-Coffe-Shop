@@ -1,0 +1,353 @@
+@import url(hiddenStyle.css);
+@import url(responsive.css);
+
+@font-face {
+  font-family: DM-Sans-Medium;
+  src: url(./fonts/DMSans_18pt-Medium.ttf);
+}
+
+@font-face {
+  font-family: DM-Sans-Regular;
+  src: url(./fonts/DMSans_18pt-Regular.ttf);
+}
+
+@font-face {
+  font-family: Play-fairDisplay-Medium;
+  src: url(./fonts/PlayfairDisplay-Medium.ttf);
+}
+
+@font-face {
+  font-family: DM-Sans-Bold;
+  src: url(./fonts/DMSans_18pt-Bold.ttf);
+}
+
+* {
+  font-family: "DM-Sans-Medium";
+  color: #394B32;
+  padding: 0 ;
+  margin: 0;
+  box-sizing: border-box !important;
+  max-width: 100%;
+  /* overflow: auto; */
+}
+
+body {
+  background-color: #FAF7F0;
+}
+
+h1,
+h2,
+h4 {
+  font-family: "Play-fairDisplay-Medium";
+  font-weight: normal;
+}
+
+h5 {
+  font-family: "DM-Sans-Medium";
+  font-weight: normal;
+  font-size: 20px;
+  color: #30291F;
+}
+
+i,
+span {
+  display: inline-block;
+  font-family: "DM-Sans-Medium";
+  margin: 0;
+}
+
+small {
+  display: inline-block;
+  font-size: x-small;
+  font-weight: normal;
+  position: relative;
+  bottom: 2px;
+  font-family: "DM-Sans-Regular";
+
+}
+
+a,
+li {
+  text-decoration: none;
+  list-style: none;
+  color: #394B32;
+}
+
+.a-with-underLine {
+  text-decoration: underline #394B32 1px;
+}
+
+:root {
+  /* --radio-border: #394B32; */
+  --radio-checked-clr: #E9EEDC;
+  --radio-disabled-bg: #FFFFFF;
+  --border-checked: #394B32;
+}
+
+header {
+  border-bottom: solid 1px #394B32;
+
+  #upper-header {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  #nav-wrapper {
+    padding: 1rem ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    #logo-spn {
+      #logo-icon {
+        display: inline-block;
+        height: 2rem;
+        width: auto;
+        margin-right: 0.7rem;
+        position: relative;
+        top: 3px;
+      }
+
+      #logo-text {
+        display: inline-block;
+      }
+    }
+
+    #cart-spn {
+      #cart-logo {
+        margin-right: 0.5rem;
+      }
+
+      #cart-counter {
+        font-size: small;
+        font-family: "DM-Sans-Regular";
+
+      }
+
+    }
+  }
+
+
+}
+
+main {
+  #small-hero {
+    font-size: x-small;
+    font-family: "DM-Sans-Medium";
+    padding: 1rem;
+    padding-bottom: 0;
+    display: flex;
+    gap: 0.7rem;
+
+    .links1-2 {
+      i {
+        width: auto;
+      }
+    }
+  }
+
+
+  span {
+    margin-bottom: 1rem;
+
+    h2 {
+      font-size: xx-large;
+      margin-bottom: 0.8rem;
+    }
+
+    #sml2 {
+      font-size:x-small;
+    }
+  }
+
+  /* VISIBLE SECTION */
+  .coffeAndForm-section {
+    padding: 1rem;
+
+    /* 1 */
+    .coffe-card {
+      background-color: #E8DBC7;
+      border-radius: 20px;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+
+      #upper-coffe-div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: auto;
+        margin-right: 1rem;
+      }
+
+      #coffe-badge {
+        margin: 1rem;
+        height: 2rem;
+        width: 9rem;
+        background-color: #FFFFFF;
+        color: #394B32;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2rem;
+      }
+
+      #lower-coffe-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        #coffe-img {
+          background: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        span {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          h4 {
+            font-size: x-large;
+            text-align: center;
+          }
+
+          small {
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+
+
+    /* 2 */
+    #byCoffe-form {
+
+      .label-spn {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+      }
+
+      fieldset {
+        border: none;
+
+        span {
+          font-family: "DM-Sans-Bold";
+        }
+
+        form {
+          display: flex;
+          justify-content: space-between;
+          column-gap: 0.5rem;
+
+          input {
+            background-color: #FFFFFF;
+            appearance: none;
+            border: solid 1px #DFD5C8;
+            height: 4rem;
+            width: 100% ;
+            border-radius: 1rem;
+          }
+          
+          input:checked {
+            border-color: 5px var(--border-checked);
+            background-color: var(--radio-checked-clr);
+          }
+          
+          input:checked::after {
+            content: "✓";
+            font-weight: bolder;
+            font-size: larger;
+            position: relative;
+            top: 0.7rem;
+            left: 0.8rem;
+          }
+          /* .base-plus-inputs {
+
+          }
+
+          .taille-lait-inputs {
+            
+          } */
+          
+          label {
+            font-family: "DM-Sans-Bold";
+            font-size: 15px;
+            position: relative;
+            width: 100%;
+          }
+
+          small {
+            font-size: 12px;
+            position: relative;
+            top: 3px;
+          }
+        }
+      }
+
+      #aria-labelled {
+        font-size: x-small;
+        font-family: "DM-Sans-Medium";
+      }
+    }
+  }
+
+  .inside-spn {
+    margin: 0;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 1.3rem;
+    left: 1rem;
+    span,small{
+      font-size: smaller;
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
+    }
+  }
+}
+
+#total-sec {
+  padding: 1rem;
+  background-color: #FFFFFF;
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  span {
+    display: flex;
+    flex-direction: column;
+
+    small {
+      display: block;
+    }
+  }
+
+  #total-word {
+    color: #796A59;
+    font-size: medium;
+  }
+
+  #total-price {
+    color: #30291F;
+    font-size: xx-large;
+    font-weight: bold;
+  }
+
+  #add-to-cart-btn {
+    color: #FFFFFF;
+    background-color: #394B32;
+    border-radius: 1rem;
+    height: 3.5rem;
+    width: 50%;
+    border: #394B32;
+  }
+}
