@@ -19,74 +19,130 @@ const coffeShop = {
     vanille: { name: "Vanille", price: 3 }
   }
 };
-// tst
-let espresso = document.getElementById("espresso")
-let espressoPrice = document.getElementById("espressoPrice")
+
+let addToCartBtn = document.getElementById("add-to-cart-btn");
+let hiddenSection = document.getElementById("hiddenSection")
+let visibleSection = document.getElementById("visibleSection")
+let totalPrice = document.getElementById("totalPrice")
 
 
-// espresso.innerHTML = coffeShop.base.espresso.name
-// espressoPrice.innerHTML = coffeShop.base.espresso.price
 
-
+// inputs
 // form1
-// let expresso = document.getElementById("expresso")
+let espresso = document.getElementById("espresso").value;
+let filtre = document.getElementById("filtre").value;
+let laBaseForm = document.getElementsByName('labase')
 
-// showData.innerHTML = coffeShop.base.espresso.name
-
-
-
-let filtre = document.getElementById("filtre")
 // form2
-let taille1 = document.getElementById("taille1")
-let taille2 = document.getElementById("taille2")
-let taille3 = document.getElementById("taille3")
+let s = document.getElementById("s").value;
+let m = document.getElementById("m").value;
+let l = document.getElementById("l").value;
+let LaTaille = document.getElementsByName('LaTaille')
 // form3
-let lait1 = document.getElementById("lait1")
-let lait2 = document.getElementById("lait2")
-let lait3 = document.getElementById("lait3")
+let vache = document.getElementById("vache").value;
+let avoine = document.getElementById("avoine").value;
+let amande = document.getElementById("amande").value;
+let LeLait = document.getElementsByName('LeLait')
 // form4
-let Caramel = document.getElementById("Caramel")
-let Vanille = document.getElementById("Vanille")
+let caramel = document.getElementById("caramel").value;
+let vanille = document.getElementById("vanille").value;
+let plus = document.getElementsByName('plus')
+
+// this function to know which input is cheked
+
+// let checkedValue = []
 
 
+// NOTE : the values where aded to the inputs as attributs
+// to clone the 
+//to get inputs with the same name attribute
+// let LeLait = document.getElementsByName('LeLait')
+// the element i want to display checked values in
+// let totalPrice = document.getElementById("totalPrice")
+function isChecked () {
+  LeLait;
+  let checkedValue = [] 
+  for(let i = 0; i < LeLait.length; i++){ //loop throw the inputs with the same name attri
+    if(LeLait[i].checked){ //if only checked
+      checkedValue = LeLait[i].value //push values to the array
+      break; // break once the selected value founded
+    }
+  }
+  totalPrice.innerHTML = checkedValue // display the checked value in this element
+}
+// SUGGESTIONS : forEaach push
 
+// caramel.nodeList.checked
 
-
-
-
-
-
-// display cards
-let showCard = document.getElementById("showCard")
-let addToCartBtn = document.getElementById("add-to-cart-btn")
-
-let hiddenCard = document.getElementById("hiddenCard")
-let creatCoffeBtn = document.getElementById("create-other-coffe-btn")
-
-let showState = () => hiddenCard.style.display = "block"
-
-
-addToCartBtn.addEventListener("clikc", showState)
-
-
-// let hiddState = () => {
-//   showCard.style.display = "block"
-// } 
-// addToCartBtn.addEventListener("click", hiddState)
-
-
-// let showState = () =>{
-//   showCard.remove()
-// }
-// addToCartBtn.addEventListener("click" , showState)
-
-// function state () {
-//   if(showState == true) {
-//     hiddenCard.style.display = "block"
-//   }
-//   else{
-//     showCard.style.display = "none"
-//   }
+// function getValue (value){
+//   value.addEventListener("ckecked")
 // }
 
+// getValue(espresso)
 
+// addToCartBtn.addEventListener("click" , () => hiddenSection.add() && visibleSection.remove())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let summ=document.querySelector('.summ');
+
+// let inputs = document.querySelectorAll('input');
+
+// inputs.forEach(inp => {
+//     inp.addEventListener("change",claculeOption);
+// });
+
+// let orderTicket = [];
+  
+// function claculeOption(event){
+//     // select all checked items
+//     let selectedItems = document.querySelectorAll("input")
+//     let sum = 0 ;
+//     orderTicket = [];
+//     selectedItems.forEach(input => {
+//         if(input.checked) {
+//             // get price
+//             let name = input.parentElement.querySelector("span").textContent;
+//             let price = Number(input.parentElement.querySelector("p").textContent.replace("DH",""));
+//             orderTicket.push({name, price})
+//             sum += price;
+//         }
+//     })
+//     // sum
+//     summ.textContent= sum
+//     // console.log(sum, orderTicket);
+//     //
+// }
+
+
+// // arr = [2,4,5]
+// // of => 2,4,5
+// // in => 0,1,2
+// // of(item) / in(index) 
+// for(item of orderTicket){
+//     // item = {name, price}
+//     //item.name
+// }
