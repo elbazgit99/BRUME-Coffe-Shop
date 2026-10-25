@@ -23,66 +23,47 @@ const coffeShop = {
 let addToCartBtn = document.getElementById("add-to-cart-btn");
 let hiddenSection = document.getElementById("hiddenSection")
 let visibleSection = document.getElementById("visibleSection")
-let totalPrice = document.getElementById("totalPrice")
+
 
 
 
 // inputs
 // form1
-let espresso = document.getElementById("espresso").value;
-let filtre = document.getElementById("filtre").value;
+let espresso = document.getElementById("espresso");
+let filtre = document.getElementById("filtre");
 let laBaseForm = document.getElementsByName('labase')
 
 // form2
-let s = document.getElementById("s").value;
-let m = document.getElementById("m").value;
-let l = document.getElementById("l").value;
+let s = document.getElementById("s");
+let m = document.getElementById("m");
+let l = document.getElementById("l");
 let LaTaille = document.getElementsByName('LaTaille')
 // form3
-let vache = document.getElementById("vache").value;
-let avoine = document.getElementById("avoine").value;
-let amande = document.getElementById("amande").value;
-let LeLait = document.getElementsByName('LeLait')
+let vache = document.getElementById("vache");
+let avoine = document.getElementById("avoine");
+let amande = document.getElementById("amande");
 // form4
-let caramel = document.getElementById("caramel").value;
-let vanille = document.getElementById("vanille").value;
+let caramel = document.getElementById("caramel");
+let vanille = document.getElementById("vanille");
 let plus = document.getElementsByName('plus')
 
+
+
+function isChecked() {
+  let LeLait = document.querySelector('input[name="LeLait"]:checked')
+  if (LeLait) {
+    let checkedValue = LeLait.value
+    console.log(checkedValue);
+    let totalPrice = document.getElementById("totalPrice")
+    totalPrice.innerHTML = checkedValue
+  }else{
+    console.log("no selected inputs");
+    
+  }
+}
 // this function to know which input is cheked
 
 // let checkedValue = []
-
-
-// NOTE : the values where aded to the inputs as attributs
-// to clone the 
-//to get inputs with the same name attribute
-// let LeLait = document.getElementsByName('LeLait')
-// the element i want to display checked values in
-// let totalPrice = document.getElementById("totalPrice")
-function isChecked () {
-  LeLait;
-  let checkedValue = [] 
-  for(let i = 0; i < LeLait.length; i++){ //loop throw the inputs with the same name attri
-    if(LeLait[i].checked){ //if only checked
-      checkedValue = LeLait[i].value //push values to the array
-      break; // break once the selected value founded
-    }
-  }
-  totalPrice.innerHTML = checkedValue // display the checked value in this element
-}
-// SUGGESTIONS : forEaach push
-
-// caramel.nodeList.checked
-
-// function getValue (value){
-//   value.addEventListener("ckecked")
-// }
-
-// getValue(espresso)
-
-// addToCartBtn.addEventListener("click" , () => hiddenSection.add() && visibleSection.remove())
-
-
 
 
 
