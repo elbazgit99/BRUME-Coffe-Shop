@@ -61,15 +61,6 @@ let hiddenSection = document.getElementById("hiddenSection");
 // displayStates(addToCartBtn,visibleSection,hiddenSection)
 // console.log(displayStates(addToCartBtn,visibleSection,hiddenSection))
 
-addToCartBtn.addEventListener("click", () => {
-  visibleSection.style.display = "none";
-  hiddenSection.style.display = "block";
-});
-
-createOtherCoffeBtn.addEventListener("click" ,() => {
-  visibleSection.style.display = "block"
-  hiddenSection.style.display= "none"
-})
 
 
 // total small in page1
@@ -94,17 +85,31 @@ function calcSelectedOnes(event) {
       let name = eachInput.name;
       console.log(name);
       // get prices
-      let prices = Number(eachInput.values);
-      // let price = Number(input.parentElement.querySelector("p").textContent.replace("DH",""));
+      let prices = Number(eachInput.value)
       orderTicket.push({ name, prices });
-      sum += prices;
+      console.log(orderTicket.push({ name, prices }))
+      sum += prices ;
     }
   });
-  // sum
-  total.textContent = sum;
+
+  total.innerText = `${sum} DH`;
   console.log(sum, orderTicket);
-  //
+
 }
+
+
+addToCartBtn.addEventListener("click", () => {
+  visibleSection.style.display = "none";
+  hiddenSection.style.display = "block";
+  calcSelectedOnes()
+});
+
+createOtherCoffeBtn.addEventListener("click" ,() => {
+  visibleSection.style.display = "block"
+  hiddenSection.style.display= "none"
+})
+
+
 
 // let summ=document.querySelector('.summ');
 
