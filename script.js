@@ -23,10 +23,11 @@ const coffeShop = {
 let addToCartBtn = document.getElementById("add-to-cart-btn");
 let hiddenSection = document.getElementById("hiddenSection")
 let visibleSection = document.getElementById("visibleSection")
+let totalPrice = document.getElementById("totalPrice")
+
+
 
 // inputs
-
-
 // form1
 let espresso = document.getElementById("espresso").value;
 let filtre = document.getElementById("filtre").value;
@@ -46,8 +47,30 @@ let LeLait = document.getElementsByName('LeLait')
 let caramel = document.getElementById("caramel").value;
 let vanille = document.getElementById("vanille").value;
 let plus = document.getElementsByName('plus')
-console.log(plus);
- 
+
+// this function to know which input is cheked
+
+// let checkedValue = []
+
+
+// NOTE : the values where aded to the inputs as attributs
+// to clone the 
+//to get inputs with the same name attribute
+// let LeLait = document.getElementsByName('LeLait')
+// the element i want to display checked values in
+// let totalPrice = document.getElementById("totalPrice")
+function isChecked () {
+  LeLait;
+  let checkedValue = [] 
+  for(let i = 0; i < LeLait.length; i++){ //loop throw the inputs with the same name attri
+    if(LeLait[i].checked){ //if only checked
+      checkedValue = LeLait[i].value //push values to the array
+      break; // break once the selected value founded
+    }
+  }
+  totalPrice.innerHTML = checkedValue // display the checked value in this element
+}
+// SUGGESTIONS : forEaach push
 
 // caramel.nodeList.checked
 
