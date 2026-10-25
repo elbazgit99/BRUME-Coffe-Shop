@@ -74,7 +74,7 @@ allInputs.forEach((npt) => {
 });
 
 let orderTicket = [];
-function calcSelectedOnes(event) {
+function calcSelectedOnes() {
   // select all checked items
   let selectedItems = document.querySelectorAll("input");
   let sum = 0;
@@ -82,13 +82,13 @@ function calcSelectedOnes(event) {
   selectedItems.forEach((eachInput) => {
     if (eachInput.checked) {
       // get names
-      let name = eachInput.name;
-      console.log(name);
+      let inptsname = eachInput.name;
+      console.log(inptsname);
       // get prices
       let prices = Number(eachInput.value)
-      orderTicket.push({ name, prices });
-      console.log(orderTicket.push({ name, prices }))
-      sum += prices ;
+      orderTicket.push( inptsname, prices);
+      console.log(orderTicket.push({ inptsname, prices }))
+      sum += prices;
     }
   });
 
@@ -108,7 +108,6 @@ createOtherCoffeBtn.addEventListener("click" ,() => {
   visibleSection.style.display = "block"
   hiddenSection.style.display= "none"
 })
-
 
 
 // let summ=document.querySelector('.summ');
