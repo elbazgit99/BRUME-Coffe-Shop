@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
@@ -14,7 +14,7 @@
     <span id="upper-header">Du grain à votre tasse. Un café qui vous ressemble.</span>
     <figure id="nav-wrapper">
       <span id="logo-spn">
-        <img id="logo-icon" src="./assets/icons/logo.png" alt="coffe-logo">
+        <img id="logo-icon" src="./assets/icons/logo.png" alt="coffe logo">
         <h1 id="logo-text">BRUME</h1>
       </span>
 
@@ -26,8 +26,8 @@
         </ul>
       </nav>
       <span id="cart-spn">
-        <img id="cart-logo" src="./assets/icons/cart.png" alt="cart-logo">
-        <small id="cart-counter">1</small>
+        <img id="cart-logo" src="./assets/icons/cart.png" alt="cart logo">
+        <small id="cart-counter">0</small>
       </span>
     </figure>
 
@@ -70,13 +70,13 @@
           <fieldset aria-labelledby="aria-labelled">
             <!-- form1 -->
             <span class="label-spn">
-              <span class="label-title">01 La base</span>
-              <small class="Choix">Choix unique</small>
+              <span>01 La base</span>
+              <small>Choix unique</small>
             </span>
 
-            <form class="form1-4">
-              <label >
-                <input class="base-plus-inputs" type="radio" name="labase" value="18.00">
+            <form>
+              <label>
+                <input type="radio" name="labase" id="espresso" value="18.00" alt="espresso">
                 <span class="inside-spn">
                   <span>Espresso</span>
                   <small  >18,00 DH</small>
@@ -84,7 +84,7 @@
               </label>
 
               <label>
-                <input class="base-plus-inputs" type="radio" name="labase" value="16,00 DH">
+                <input type="radio" name="labase" id="filtre" value="16,00 DH" alt="Filtre">
                 <span class="inside-spn">
                   <span>Filtre</span>
                   <small >16,00 DH</small>
@@ -94,13 +94,13 @@
 
             <!-- form2 -->
             <span class="label-spn">
-              <span class="label-title">02  La taille</span>
-              <small class="Choix">Choix unique</small>
+              <span>02  La taille</span>
+              <small>Choix unique</small>
             </span>
 
-            <form action="" class="form2-3">
+            <form>
               <label >
-                <input class="taille-lait-inputs" type="radio" name="LaTaille" value="0">
+                <input type="radio" name="LaTaille" id="s" value="0" alt="taille S">
                 <span class="inside-spn">
                   <span>S · 150 ml</span>
                   <small >Inclus</small>
@@ -108,15 +108,15 @@
               </label>
 
               <label >
-                <input class="taille-lait-inputs" type="radio" name="LaTaille" value="4.00">
+                <input type="radio" name="LaTaille" id="m" value="4.00" alt="taille M">
                 <span class="inside-spn">
                   <span>M · 250 ml</span>
                   <small >+ 4,00 DH</small>
                 </span>
               </label>
 
-              <label >
-                <input class="taille-lait-inputs" type="radio" name="LaTaille" value="8,00 DH">
+              <label>
+                <input type="radio" name="LaTaille" id="l" value="8,00 DH" alt="taille L">
                 <span class="inside-spn">
                   <span>L · 350 ml</span>
                   <small >+ 8,00 DH</small>
@@ -126,13 +126,13 @@
 
             <!-- form3 -->
             <span class="label-spn">
-              <span class="label-title">03  Le lait</span>
-              <small class="Choix">Choix unique</small>
+              <span>03  Le lait</span>
+              <small>Choix unique</small>
             </span>
 
-            <form  class="form2-3">
+            <form>
               <label>
-                <input class="taille-lait-inputs" type="radio" name="LeLait"  value="0">
+                <input type="radio" name="LeLait" id="vache" value="0" alt="Vache">
                 <span class="inside-spn">
                   <span>Vache</span>
                   <small >Inclus</small>
@@ -140,7 +140,7 @@
               </label>
 
               <label>
-                <input class="taille-lait-inputs" type="radio" name="LeLait" value="4.00">
+                <input type="radio" name="LeLait" id="avoine" value="4.00" alt="Avoine">
                 <span class="inside-spn">
                   <span>Avoine</span>
                   <small >+ 4,00 DH</small>
@@ -148,7 +148,7 @@
               </label>
 
               <label>
-                <input class="taille-lait-inputs" type="radio" name="LeLait" value="5,00 DH">
+                <input type="radio" name="LeLait" id="amande" value="5,00 DH" alt="Amande">
                 <span class="inside-spn">
                   <span>Amande</span>
                   <small >+ 5,00 DH</small>
@@ -158,21 +158,21 @@
 
             <!-- form4 -->
             <span class="label-spn">
-              <span class="label-title">04  La touche en plus</span>
-              <small class="Choix">Plusieurs choix</small>
+              <span>04  La touche en plus</span>
+              <small>Plusieurs choix</small>
             </span>
 
-            <form class="form1-4">
+            <form>
               <label>
-                <input class="base-plus-inputs" type="checkbox" name="plus" value="3.00">
+                <input type="checkbox" name="plus" id="caramel" value="3.00" alt="Caramel">
                 <span class="inside-spn">
                   <span>Caramel</span>
-                  <small >+ 3,00 DH</small>
+                  <small>+ 3,00 DH</small>
                 </span>
               </label>
 
               <label>
-                <input class="base-plus-inputs" type="checkbox" name="plus" id="filtre" value="3,00 DH">
+                <input type="checkbox" name="plus" id="vanille" value="3,00 DH" alt="Vanille">
                 <span class="inside-spn">
                   <span>Vanille</span>
                   <small >+ 3,00 DH</small>
@@ -189,7 +189,7 @@
       <div id="total-sec">
         <span>
           <small id="total-word">Total</small>
-          <small id="total-price">29,00 DH</small>
+          <small id="total-price">00,00 DH</small>
         </span>
         <button id="add-to-cart-btn">Ajouter au panier</button>
       </div>
@@ -240,7 +240,7 @@
 
           <span class="recapitulatif-badge">✓ Sélection ajoutée</span>
           <h5>Votre récapitulatif</h5>
-          <small class="price-smalls">Une création personnalisée · Quantité : 1</small>
+          <small class="price-smalls">Une création personnalisée · Quantité : 0</small>
           <small class="line"></small>
 
           <div id="calc-div">
@@ -250,7 +250,7 @@
                 <small>·</small>
                 <small>Espresso</small>
               </span>
-              <small class="second-card-prices base-price">18,00 DH</small>
+              <small class="second-card-prices base-price">00,00 DH</small>
             </span>
 
             <span class="calc-rows-spn">
@@ -259,7 +259,7 @@
                 <small>·</small>
                 <small>M / 250 ml</small>
               </span>
-              <small class="second-card-prices taille-price">4,00 DH</small>
+              <small class="second-card-prices taille-price">00,00 DH</small>
             </span>
 
             <span class="calc-rows-spn">
@@ -268,7 +268,7 @@
                 <small>·</small>
                 <small>Avoine</small>
               </span>
-              <small class="second-card-prices lait-price">4,00 DH</small>
+              <small class="second-card-prices lait-price">00,00 DH</small>
             </span>
 
             <span class="calc-rows-spn">
@@ -277,13 +277,13 @@
                 <small>·</small>
                 <small>Caramel</small>
               </span>
-              <small class="second-card-prices plus-price">3,00 DH</small>
+              <small class="second-card-prices plus-price">00,00 DH</small>
             </span>
 
           </div>
           <span class="total-spn">
             <span>Total</span>
-            <span id="second-card-price">29,00 DH</span>
+            <span id="second-card-price">00,00 DH</span>
           </span>
           <small>Prix de cette sélection · aucun paiement effectué.</small>
           <button id="create-other-coffe-btn">Créer un autre café →</button>

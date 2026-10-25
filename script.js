@@ -24,7 +24,40 @@ let addToCartBtn = document.getElementById("add-to-cart-btn");
 let hiddenSection = document.getElementById("hiddenSection")
 let visibleSection = document.getElementById("visibleSection")
 
-addToCartBtn.addEventListener("click" , () => hiddenSection.style.display = "block" && visibleSection.remove())
+// inputs
+
+
+// form1
+let espresso = document.getElementById("espresso").value;
+let filtre = document.getElementById("filtre").value;
+let laBaseForm = document.getElementsByName('labase')
+
+// form2
+let s = document.getElementById("s").value;
+let m = document.getElementById("m").value;
+let l = document.getElementById("l").value;
+let LaTaille = document.getElementsByName('LaTaille')
+// form3
+let vache = document.getElementById("vache").value;
+let avoine = document.getElementById("avoine").value;
+let amande = document.getElementById("amande").value;
+let LeLait = document.getElementsByName('LeLait')
+// form4
+let caramel = document.getElementById("caramel").value;
+let vanille = document.getElementById("vanille").value;
+let plus = document.getElementsByName('plus')
+console.log(plus);
+ 
+
+// caramel.nodeList.checked
+
+// function getValue (value){
+//   value.addEventListener("ckecked")
+// }
+
+// getValue(espresso)
+
+// addToCartBtn.addEventListener("click" , () => hiddenSection.add() && visibleSection.remove())
 
 
 
