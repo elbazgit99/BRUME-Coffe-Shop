@@ -1,0 +1,62 @@
+@import url(/mainStyle.css);
+@import url(/hiddenStyle.css);
+@import url(/responsive.css);
+
+#hiddenSection{
+  display: block;
+}
+
+.recapitulatif-badge{
+
+}
+
+@media screen and (min-width : 868px) {
+
+
+  #hiddenSection {
+    padding: 1rem 3rem !important;
+
+  }
+
+  #coffe-card-and-invoice {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2rem;
+  }
+
+  #byCoffe-form {
+    width: 50%;
+  }
+
+  .hidden-page-card {
+    width: 100% !important;
+  }
+
+  .coffe-card {
+    width: 50% !important;
+    max-height: 70vh;
+  }
+
+  .recapitulatif-hidden-card {
+    width: 50% !important;
+  }
+
+  #coffe-card-2 {
+    height: 80vh !important;
+    width: 45vw !important;
+
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+
+  small {
+    font-size: small;
+  }
+  #hidden-footer-sml{
+    display: block;
+  }
+}
+
+}

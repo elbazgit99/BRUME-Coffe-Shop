@@ -13,7 +13,7 @@ const coffeShop = {
     avoine: { name: "Lait d'avoine", price: 4 },
     amande: { name: "Lait d'amande", price: 5 },
   },
-  plus: {
+  Supplement: {
     caramel: { name: "Caramel", price: 3 },
     vanille: { name: "Vanille", price: 3 },
   },
@@ -79,22 +79,21 @@ function calcSelectedinputs() {
   selectedItems.forEach((eachInput) => {
     if (eachInput.checked) {
       // get names
-      let inptsname = eachInput.name;
-      console.log(inptsname);
+      let category = eachInput.querySelector(".label-spn").appendChild.textContent
+      let inputsNames = eachInput.name;
+      // console.log(inputsNames);
       // get prices
       let prices = Number(eachInput.value)
-      orderTicket.push( inptsname, prices);
-      console.log(orderTicket.push({ inptsname, prices }))
+      orderTicket.push( {category, inputsNames, prices});
+      // console.log(orderTicket.push({ inputsNames, prices }))
       sum += prices;
     }
   });
 
-
   total.innerText = `${sum} DH`;
   secondCardPrice.innerHTML = `${sum} DH`
-  console.log(sum, orderTicket);
+  // console.log(sum, orderTicket);
 }
-
 
 addToCartBtn.addEventListener("click", () => {
   visibleSection.style.display = "none";
@@ -110,20 +109,22 @@ createOtherCoffeBtn.addEventListener("click" ,hideHiddenSection)
 editeBtn.addEventListener("click",hideHiddenSection) 
 
 // display selected items on invoice
+// coffeShop.forEach(category => {
+  
+// });
 function invoice () {
   for(let order of orderTicket){
     calcDiv.innerHTML = `
               <span class="calc-rows-spn">
               <span>
-                <small></small>
+                <small>${order.category}</small>
                 <small>·</small>
-                <small>${order.inptsname}</small>
+                <small>${order.inputsNames}</small>
               </span>
               <small class="second-card-prices base-price">${order.prices}</small>
             </span>
     `
   }
-  
 }
 
 // // arr = [2,4,5]
