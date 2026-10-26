@@ -21,6 +21,7 @@ const coffeShop = {
 
 
 let calcDiv = document.getElementById("calc-div")
+let secondCardPric = document.getElementById('second-card-price')
 // INPUTS
 
 // form1
@@ -121,6 +122,7 @@ function invoice () {
             </span>
     `
   }
+  secondCardPric.innerHTML = ``
 }
 
 // // arr = [2,4,5]
