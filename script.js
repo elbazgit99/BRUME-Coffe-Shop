@@ -19,34 +19,31 @@ const coffeShop = {
   },
 };
 
+
+let calcDiv = document.getElementById("calc-div")
 // INPUTS
+
 // form1
 let espresso = document.getElementById("espresso");
 let filtre = document.getElementById("filtre");
-// all byName
-let laBaseForm = document.getElementsByName("labase");
-
 // form2
 let s = document.getElementById("s");
 let m = document.getElementById("m");
 let l = document.getElementById("l");
-// all byName
-let LaTaille = document.getElementsByName("LaTaille");
 // form3
 let vache = document.getElementById("vache");
 let avoine = document.getElementById("avoine");
 let amande = document.getElementById("amande");
-// all byName
-let LeLait = document.querySelector('input[name="LeLait"]:checked');
 // form4
 let caramel = document.getElementById("caramel");
 let vanille = document.getElementById("vanille");
-// all byName
-let plus = document.getElementsByName("plus");
+
 
 // BUTTONS
 let addToCartBtn = document.getElementById("add-to-cart-btn");
 let createOtherCoffeBtn = document.getElementById("create-other-coffe-btn");
+// links
+let editeBtn = document.querySelector(".a-with-underLine")
 // PAGES
 let visibleSection = document.getElementById("visibleSection");
 let hiddenSection = document.getElementById("hiddenSection");
@@ -70,11 +67,10 @@ let total = document.getElementById("totalPrice");
 let allInputs = document.querySelectorAll("input");
 // loop through all inputs to know wich one is selected
 allInputs.forEach((npt) => {
-  npt.addEventListener("change", calcSelectedOnes);
+  npt.addEventListener("change", calcSelectedinputs);
 });
-
 let orderTicket = [];
-function calcSelectedOnes() {
+function calcSelectedinputs() {
   // select all checked items
   let selectedItems = document.querySelectorAll("input");
   let sum = 0;
@@ -92,62 +88,40 @@ function calcSelectedOnes() {
     }
   });
 
+
   total.innerText = `${sum} DH`;
   console.log(sum, orderTicket);
-
 }
 
 
 addToCartBtn.addEventListener("click", () => {
   visibleSection.style.display = "none";
   hiddenSection.style.display = "block";
-  calcSelectedOnes()
+  invoice()
 });
 
-createOtherCoffeBtn.addEventListener("click" ,() => {
+let hideHiddenSection = () => {
   visibleSection.style.display = "block"
   hiddenSection.style.display= "none"
-})
+}
+createOtherCoffeBtn.addEventListener("click" ,hideHiddenSection)
+editeBtn.addEventListener("click",hideHiddenSection) 
 
-
-// let summ=document.querySelector('.summ');
-
-// let inputs = document.querySelectorAll('input');
-
-// inputs.forEach(inp => {
-//     inp.addEventListener("change",claculeOption);
-// });
-
-// let orderTicket = [];
-
-// function claculeOption(event){
-//     // select all checked items
-//     let selectedItems = document.querySelectorAll("input")
-//     let sum = 0 ;
-//     orderTicket = [];
-//     selectedItems.forEach(input => {
-//         if(input.checked) {
-//             // get price
-//             let name = input.parentElement.querySelector("span").textContent;
-//             let price = Number(input.parentElement.querySelector("p").textContent.replace("DH",""));
-//             orderTicket.push({name, price})
-//             sum += price;
-//         }
-//     })
-//     // sum
-//     summ.textContent= sum
-//     // console.log(sum, orderTicket);
-//     //
-// }
-
-// arr = [2,4,5]
-// of => 2,4,5
-// in => 0,1,2
-// of(item) / in(index)
-// for(item of orderTicket){
-//     // item = {name, price}
-//     //item.name
-// }
+// display selected items on invoice
+function invoice () {
+  for(let order of orderTicket){
+    calcDiv.innerHTML = `
+              <span class="calc-rows-spn">
+              <span>
+                <small></small>
+                <small>·</small>
+                <small>${order.inptsname}</small>
+              </span>
+              <small class="second-card-prices base-price">${order.prices}</small>
+            </span>
+    `
+  }
+}
 
 // // arr = [2,4,5]
 // // of => 2,4,5
