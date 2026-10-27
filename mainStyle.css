@@ -1,5 +1,6 @@
 @import url(hiddenStyle.css);
 @import url(responsive.css);
+
 @font-face {
   font-family: DM-Sans-Medium;
   src: url(./fonts/DMSans_18pt-Medium.ttf);
@@ -23,7 +24,7 @@
 * {
   font-family: "DM-Sans-Medium";
   color: #394B32;
-  padding: 0 ;
+  padding: 0;
   margin: 0;
   box-sizing: border-box !important;
   max-width: 100%;
@@ -95,7 +96,7 @@ header {
   }
 
   #nav-wrapper {
-    padding: 1rem ;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -158,7 +159,7 @@ main {
     }
 
     #sml2 {
-      font-size:x-small;
+      font-size: x-small;
     }
   }
 
@@ -221,75 +222,70 @@ main {
         }
       }
     }
-    /* 2 */
-    #byCoffe-form {
+  }
 
-      .label-spn {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
+  #byCoffe-form {
+
+    .label-spn {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin: 0;
+
+      span,
+      small {
         margin: 0;
-        span,small{
-          margin: 0;
-        }
+      }
+    }
+
+    fieldset {
+      border: none;
+
+      span {
+        font-family: "DM-Sans-Bold";
       }
 
-      fieldset {
-        border: none;
+      form {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 0.5rem;
+        margin-bottom: 0.3rem;
 
-        span {
-          font-family: "DM-Sans-Bold";
+        input {
+          background-color: #FFFFFF;
+          appearance: none;
+          border: solid 1px #DFD5C8;
+          height: 4rem;
+          width: 100%;
+          border-radius: 1rem;
+          cursor: pointer;
         }
 
-        form {
-          display: flex;
-          justify-content: space-between;
-          column-gap: 0.5rem;
-          margin-bottom: 0.3rem;
+        input:checked {
+          border-color: 5px var(--border-checked);
+          background-color: var(--radio-checked-clr);
+        }
 
-          input {
-            background-color: #FFFFFF;
-            appearance: none;
-            border: solid 1px #DFD5C8;
-            height: 4rem;
-            width: 100% ;
-            border-radius: 1rem;
-            cursor: pointer;
-          }
-          
-          input:checked {
-            border-color: 5px var(--border-checked);
-            background-color: var(--radio-checked-clr);
-          }
-          
-          input:checked::after {
-            content: "✓";
-            font-weight: bolder;
-            font-size: larger;
-            position: relative;
-            top: 0.7rem;
-            left: 0.8rem;
-          }
-          /* .base-plus-inputs {
+        input:checked::after {
+          content: "✓";
+          font-weight: bolder;
+          font-size: larger;
+          position: relative;
+          top: 0.7rem;
+          left: 0.8rem;
+        }
 
-          }
+        label {
+          font-family: "DM-Sans-Bold";
+          font-size: 15px;
+          position: relative;
+          width: 100%;
+        }
 
-          .taille-lait-inputs {
-            
-          } */
-          
-          label {
-            font-family: "DM-Sans-Bold";
-            font-size: 15px;
-            position: relative;
-            width: 100%;
-          }
-
-          small {
-            font-size: 12px;
-            position: relative;
-            top: 3px;
-          }
+        small {
+          font-size: 12px;
+          position: relative;
+          top: 3px;
         }
       }
     }
@@ -303,7 +299,9 @@ main {
     position: absolute;
     bottom: 1.3rem;
     left: 1rem;
-    span,small{
+
+    span,
+    small {
       font-size: smaller;
       margin: 0;
       padding: 0;

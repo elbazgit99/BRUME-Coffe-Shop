@@ -43,10 +43,139 @@
       </div>
     </section>
 
-    <section class="modal">
-      
+    <section id="visibleSection">
+      <div class="coffeAndForm-section" id="coffeModal">
+
+        <div id="byCoffe-form">
+
+          <fieldset aria-labelledby="aria-labelled">
+            <!-- form1 -->
+            <span class="label-spn">
+              <span>01 La base</span>
+              <small>Choix unique</small>
+            </span>
+
+            <form>
+              <label>
+                <input type="radio" name="labase" id="espresso" value="18.00  " alt="espresso">
+                <span class="inside-spn">
+                  <span>Espresso</span>
+                  <small>18,00 DH</small>
+                </span>
+              </label>
+
+              <label>
+                <input type="radio" name="labase" id="filtre" value="16.00" alt="Filtre">
+                <span class="inside-spn">
+                  <span>Filtre</span>
+                  <small>16,00 DH</small>
+                </span>
+              </label>
+            </form>
+
+            <!-- form2 -->
+            <span class="label-spn">
+              <span>02 La taille</span>
+              <small>Choix unique</small>
+            </span>
+
+            <form>
+              <label>
+                <input type="radio" name="LaTaille" id="s" value="0" alt="taille S">
+                <span class="inside-spn">
+                  <span>S · 150 ml</span>
+                  <small>Inclus</small>
+                </span>
+              </label>
+
+              <label>
+                <input type="radio" name="LaTaille" id="m" value="4.00" alt="taille M">
+                <span class="inside-spn">
+                  <span>M · 250 ml</span>
+                  <small>+ 4,00 DH</small>
+                </span>
+              </label>
+
+              <label>
+                <input type="radio" name="LaTaille" id="l" value="8.00" alt="taille L">
+                <span class="inside-spn">
+                  <span>L · 350 ml</span>
+                  <small>+ 8,00 DH</small>
+                </span>
+              </label>
+            </form>
+
+            <!-- form3 -->
+            <span class="label-spn">
+              <span>03 Le lait</span>
+              <small>Choix unique</small>
+            </span>
+
+            <form>
+              <label>
+                <input type="radio" name="LeLait" id="vache" value="0" alt="Vache">
+                <span class="inside-spn">
+                  <span>Vache</span>
+                  <small>Inclus</small>
+                </span>
+              </label>
+
+              <label>
+                <input type="radio" name="LeLait" id="avoine" value="4.00" alt="Avoine">
+                <span class="inside-spn">
+                  <span>Avoine</span>
+                  <small>+ 4,00 DH</small>
+                </span>
+              </label>
+
+              <label>
+                <input type="radio" name="LeLait" id="amande" value="5.00" alt="Amande">
+                <span class="inside-spn">
+                  <span>Amande</span>
+                  <small>+ 5,00 DH</small>
+                </span>
+              </label>
+            </form>
+
+            <!-- form4 -->
+            <span class="label-spn">
+              <span>04 La touche en plus</span>
+              <small>Plusieurs choix</small>
+            </span>
+
+            <form>
+              <label>
+                <input type="checkbox" name="Supplement" id="caramel" value="3.00" alt="Caramel">
+                <span class="inside-spn">
+                  <span>Caramel</span>
+                  <small>+ 3,00 DH</small>
+                </span>
+              </label>
+
+              <label>
+                <input type="checkbox" name="Supplement" id="vanille" value="3.00" alt="Vanille">
+                <span class="inside-spn">
+                  <span>Vanille</span>
+                  <small>+ 3,00 DH</small>
+                </span>
+              </label>
+            </form>
+          </fieldset>
+          
+          <small id="aria-labelled">Le prix évolue selon vos choix. Vous pourrez les modifier au récapitulatif.</small>
+          <div id="total-sec">
+            <span>
+              <small id="total-word">Total</small>
+              <small id="totalPrice">00,00 DH</small>
+            </span>
+            <button type="submit" id="add-to-cart-btn">Ajouter au panier</button>
+          </div>
+        </div>
+      </div>
+
 
     </section>
+
 
 
   </main>

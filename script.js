@@ -44,7 +44,7 @@ let vanille = document.getElementById("vanille");
 let addToCartBtn = document.getElementById("add-to-cart-btn");
 let createOtherCoffeBtn = document.getElementById("create-other-coffe-btn");
 // links
-let editeBtn = document.querySelector(".a-with-underLine")
+let editeBtn = document.getElementById("modifierLink")
 // PAGES
 let visibleSection = document.getElementById("visibleSection");
 let hiddenSection = document.getElementById("hiddenSection");
