@@ -2,17 +2,13 @@
 @import url(/hiddenStyle.css);
 @import url(/responsive.css);
 
-#hiddenSection{
-  display: block;
+
+.modifier{
+  font-size:larger;
 }
 
-.recapitulatif-badge{
-
-}
 
 @media screen and (min-width : 868px) {
-
-
   #hiddenSection {
     padding: 1rem 3rem !important;
 
@@ -20,8 +16,8 @@
 
   #coffe-card-and-invoice {
     display: flex;
-    justify-content: space-between;
-    column-gap: 2rem;
+    justify-content: center;
+    /* column-gap: 2rem; */
   }
 
   #byCoffe-form {

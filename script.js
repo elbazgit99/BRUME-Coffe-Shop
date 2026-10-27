@@ -79,13 +79,13 @@ function calcSelectedinputs() {
   selectedItems.forEach((eachInput) => {
     if (eachInput.checked) {
       // get names
-      let category = eachInput.querySelector(".label-spn").appendChild.textContent
-      let inputsNames = eachInput.name;
-      // console.log(inputsNames);
+      // let category =  
+      let inputsName = eachInput.name;
+      // console.log(inputsName);
       // get prices
       let prices = Number(eachInput.value)
-      orderTicket.push( {category, inputsNames, prices});
-      // console.log(orderTicket.push({ inputsNames, prices }))
+      orderTicket.push( {inputsName, prices});
+      // console.log(orderTicket.push({ inputsName, prices }))
       sum += prices;
     }
   });
@@ -119,11 +119,11 @@ function invoice () {
               <span>
                 <small>${order.category}</small>
                 <small>·</small>
-                <small>${order.inputsNames}</small>
+                <small>${order.inputsName}</small>
               </span>
               <small class="second-card-prices base-price">${order.prices}</small>
             </span>
-    `
+            `
   }
 }
 
