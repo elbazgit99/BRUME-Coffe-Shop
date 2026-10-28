@@ -10,12 +10,9 @@
 </head>
 
 <body>
-  <header>
-
-  </header>
 
   <main>
-    <!-- HIDDEN SECTION -->
+    <!-- style="display: none;" -->
     <section class="coffeAndForm-section">
       <!-- 2 -->
       <div id="coffe-card-and-invoice">
@@ -25,13 +22,17 @@
           <span class="recapitulatif-badge">✓ Sélection ajoutée</span>
           <h5>Votre récapitulatif</h5>
           <small class="price-smalls">Une création personnalisée · Quantité : 0</small>
-          <small></small>
 
-          <div class="coffeList">
-            <button class="lastSmall"> Votre sélection reste modifiable à tout moment.</button>
-            <button class="lastSmall"> Votre sélection reste modifiable à tout moment.</button>
-            <button class="lastSmall"> Votre sélection reste modifiable à tout moment.</button>
-            <button class="createOtherCoffeBtn">Créer un autre café →</button>
+          <div class="coffeListWrapper">
+            <span id="plusMinseDisplaySpn">
+              <button class="lastSmall displayCoffeeCartBtns"> Votre sélection reste modifiable à tout moment.</button>
+              <span id="plusMinsSpn">
+                <button id="plusBtn" class="countBtns roundBtns">+</button>
+                <span id="result">0</span>
+                <button id="minseBtn" class="countBtns roundBtns">-</button>
+              </span>
+            </span>
+            <button class="createOtherCoffeBtn" id="createBtn">Créer café →</button>
           </div>
           <span class="total-spn">
             <span>Total</span>
@@ -43,146 +44,68 @@
       </div>
     </section>
 
-    <section id="visibleSection">
-      <div class="coffeAndForm-section" id="coffeModal">
 
-        <div id="byCoffe-form">
 
-          <fieldset aria-labelledby="aria-labelled">
-            <!-- form1 -->
-            <span class="label-spn">
-              <span>01 La base</span>
-              <small>Choix unique</small>
-            </span>
 
-            <form>
-              <label>
-                <input type="radio" name="labase" id="espresso" value="18.00  " alt="espresso">
-                <span class="inside-spn">
-                  <span>Espresso</span>
-                  <small>18,00 DH</small>
-                </span>
-              </label>
+    <section id="modalWrapper" style="display: none;">
+      <form id="modalForm">
+        <label id="lbl">Coffe Products
+          <input type="text" id="searchModal">
+          <button class="roundBtns">x</button>
+        </label>
+        <span id="plusMinseDisplaySpn">
+          <button class="lastSmall displayCoffeeCartBtns"> Votre sélection reste modifiable à tout moment.</button>
+          <span id="plusMinsSpn">
+            <button id="plusBtn" class="countBtns roundBtns">+</button>
+            <span id="result">0</span>
+            <button id="minseBtn" class="countBtns roundBtns">-</button>
+          </span>
+        </span>
+      </form>
+    </section>
 
-              <label>
-                <input type="radio" name="labase" id="filtre" value="16.00" alt="Filtre">
-                <span class="inside-spn">
-                  <span>Filtre</span>
-                  <small>16,00 DH</small>
-                </span>
-              </label>
-            </form>
+    <section class="coffeAndForm-section" id="paymentForm" style="display: none;">
+      <div id="byCoffe-form" class="paymentForm">
+        <img src="/assets/images/bank card.png" alt="">
 
-            <!-- form2 -->
-            <span class="label-spn">
-              <span>02 La taille</span>
-              <small>Choix unique</small>
-            </span>
+        <form class="formWrapper" aria-labelledby="aria-labelled">
+          <label>Card Number
+            <input type="number" name="cardNumber" id="cardNumber" placeholder="123" alt="card Number" required>
+          </label>
+          <fieldset>
+            <label> card Holder
+              <input type="text" name="CardHolder" id="CardHolder" alt="Card Holder" placeholder="Joen Deo" required>
+            </label>
 
-            <form>
-              <label>
-                <input type="radio" name="LaTaille" id="s" value="0" alt="taille S">
-                <span class="inside-spn">
-                  <span>S · 150 ml</span>
-                  <small>Inclus</small>
-                </span>
-              </label>
+            <label>Expiration
+              <input type="date" name="Expiration" id="Expiration" alt="Expiration" placeholder="Expiration" required>
+            </label>
 
-              <label>
-                <input type="radio" name="LaTaille" id="m" value="4.00" alt="taille M">
-                <span class="inside-spn">
-                  <span>M · 250 ml</span>
-                  <small>+ 4,00 DH</small>
-                </span>
-              </label>
+            <label>CVV
+              <input type="text" name="CVV" id="CVV" alt="CVV" placeholder="123" minlength="3" maxlength="3" required>
+            </label>
 
-              <label>
-                <input type="radio" name="LaTaille" id="l" value="8.00" alt="taille L">
-                <span class="inside-spn">
-                  <span>L · 350 ml</span>
-                  <small>+ 8,00 DH</small>
-                </span>
-              </label>
-            </form>
-
-            <!-- form3 -->
-            <span class="label-spn">
-              <span>03 Le lait</span>
-              <small>Choix unique</small>
-            </span>
-
-            <form>
-              <label>
-                <input type="radio" name="LeLait" id="vache" value="0" alt="Vache">
-                <span class="inside-spn">
-                  <span>Vache</span>
-                  <small>Inclus</small>
-                </span>
-              </label>
-
-              <label>
-                <input type="radio" name="LeLait" id="avoine" value="4.00" alt="Avoine">
-                <span class="inside-spn">
-                  <span>Avoine</span>
-                  <small>+ 4,00 DH</small>
-                </span>
-              </label>
-
-              <label>
-                <input type="radio" name="LeLait" id="amande" value="5.00" alt="Amande">
-                <span class="inside-spn">
-                  <span>Amande</span>
-                  <small>+ 5,00 DH</small>
-                </span>
-              </label>
-            </form>
-
-            <!-- form4 -->
-            <span class="label-spn">
-              <span>04 La touche en plus</span>
-              <small>Plusieurs choix</small>
-            </span>
-
-            <form>
-              <label>
-                <input type="checkbox" name="Supplement" id="caramel" value="3.00" alt="Caramel">
-                <span class="inside-spn">
-                  <span>Caramel</span>
-                  <small>+ 3,00 DH</small>
-                </span>
-              </label>
-
-              <label>
-                <input type="checkbox" name="Supplement" id="vanille" value="3.00" alt="Vanille">
-                <span class="inside-spn">
-                  <span>Vanille</span>
-                  <small>+ 3,00 DH</small>
-                </span>
-              </label>
-            </form>
           </fieldset>
-          
-          <small id="aria-labelled">Le prix évolue selon vos choix. Vous pourrez les modifier au récapitulatif.</small>
-          <div id="total-sec">
-            <span>
-              <small id="total-word">Total</small>
-              <small id="totalPrice">00,00 DH</small>
-            </span>
-            <button type="submit" id="add-to-cart-btn">Ajouter au panier</button>
-          </div>
-        </div>
+          <button id="payBtn" class="Btns">gg</button>
+        </form>
       </div>
-
-
     </section>
 
 
 
+    <!-- <section>
+      <div id="total-sec">
+        <span>
+          <small id="total-word">Total</small>
+          <small id="totalPrice">00,00 DH</small>
+        </span>
+        <button type="submit" id="add-to-cart-btn">Ajouter au panier</button>
+      </div>
+    </section> -->
+
+
+
   </main>
-
-  <footer>
-
-  </footer>
   <script src="./cart/script.js"></script>
   <script src="./liveSearch/script.js"></script>
   <script src="./validation/script.js"></script>

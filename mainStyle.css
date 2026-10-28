@@ -238,56 +238,59 @@ main {
       }
     }
 
+
     fieldset {
       border: none;
 
       span {
         font-family: "DM-Sans-Bold";
       }
+    }
 
-      form {
-        display: flex;
-        justify-content: space-between;
-        column-gap: 0.5rem;
-        margin-bottom: 0.3rem;
+  }
 
-        input {
-          background-color: #FFFFFF;
-          appearance: none;
-          border: solid 1px #DFD5C8;
-          height: 4rem;
-          width: 100%;
-          border-radius: 1rem;
-          cursor: pointer;
-        }
+  form,
+  .formWrapper {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 0.5rem;
+    margin-bottom: 0.3rem;
 
-        input:checked {
-          border-color: 5px var(--border-checked);
-          background-color: var(--radio-checked-clr);
-        }
+    input {
+      background-color: #FFFFFF;
+      appearance: none;
+      border: solid 1px #DFD5C8;
+      height: 4rem;
+      width: 100%;
+      border-radius: 1rem;
+      cursor: pointer;
+    }
 
-        input:checked::after {
-          content: "✓";
-          font-weight: bolder;
-          font-size: larger;
-          position: relative;
-          top: 0.7rem;
-          left: 0.8rem;
-        }
+    input:checked {
+      border-color: 5px var(--border-checked);
+      background-color: var(--radio-checked-clr);
+    }
 
-        label {
-          font-family: "DM-Sans-Bold";
-          font-size: 15px;
-          position: relative;
-          width: 100%;
-        }
+    input:checked::after {
+      content: "✓";
+      font-weight: bolder;
+      font-size: larger;
+      position: relative;
+      top: 0.7rem;
+      left: 0.8rem;
+    }
 
-        small {
-          font-size: 12px;
-          position: relative;
-          top: 3px;
-        }
-      }
+    label {
+      font-family: "DM-Sans-Bold";
+      font-size: 15px;
+      position: relative;
+      width: 100%;
+    }
+
+    small {
+      font-size: 12px;
+      position: relative;
+      top: 3px;
     }
   }
 
