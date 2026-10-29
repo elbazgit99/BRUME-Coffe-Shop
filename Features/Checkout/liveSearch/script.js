@@ -33,4 +33,4 @@ let createBtn = document.querySelector('#createBtn');
 createBtn.addEventListener("click", () => {
   modalWrapper.style.display = "block";
 
-});
+})
