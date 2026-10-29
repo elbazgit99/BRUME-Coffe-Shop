@@ -1,0 +1,36 @@
+const coffeeProducts = [
+  { id: "c1", name: "Espresso Intense", category: "Base", price: 2.50, image: "espresso.jpg" },
+  { id: "c2", name: "Cappuccino Mousseux", category: "Classique", price: 4.00, image: "cappuccino.jpg" },
+  { id: "c3", name: "Latte Caramel", category: "Gourmand", price: 4.50, image: "latte.jpg" },
+  { id: "c4", name: "Flat White", category: "Classique", price: 3.80, image: "flatwhite.jpg" },
+  { id: "c5", name: "Iced Matcha Latte", category: "Froid", price: 5.00, image: "matcha.jpg" },
+  { id: "c6", name: "Cold Brew", category: "Froid", price: 4.20, image: "coldbrew.jpg" },
+  { id: "c7", name: "Cookie Pépites", category: "Snack", price: 2.00, image: "cookie.jpg" },
+  { id: "c8", name: "Mug Isotherme Noir", category: "Accessoire", price: 15.00, image: "mug.jpg" },
+  { id: "c9", name: "Filtres Papier V60 (x100)", category: "Accessoire", price: 6.50, image: "filters.jpg" },
+  { id: "c10", name: "Tote Bag 'Coffee Lover'", category: "Accessoire", price: 12.00, image: "totebag.jpg" }
+];
+
+let SearchInput = document.querySelector("#searchModal")
+let modalWrapper = document.querySelector('#modalWrapper')
+modalWrapper.innerHTML = ""
+function displaySearch () {
+  let modalElements = modalWrapper.innerHTML = `
+          <span id="plusMinseDisplaySpn">
+          <span class="lastSmall displayCoffeeCartBtns"> Votre sélection reste modifiable à tout moment.</span>
+          <span id="plusMinsSpn">
+            <button id="plusBtn" class="countBtns roundBtns">+</button>
+            <span id="result">0</span>
+            <button id="minseBtn" class="countBtns roundBtns">-</button>
+          </span>
+        </span>
+  `
+  modalWrapper.appendChild(modalElements)
+  console.log(modalElements);
+  
+}
+let createBtn = document.querySelector('#createBtn');
+createBtn.addEventListener("click", () => {
+  modalWrapper.style.display = "block";
+
+});

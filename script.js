@@ -20,7 +20,7 @@ const coffeShop = {
 };
 
 
-let calcDiv = document.getElementById("calc-div")
+let calcDiv = document.querySelector("#calc-div")
 let secondCardPrice = document.getElementById('second-card-price')
 // INPUTS
 
