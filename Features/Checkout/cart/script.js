@@ -17,7 +17,6 @@ let resultSpn = document.getElementById('result')
 let plusBtn = document.querySelector('#plusBtn')
 let displayCoffeeCartBtns = document.querySelector('.displayCoffeeCartBtns')
 let coffeListWrapper = document.querySelector('.coffeListWrapper')
-let createBtn = document.querySelector
 
 function displaycoffeeCart() {
   coffeeCart.forEach(cart => {
@@ -35,8 +34,9 @@ function displaycoffeeCart() {
     `
     
   });
+
 }
-console.log(displaycoffeeCart());
+displaycoffeeCart()
 
 
 

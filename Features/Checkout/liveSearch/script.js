@@ -13,24 +13,31 @@ const coffeeProducts = [
 
 let SearchInput = document.querySelector("#searchModal")
 let modalWrapper = document.querySelector('#modalWrapper')
-modalWrapper.innerHTML = ""
-function displaySearch () {
-  let modalElements = modalWrapper.innerHTML = `
-          <span id="plusMinseDisplaySpn">
-          <span class="lastSmall displayCoffeeCartBtns"> Votre sélection reste modifiable à tout moment.</span>
-          <span id="plusMinsSpn">
-            <button id="plusBtn" class="countBtns roundBtns">+</button>
-            <span id="result">0</span>
-            <button id="minseBtn" class="countBtns roundBtns">-</button>
-          </span>
-        </span>
-  `
-  modalWrapper.appendChild(modalElements)
-  console.log(modalElements);
+let productsListSpn = document.querySelector('#productsList')
+
+productsListSpn = ""
+SearchInput.addEventListener("input", function() {
+// i need to store the income input and the existing names in the array
+    coffeeProducts.forEach((product) => {
+    searchValue = SearchInput.value.toLowerCase()
+    
+    product.name.toLowerCase()
+
+    productsListSpn.innerHTML += `
   
-}
+      <small>${searchValue}</small>
+  
+    `
+  })
+  
+
+})
+
+
+
 let createBtn = document.querySelector('#createBtn');
 createBtn.addEventListener("click", () => {
   modalWrapper.style.display = "block";
 
 })
+

@@ -25,15 +25,14 @@
 
           <div class="coffeListWrapper">
             <span id="plusMinseDisplaySpn">
-              <button class="lastSmall displayCoffeeCartBtns"> Votre sélection reste modifiable à tout moment.</button>
-              <span id="plusMinsSpn">
-                <button id="plusBtn" class="countBtns roundBtns">+</button>
-                <span id="result">0</span>
-                <button id="minseBtn" class="countBtns roundBtns">-</button>
-              </span>
             </span>
-            <button class="createOtherCoffeBtn" id="createBtn">Créer café →</button>
           </div>
+          <button class="createOtherCoffeBtn" id="createBtn">Créer café →</button>
+          <span id="plusMinsSpn">
+            <button id="plusBtn" class="countBtns roundBtns">+</button>
+            <span id="result">0</span>
+            <button id="minseBtn" class="countBtns roundBtns">-</button>
+          </span>
           
           <span class="total-spn">
             <span>Total</span>
@@ -49,15 +48,20 @@
 
 
     <section id="modalWrapper">
+
       <form id="modalForm">
         <label id="lbl">Coffe Products
           <input type="search" id="searchModal" name="modal">
           <button class="roundBtns">x</button>
         </label>
+        <span id="productsList">
+          
+        </span>
       </form>
+      
     </section>
-
-    <section class="coffeAndForm-section" id="paymentForm" style="display: none;">
+    <!-- style="display: none;" -->
+    <section class="coffeAndForm-section" id="paymentForm" >
       <div id="byCoffe-form" class="paymentForm">
         <img src="/assets/images/bank card.png" alt="">
 
