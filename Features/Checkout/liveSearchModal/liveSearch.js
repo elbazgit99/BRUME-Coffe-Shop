@@ -1,3 +1,6 @@
+import {coffeeCart} from "/Features/Checkout/cart/cart.js"
+console.log("expor", coffeeCart );
+
 const coffeeProducts = [
   { id: "c1", name: "Espresso Intense", category: "Base", price: 2.50, image: "espresso.jpg" },
   { id: "c2", name: "Cappuccino Mousseux", category: "Classique", price: 4.00, image: "cappuccino.jpg" },
@@ -11,12 +14,13 @@ const coffeeProducts = [
   { id: "c10", name: "Tote Bag 'Coffee Lover'", category: "Accessoire", price: 12.00, image: "totebag.jpg" }
 ];
 
+
 // search by category | search by price
 let SearchInput = document.querySelector("#searchModal")
 let modalWrapper = document.querySelector('#modalWrapper')
 let productsListSpn = document.querySelector('#productsList')
 let totalCartPrice = document.querySelector('.totalCartPrice')
-SearchInput.addEventListener("input", function() {
+SearchInput.addEventListener("input", function modal() {
   // i need to store the income input and the existing names in the array
   coffeeProducts.forEach((product) => {
     let searchValue = SearchInput.value.toUpperCase()
@@ -28,31 +32,34 @@ SearchInput.addEventListener("input", function() {
     if(isMatches){
       productsListSpn.innerHTML += `
       <button id="productBtn" class="Btns" >${coffeName}</button>
-      <button id="addModalBtn"class="roundBtns" >add to cart</button>  <br>
+      <button id="addModalToCartBtn"class="roundBtns" >add modal to cart</button>  <br>
     `
     }
-    if(searchValue === ""){
-        productsListSpn.innerHTML = ""
-    }
+      if(searchValue === ""){
+          productsListSpn.innerHTML = ""
+      }
   })
+      addModalToCartBtn.addEventListener("click",function(){
+        coffeeCartArray.push()
+      })
   
+    let productBtn = document.getElementById('productBtn');
+    console.log(productBtn);
+
+    let addModalToCartBtn = document.querySelector('#addModalToCartBtn')
+    console.log(addModalToCartBtn);
+
+    // let coffeeCartElements = document.querySelector('#plusMinseDisplaySpn');
+
+
+
+  let createBtn = document.querySelector('#createBtn');
+  createBtn.addEventListener("click", () => {
+    modalWrapper.style.display = "block";
+  })
 })
 
-let coffeeCartElements = document.querySelector('#plusMinseDisplaySpn');
-let productBtn = document.getElementById('productBtn');
-console.log(productBtn);
 
-let addModalBtn = document.querySelector('#addModalBtn')
-console.log(addModalBtn);
 
-addModalBtn.addEventListener("click",function(){
-  coffeeCartElements.innerHTML = `
-    <button  class="countBtns">add to cart</button>
-  `
-})
 
-let createBtn = document.querySelector('#createBtn');
-createBtn.addEventListener("click", () => {
-  modalWrapper.style.display = "block";
-})
 

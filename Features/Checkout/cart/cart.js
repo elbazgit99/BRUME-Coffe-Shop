@@ -1,8 +1,6 @@
 // 1. Le tableau global (Catalogue complet incluant les accessoires)
-
-
 // 2. Le tableau des produits dans le panier par défaut (avec un accessoire)
-let coffeeCart = [
+export let coffeeCart = [
   { id: "c2", name: "Cappuccino Mousseux", price: 4.00, quantity: 2, image: "/assets/images/coffeCup.webp" },
   { id: "c3", name: "Latte Caramel", price: 4.50, quantity: 1, image: "/assets/images/coffeCup.webp" },
   { id: "c8", name: "Mug Isotherme Noir", price: 15.00, quantity: 1, image: "/assets/images/coffeCup.webp" }
@@ -12,14 +10,10 @@ let coffeeCart = [
 
 // 1. Le tableau global (Catalogue complet incluant les accessoires)
 
-let minseBtn = document.getElementById('minseBtn')
-let resultSpn = document.getElementById('result')
-let plusBtn = document.querySelector('#plusBtn')
-let displayCoffeeCartBtns = document.querySelector('.displayCoffeeCartBtns')
-let coffeListWrapper = document.querySelector('.coffeListWrapper')
 
+let coffeListWrapper = document.querySelector('.coffeListWrapper')
 function displaycoffeeCart() {
-  coffeeCart.forEach(cart => {
+  coffeeCart.forEach(cart => {  
     coffeListWrapper.innerHTML += `
     
     <div id="plusMinseDisplaySpn">
@@ -37,6 +31,12 @@ function displaycoffeeCart() {
     
   });
 
+let minseBtn = document.getElementById('minseBtn')
+let resultSpn = document.getElementById('result')
+let plusBtn = document.querySelector('#plusBtn')
+let displayCoffeeCartBtns = document.querySelector('.displayCoffeeCartBtns')
+
+
 }
 displaycoffeeCart()
 // plusBtn.addEventListener('click', () => {
@@ -46,6 +46,7 @@ displaycoffeeCart()
   
 
 
+// NOTE : you most export the wanted expression at the end of the file
 
 
 
