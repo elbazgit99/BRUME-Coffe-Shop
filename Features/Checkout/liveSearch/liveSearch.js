@@ -11,33 +11,48 @@ const coffeeProducts = [
   { id: "c10", name: "Tote Bag 'Coffee Lover'", category: "Accessoire", price: 12.00, image: "totebag.jpg" }
 ];
 
+// search by category | search by price
 let SearchInput = document.querySelector("#searchModal")
 let modalWrapper = document.querySelector('#modalWrapper')
 let productsListSpn = document.querySelector('#productsList')
-
-productsListSpn = ""
+let totalCartPrice = document.querySelector('.totalCartPrice')
 SearchInput.addEventListener("input", function() {
-// i need to store the income input and the existing names in the array
-    coffeeProducts.forEach((product) => {
-    searchValue = SearchInput.value.toLowerCase()
-    
-    product.name.toLowerCase()
-
-    productsListSpn.innerHTML += `
-  
-      <small>${searchValue}</small>
-  
+  // i need to store the income input and the existing names in the array
+  coffeeProducts.forEach((product) => {
+    let searchValue = SearchInput.value.toUpperCase()
+    let coffeName = product.name.toUpperCase()
+    // console.log(coffeName);
+    // includs returns boolean
+    let isMatches =  coffeName.includes(searchValue);
+    // console.log(isMatches);
+    if(isMatches){
+      productsListSpn.innerHTML += `
+      <button id="productBtn" class="Btns" >${coffeName}</button>
+      <button id="addModalBtn"class="roundBtns" >add to cart</button>  <br>
     `
+    }
+    if(searchValue === ""){
+        productsListSpn.innerHTML = ""
+    }
   })
   
-
 })
 
+let coffeeCartElements = document.querySelector('#plusMinseDisplaySpn');
+let productBtn = document.getElementById('productBtn');
+console.log(productBtn);
 
+let addModalBtn = document.querySelector('#addModalBtn')
+console.log(addModalBtn);
+
+addModalBtn.addEventListener("click",function(){
+  coffeeCartElements.innerHTML = `
+    <button  class="countBtns">add to cart</button>
+  `
+})
 
 let createBtn = document.querySelector('#createBtn');
 createBtn.addEventListener("click", () => {
   modalWrapper.style.display = "block";
-
 })
 

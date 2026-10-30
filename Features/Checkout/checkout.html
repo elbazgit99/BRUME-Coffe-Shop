@@ -18,14 +18,14 @@
       <div id="coffe-card-and-invoice">
         <!-- 3 -->
         <div class="recapitulatif-hidden-card">
+          
 
           <span class="recapitulatif-badge">✓ Sélection ajoutée</span>
           <h5>Votre récapitulatif</h5>
           <small class="price-smalls">Une création personnalisée · Quantité : 0</small>
 
           <div class="coffeListWrapper">
-            <span id="plusMinseDisplaySpn">
-            </span>
+
           </div>
           <button class="createOtherCoffeBtn" id="createBtn">Créer café →</button>
           <span id="plusMinsSpn">
@@ -36,7 +36,7 @@
           
           <span class="total-spn">
             <span>Total</span>
-            <span class="invoicePrice">00,00 DH</span>
+            <span class="invoicePrice totalCartPrice">00,00 DH</span>
           </span>
           <a class="modifier" href="#">Modifier</a>
 
@@ -61,7 +61,7 @@
       
     </section>
     <!-- style="display: none;" -->
-    <section class="coffeAndForm-section" id="paymentForm" >
+    <section class="coffeAndForm-section" id="paymentForm" style="display: none;">
       <div id="byCoffe-form" class="paymentForm">
         <img src="/assets/images/bank card.png" alt="">
 
@@ -103,9 +103,9 @@
 
 
   </main>
-  <script src="./cart/script.js"></script>
-  <script src="./liveSearch/script.js"></script>
-  <script src="./validation/script.js"></script>
+  <script src="./cart/cart.js"></script>
+  <script src="./liveSearch/liveSearch.js"></script>
+  <script src="./validation/validation.js"></script>
 </body>
 
 </html>

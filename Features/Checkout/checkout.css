@@ -83,8 +83,17 @@ input{
   }
 }
 
+#cupImg{
+  height: 5rem;
+  width: 10rem;
+  border-radius: 5px;
+}
 
-
+#plusMinseDisplaySpn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 
 

@@ -3,9 +3,9 @@
 
 // 2. Le tableau des produits dans le panier par défaut (avec un accessoire)
 let coffeeCart = [
-  { id: "c2", name: "Cappuccino Mousseux", price: 4.00, quantity: 2, image: "/assets/images/bank card.png" },
-  { id: "c3", name: "Latte Caramel", price: 4.50, quantity: 1, image: "/assets/images/bank card.png" },
-  { id: "c8", name: "Mug Isotherme Noir", price: 15.00, quantity: 1, image: "/assets/images/bank card.png" }
+  { id: "c2", name: "Cappuccino Mousseux", price: 4.00, quantity: 2, image: "/assets/images/coffeCup.webp" },
+  { id: "c3", name: "Latte Caramel", price: 4.50, quantity: 1, image: "/assets/images/coffeCup.webp" },
+  { id: "c8", name: "Mug Isotherme Noir", price: 15.00, quantity: 1, image: "/assets/images/coffeCup.webp" }
 ];
 
 //NOTE : you can use a function in forEach as an args even before its declaration
@@ -22,36 +22,28 @@ function displaycoffeeCart() {
   coffeeCart.forEach(cart => {
     coffeListWrapper.innerHTML += `
     
-    <img src="${cart.image}" alt="">
-          <span id="plusMinseDisplaySpn">
-          <span class="lastSmall displayCoffeeCartBtns"> ${cart.name} === price:${cart.price} === ${cart.quantity}</span>
+    <div id="plusMinseDisplaySpn">
+          <img id="cupImg" src="${cart.image}" alt="">
+          <span class="lastSmall displayCoffeeCartBtns"> ${cart.name}</span>
+          <span class="lastSmall displayCoffeeCartBtns ">${cart.price}DH</span>
+          <span class="lastSmall displayCoffeeCartBtns roundBtns"> ${cart.quantity}</span>
           <span id="plusMinsSpn">
             <button id="plusBtn" class="countBtns roundBtns">+</button>
             <span id="result">0</span>
             <button id="minseBtn" class="countBtns roundBtns">-</button>
           </span>
-        </span>
+    </div>
     `
     
   });
 
 }
 displaycoffeeCart()
-
-
-
-
 // plusBtn.addEventListener('click', () => {
 // })
-  //array.foreach + callback 
+  // array.foreach + callback 
   // it provides through callback : element , index, array as a args and the loàcation of the array it self
   
-//   function displayCoffeeCart(category) {
-    
-//   let list = coffeeCart.forEach(displayCoffeeCart)
-
-//   coffeListWrapper.textContent = list
-// }
 
 
 
