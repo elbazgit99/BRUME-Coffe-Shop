@@ -127,6 +127,13 @@ function invoice () {
   }
 }
 
+let link = "./Features/Checkout/checkout.html"
+
+let cartIcon = document.querySelector('#cartIcon').addEventListener('click' ,(e) => {
+  link
+})
+
+
 // // arr = [2,4,5]
 // // of => 2,4,5
 // // in => 0,1,2
