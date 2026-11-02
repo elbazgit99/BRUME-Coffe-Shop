@@ -41,6 +41,9 @@ CardHolder.addEventListener("input", function() {
   if (!isMatchCardHolder(CardHolder.value)) {
         messageElmnt.textContent = "invalid card holder name use characters only"
   }
+    if (CardHolder.value === "") {
+    messageElmnt.textContent = ""
+  }
 })
 Expiration.addEventListener("input", function() {
 
