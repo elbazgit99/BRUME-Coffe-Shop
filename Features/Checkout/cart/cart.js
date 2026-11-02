@@ -12,27 +12,27 @@ export let coffeeCart = [
 let modalWrapper = document.querySelector('#modalWrapper')
 let createBtn = document.querySelector('#createBtn')
 let coffeListWrapper = document.querySelector('.coffeListWrapper')
-
+let totalCartPriceElement = document.querySelector('.totalCartPrice')
 let xModalBtn = document.querySelector('#xModalBtn')
 function displaycoffeeCart() {
+  let counter = 0;
+
   coffeeCart.forEach(cart => {  
     coffeListWrapper.innerHTML += `
-    
     <div id="plusMinseDisplaySpn">
           <img id="cupImg" src="${cart.image}" alt="">
           <span class="lastSmall displayCoffeeCartBtns"> ${cart.name}</span>
           <span class="lastSmall displayCoffeeCartBtns ">${cart.price}DH</span>
           <span class="lastSmall displayCoffeeCartBtns roundBtns"> ${cart.quantity}</span>
           <span id="plusMinsSpn">
-            <button class="countBtns roundBtns plusBtn">+</button>
-            <span class="result" >0</span>
-            <button class="countBtns roundBtns minseBtn">-</button>
+            <button data-id=${counter} class="countBtns roundBtns plusBtn">+</button>
+            <span id="${counter}" class="result" >0</span>
+            <button data-id=${counter} class="countBtns roundBtns minseBtn">-</button>
           </span>
     </div>
     `
-    
+    counter++;
   });
-
   createBtn.addEventListener('click' , () => {
     modalWrapper.style.display = "block"
 
@@ -40,20 +40,36 @@ function displaycoffeeCart() {
   xModalBtn.addEventListener("click" , () => {
     modalWrapper.style.display = "none"
   })
-  let plusBtn = document.querySelector('.plusBtn')
-  let minseBtn = document.querySelector('.minseBtn')
-  plusBtn.addEventListener("click", () => {
-    let result = document.querySelector('.result')
-    result.textContent++
-
+  let plusBtns = document.querySelectorAll('.plusBtn')
+  let minseBtns = document.querySelectorAll('.minseBtn')
+  plusBtns.forEach(btn => {
+     btn.addEventListener("click", (event) => {
+      
+      let targetBtn = event.target;
+      let targetId = targetBtn.dataset.id;
+      let result = document.getElementById(`${targetId}`);
+      let total = result.textContent++;
+      totalCartPriceElement.textContent = total
   })
-  minseBtn.addEventListener("click", () => {
-    let result = document.querySelector('.result')
-    result.textContent--
-
   })
-let displayCoffeeCartBtns = document.querySelector('.displayCoffeeCartBtns')
+ minseBtns.forEach((Btn) => {
 
+   Btn.addEventListener("click", (event) => {
+    let targetBtn = event.target
+    let targetId  = targetBtn.dataset.id
+    let result = document.getElementById(`${targetId}`)
+    for (let i = 0; i < coffeeCart.length; i++) {
+      let prices = coffeeCart[i].price
+      if (minseBtns.click) {
+        prices * 2
+      }
+      
+    }
+    let total = result.textContent--
+    totalCartPriceElement.textContent = total
+    })
+ }) 
+ 
 
 }
 displaycoffeeCart()
@@ -65,7 +81,6 @@ displaycoffeeCart()
 
 
 // NOTE : you most export the wanted expression at the end of the file
-
 
 
 
