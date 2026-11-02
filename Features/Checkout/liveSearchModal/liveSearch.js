@@ -125,10 +125,7 @@ function calcAddedCards() {
   let sum = 0;
   coffeeCart
   let productBtn = document.querySelectorAll("button").forEach((btn) => {
-
   });
-
-
   // console.log(sum, orderTicket);
 }
 calcAddedCards()
