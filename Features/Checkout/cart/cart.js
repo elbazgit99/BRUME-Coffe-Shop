@@ -73,6 +73,15 @@ function displaycoffeeCart() {
 
 }
 displaycoffeeCart()
+let paymentForm = document.querySelector('#paymentForm')
+let shopBtn = document.querySelector('#shop')
+let cartSection = document.querySelector('#cartSection')
+shopBtn.addEventListener('click' , () => {
+  paymentForm.style.display = "block"
+  modalWrapper.style.display = "none"
+  cartSection.style.display = "none"
+
+})
 // plusBtn.addEventListener('click', () => {
 // })
   // array.foreach + callback 

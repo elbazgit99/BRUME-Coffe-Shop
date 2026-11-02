@@ -123,25 +123,9 @@ function calcAddedCards() {
   // select all checked items
   SearchInput;
   let sum = 0;
-  coffeeCart = [];
+  coffeeCart
   let productBtn = document.querySelectorAll("button").forEach((btn) => {
-    if (btn.click) {
-      // get names
-      // let category =  
-      let clickedTicked = eachInput.name;
-      // console.log(inputsName);
-      // get prices
-      let i = 0
-      let prices = Number(coffeeCart[i].price)
-      coffeeCart.push( {clickedTicked, prices});
-      i++
-      // console.log(orderTicket.push({ inputsName, prices }))
-      sum += prices;
-    }
   });
-
-  total.innerText = `${sum} DH`;
-  secondCardPrice.innerHTML = `${sum} DH`
   // console.log(sum, orderTicket);
 }
 calcAddedCards()

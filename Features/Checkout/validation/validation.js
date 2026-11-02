@@ -22,7 +22,7 @@ function isMatchExperation(exp){
   return expPattern.test(exp)
 }
 function isMatchCvv(cvv) {
-  let cvvPattern = new RegExp("^[0-9]{3}$")
+  let cvvPattern = new RegExp("^[0-9]{3,4}$")
   return cvvPattern.test(cvv)
 }
 
@@ -41,6 +41,9 @@ CardHolder.addEventListener("input", function() {
   if (!isMatchCardHolder(CardHolder.value)) {
         messageElmnt.textContent = "invalid card holder name use characters only"
   }
+    if (CardHolder.value === "") {
+    messageElmnt.textContent = ""
+  }
 })
 Expiration.addEventListener("input", function() {
 
@@ -53,9 +56,13 @@ CVV.addEventListener("input", function() {
   if (isMatchCvv(CVV.value)) {
         messageElmnt.textContent = "invalid cvv"
   }
-  let max = CVV.value === CVV.maxLength
-
+  let max = CVV.maxLength
+  console.log(max);
+  
   if (!max) {
     messageElmnt.textContent = "cvv has 3 maximum numbers"
+  }
+      if (CVV.value === "") {
+    messageElmnt.textContent = ""
   }
 })
