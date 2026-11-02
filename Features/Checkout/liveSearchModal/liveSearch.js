@@ -25,14 +25,13 @@ SearchInput.addEventListener("input", function modal() {
   coffeeProducts.forEach((product) => {
     let searchValue = SearchInput.value.toUpperCase()
     let coffeName = product.name.toUpperCase()
-    // console.log(coffeName);
     // includs returns boolean
     let isMatches =  coffeName.includes(searchValue);
     // console.log(isMatches);
     if(isMatches){
       productsListSpn.innerHTML += `
       <button id="productBtn" class="Btns" >${coffeName}</button>
-      <button id="addModalToCartBtn"class="roundBtns" >add modal to cart</button>  <br>
+      <button id="addModalToCartBtn"class="roundBtns">add</button>  <br>
     `
     }
       if(searchValue === ""){
@@ -48,10 +47,6 @@ SearchInput.addEventListener("input", function modal() {
 
     let addModalToCartBtn = document.querySelector('#addModalToCartBtn')
     console.log(addModalToCartBtn);
-
-    // let coffeeCartElements = document.querySelector('#plusMinseDisplaySpn');
-
-
 
   let createBtn = document.querySelector('#createBtn');
   createBtn.addEventListener("click", () => {

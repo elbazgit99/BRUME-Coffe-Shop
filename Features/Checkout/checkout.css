@@ -6,9 +6,26 @@
 .modifier{
   font-size:larger;
 }
-/* #modalWrapper{
+#modalWrapper{
+  background-color: #FFFFFF;
+  height: fit-content;
+  width: 50rem;
+  display: flex;
+  position: relative;
+  bottom: 40rem;
+  left: 22rem;
 
-} */
+}
+.lastSmall{
+  background-color: transparent;
+}
+#plusMinseDisplaySpn{
+  background-color: #E9EEDC;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+}
 #modalForm{
   display: flex;
   flex-direction: column;
@@ -52,6 +69,8 @@ fieldset{
   display: grid;
   row-gap: 1rem;
   background-color: #FFFFFF;
+  position: relative;
+  left: 5;
   img{
     display: flex;
     justify-self: center;
@@ -78,12 +97,22 @@ input::placeholder{
   width: 2rem;
   border-radius: 50%;
   border: 1px solid #394B32;
-  background: #E9EEDC;
-  #plusMinsSpn{
+  background: #ffffff;
+}
+#plusMinsSpn{
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  justify-content: center;
+  .result{
     display: flex;
-    margin: 0;
-    white-space: nowrap;
     justify-content: center;
+      border: 1px solid #394B32;
+  background: #ffffff;
+    align-items: center;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 1rem !important;
   }
 }
 
@@ -106,6 +135,12 @@ input::placeholder{
 
 
 @media screen and (min-width : 868px) {
+
+  main{
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
   #hiddenSection {
     padding: 1rem 3rem !important;
 

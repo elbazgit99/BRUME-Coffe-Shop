@@ -13,7 +13,7 @@
 
   <main>
     <!-- style="display: none;" -->
-    <section class="coffeAndForm-section">
+    <section class="coffeAndForm-section" id="cartSection">
       <!-- 2 -->
       <div id="coffe-card-and-invoice">
         <!-- 3 -->
@@ -44,12 +44,12 @@
       </div>
     </section>
 
-    <section id="modalWrapper">
+    <section id="modalWrapper" style="display: none;">
 
       <form id="modalForm">
         <label id="lbl">Coffe Products
           <input type="search" id="searchModal" name="modal">
-          <button class="roundBtns">x</button>
+          <button id="xModalBtn" class="roundBtns">x</button>
         </label>
         <span id="productsList">
           
@@ -58,7 +58,7 @@
       
     </section>
     <!-- style="display: none;" -->
-    <section class="coffeAndForm-section" id="paymentForm" >
+    <section class="coffeAndForm-section" id="paymentForm" style="display: none;" >
       <div id="byCoffe-form" class="paymentForm">
         <img src="/assets/images/bank card.png" alt="">
         <p id="message" style="color: red;"></p>
@@ -77,7 +77,7 @@
             </label>
 
             <label>CVV
-              <input type="number" name="CVV" id="CVV"  alt="CVV" placeholder="123" minlength="3" maxlength="3" required>
+              <input type="number" name="CVV" id="CVV"  alt="CVV" placeholder="123"  maxlength="3" required>
             </label>
 
           </fieldset>
