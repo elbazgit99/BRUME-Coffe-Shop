@@ -1,0 +1,29 @@
+{
+  "name": "brum-sprint2",
+  "version": "1.0.0",
+  "description": "The goal of this project is to design and develop a two-page interactive web application allowing users to personalize their product (a coffee drink or makeup item) before adding it to the cart.\r The project emphasizes DOM manipulation with JavaScript, excellent UX/UI, and strict versioning management via GitFlow.",
+  "main": "script.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elbazgit99/BRUME-Coffe-Shop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/elbazgit99/BRUME-Coffe-Shop/issues"
+  },
+  "homepage": "https://github.com/elbazgit99/BRUME-Coffe-Shop#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.6.2",
+    "postcss": "^8.5.32",
+    "tailwindcss": "^4.3.4"
+  }
+}
