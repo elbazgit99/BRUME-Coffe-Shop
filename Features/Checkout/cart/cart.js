@@ -15,8 +15,7 @@ let coffeListWrapper = document.querySelector('.coffeListWrapper')
 let totalCartPriceElement = document.querySelector('.totalCartPrice')
 let xModalBtn = document.querySelector('#xModalBtn')
 function displaycoffeeCart() {
-  let counter = 0;
-
+  let i = 0;
   coffeeCart.forEach(cart => {  
     coffeListWrapper.innerHTML += `
     <div id="plusMinseDisplaySpn">
@@ -25,13 +24,13 @@ function displaycoffeeCart() {
           <span class="lastSmall displayCoffeeCartBtns ">${cart.price}DH</span>
           <span class="lastSmall displayCoffeeCartBtns roundBtns"> ${cart.quantity}</span>
           <span id="plusMinsSpn">
-            <button data-id=${counter} class="countBtns roundBtns plusBtn">+</button>
-            <span id="${counter}" class="result" >0</span>
-            <button data-id=${counter} class="countBtns roundBtns minseBtn">-</button>
+            <button data-id=${i} class="countBtns roundBtns plusBtn">+</button>
+            <span id="${i}" class="result" >0</span>
+            <button data-id=${i} class="countBtns roundBtns minseBtn">-</button>
           </span>
     </div>
     `
-    counter++;
+    i++;
   });
   createBtn.addEventListener('click' , () => {
     modalWrapper.style.display = "block"
