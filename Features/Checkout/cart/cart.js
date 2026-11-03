@@ -59,7 +59,7 @@ function displaycoffeeCart() {
     let result = document.getElementById(`${targetId}`)
     for (let i = 0; i < coffeeCart.length; i++) {
       let prices = coffeeCart[i].price
-      if (minseBtns.click) {
+      if (minseBtns.clicked) {
         prices * 2
       }
       
@@ -69,7 +69,6 @@ function displaycoffeeCart() {
     })
  }) 
  
-
 }
 displaycoffeeCart()
 let paymentForm = document.querySelector('#paymentForm')

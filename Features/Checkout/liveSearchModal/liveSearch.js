@@ -107,11 +107,11 @@ SearchInput.addEventListener("input", function modal() {
       <button data-id=${i} class="roundBtns quichAdd">add</button>  <br>
     `;
     i++
+    let targetId = targetBtn.dataset.id
     let addTocart = document.getElementById(`${targetId}`)
     addTocart.forEach(btn => {
       btn.addEventListener('click',(event) => {
         let targetBtn = event.target
-        let targetId = targetBtn.dataset.id
             coffeeCart.push(productCart)
             coffeeCart.forEach(element => {
               productCart.innerHTML += `<span> ${element}</span>`

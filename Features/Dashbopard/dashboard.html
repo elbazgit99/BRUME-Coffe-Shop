@@ -9,13 +9,14 @@
   <script src="./admin/admin.js" async></script>
   <script src="./wizard/wizard.js" async></script>
   <script src="./forms/forms.js" async></script>
-  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="../../src/output.css">
+  <link rel="stylesheet" href="public/style.css">
 </head>
 
 <body>
   <form id="productForm">
 
-    <fieldset id="firstRang">
+    <fieldset  class="flex flex-col-reverse" id="firstRang">
       <h2> Informations Générales </h2>
       <label> product Name
         <input type="text" id="product-name" name="product-name">
@@ -42,9 +43,9 @@
 
         </label>
       </fieldset>
-      <button type="button" id="next1"> NEXT </button>
+      <button class="rounded-full" id="next1">NEXT</button>
     </fieldset>
-
+    
     <div id="secondRange" class="hidden">
       <h2> Caractéristiques & Options </h2>
       <label> Origine des grains
