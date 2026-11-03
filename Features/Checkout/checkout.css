@@ -8,7 +8,6 @@
 }
 #modalWrapper{
   background-color: #FFFFFF;
-  height: fit-content;
   width: 50rem;
   display: flex;
   position: relative;
@@ -127,13 +126,16 @@ input::placeholder{
   justify-content: space-between;
   align-items: center;
 }
-
-
-
-
-
-
-
+#productWrapper{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.productWrapper{
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 @media screen and (min-width : 868px) {
 
   main{
