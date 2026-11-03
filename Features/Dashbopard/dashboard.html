@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,120 @@
   <script src="./admin/admin.js" async></script>
   <script src="./wizard/wizard.js" async></script>
   <script src="./forms/forms.js" async></script>
+  <link rel="stylesheet" href="dashbord.css">
 </head>
+
 <body>
-  <section>
-    
-  </section>
+  <form id="productForm">
+
+    <fieldset id="firstRang">
+      <h2> Informations Générales </h2>
+      <label> product Name
+        <input type="text" id="product-name" name="product-name">
+      </label>
+
+      <label> Base price
+        <input type="number" id="baseprice" name="baseprice" min="0" step="0.01">
+      </label>
+      <textarea name="description" id="description">description</textarea>
+      <label>product image
+        <input id="productImage" name="productimage">
+      </label>
+      <label>product promotion
+        <input type="checkbox" id="promotion" name="promotion">
+      </label>
+
+      <fieldset class="hidden">
+        <label> discount pourcentage
+          <input type="number" id="discount" name="discount">
+        </label>
+
+        <label>Date de fin
+          <input type="date" id="expireDate" name="expireDate">
+
+        </label>
+      </fieldset>
+      <button type="button" id="next1"> NEXT </button>
+    </fieldset>
+
+    <div id="secondRange" class="hidden">
+      <h2> Caractéristiques & Options </h2>
+      <label> Origine des grains
+        <select name="origin" id="origin">
+          <option value="">choose an origin</option>
+          <option value="colombia">colombie</option>
+          <option value="ethiopia"> ethiopie</option>
+          <option value="brazil">Bresil</option>
+          <option value="mix">melange maison</option>
+        </select>
+      </label>
+      <label>Niveau de torréfaction / Intensité
+        <input type="range" id="intensity" name="intensity" min="1" max="10">
+      </label>
+
+      <fieldset>
+        <h3>Température</h3>
+        <label>chaud
+          <input type="radio" id="hot" name="Temperature" value="chaud">
+        </label>
+        <label > glacé
+          <input type="radio" name="Temperature" id="iced" value="glacé">
+        </label>
+      </fieldset>
+
+      <h3> Tailles disponibles </h3>
+      <fieldset>
+        <label >Small
+          <input type="checkbox" id="small" name="sizes" value="small">
+        </label>
+        <label >Medium
+          <input type="checkbox" id="meduim" name="sizes" value="medium">
+        </label>
+        <label>Large
+          <input type="checkbox" id="large" name="sizes" value="large">
+        </label>
+
+      </fieldset>
+      <fieldset>
+        <h3> Options de lait </h3>
+        <label >Vache
+          <input type="checkbox" name="milk" id="cowmilk" value="vache">
+        </label>
+  
+        <label >Avoine
+          <input type="checkbox" name="milk" id="oatmilk" value="avoine">
+        </label>
+  
+        <label >Soja
+          <input type="checkbox" name="milk" id="soymilk" value="soja">
+        </label>
+  
+        <label >Amande
+          <input type="checkbox" name="milk" id="almondmilk" value="amande">
+        </label>
+      </fieldset>
+      <fieldset>
+        <h3>Suppléments</h3>
+        <label >Vanille
+          <input type="checkbox" name="supplements" id="vanilla" value="Vanille">
+        </label>
+  
+        <label >Caramel
+          <input type="checkbox" name="supplements" id="caramel" value="Caramel">
+        </label>
+  
+        <label >Noisette
+          <input type="checkbox" name="supplements" id="noisette" value="Noisette">
+        </label>
+        <button type="button" id="previous1"> Previous </button>
+        <button type="button" id="next2"> NEXT </button>
+      </fieldset>
+    </div>
+
+    <section id="thirdRange" class="hidden">
+
+    </section>
+  </form>
 </body>
+
 </html>
