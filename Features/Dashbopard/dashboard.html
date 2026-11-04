@@ -14,42 +14,50 @@
 </head>
 
 <body>
-  <form id="productForm">
 
-    <fieldset  class="flex flex-col-reverse" id="firstRang">
-      <h2> Informations Générales </h2>
+  <!-- npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch -->
+  <form class="grid h-56 grid-cols-3 content-start gap-4 " id="mainFormWrapper">
+    <fieldset class="flex flex-col" id="firstRang">
+      <h3 class="bg-blue-500 text-red-800 " id="productMessage"></h3>
+      <legend></legend>
+      <!-- Error message -->
       <label> product Name
-        <input type="text" id="product-name" name="product-name">
+        <input type="text" class="border-4 border-indigo-500" id="productName" name="productName">
+        <h2> Informations Générales </h2>
       </label>
 
       <label> Base price
-        <input type="number" id="baseprice" name="baseprice" min="0" step="0.01">
+        <input class="border-4 border-indigo-500" type="number" id="baseprice" name="baseprice">
       </label>
-      <textarea name="description" id="description">description</textarea>
+
+      <textarea class="border-4 border-indigo-500" name="description" id="description">description</textarea>
+
       <label>product image
-        <input id="productImage" name="productimage">
+        <input type="url" class="border-4 border-indigo-500" id="productImage" name="productimage">
       </label>
+
       <label>product promotion
-        <input type="checkbox" id="promotion" name="promotion">
+        <input type="checkbox" class="border-4 border-indigo-500" id="promotion" name="promotion">
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <label> discount pourcentage
+        <input class="border-4 border-indigo-500" type="number" id="discount" name="discount">
       </label>
 
-      <fieldset class="hidden">
-        <label> discount pourcentage
-          <input type="number" id="discount" name="discount">
-        </label>
+      <label>Date de fin
+        <input class="border-4 border-indigo-500" type="date" id="expireDate" name="expireDate">
 
-        <label>Date de fin
-          <input type="date" id="expireDate" name="expireDate">
-
-        </label>
-      </fieldset>
-      <button class="rounded-full" id="next1">NEXT</button>
+      </label>
+      <button class="border-4 border-indigo-500" id="next1">NEXT</button>
     </fieldset>
-    
-    <div id="secondRange" class="hidden">
-      <h2> Caractéristiques & Options </h2>
+
+    <fieldset id="secondRange">
+
+      <legend> Caractéristiques & Options </legend>
       <label> Origine des grains
-        <select name="origin" id="origin">
+        <select class="border-4 border-indigo-500" name="origin" id="origin">
           <option value="">choose an origin</option>
           <option value="colombia">colombie</option>
           <option value="ethiopia"> ethiopie</option>
@@ -58,7 +66,7 @@
         </select>
       </label>
       <label>Niveau de torréfaction / Intensité
-        <input type="range" id="intensity" name="intensity" min="1" max="10">
+        <input class="border-4 border-indigo-500" type="range" id="intensity" name="intensity" min="1" max="10">
       </label>
 
       <fieldset>
@@ -66,17 +74,17 @@
         <label>chaud
           <input type="radio" id="hot" name="Temperature" value="chaud">
         </label>
-        <label > glacé
+        <label> glacé
           <input type="radio" name="Temperature" id="iced" value="glacé">
         </label>
       </fieldset>
-
+      <h2 class="bg-blue-500">FORM2</h2>
       <h3> Tailles disponibles </h3>
       <fieldset>
-        <label >Small
+        <label>Small
           <input type="checkbox" id="small" name="sizes" value="small">
         </label>
-        <label >Medium
+        <label>Medium
           <input type="checkbox" id="meduim" name="sizes" value="medium">
         </label>
         <label>Large
@@ -86,41 +94,41 @@
       </fieldset>
       <fieldset>
         <h3> Options de lait </h3>
-        <label >Vache
+        <label>Vache
           <input type="checkbox" name="milk" id="cowmilk" value="vache">
         </label>
-  
-        <label >Avoine
+
+        <label>Avoine
           <input type="checkbox" name="milk" id="oatmilk" value="avoine">
         </label>
-  
-        <label >Soja
+
+        <label>Soja
           <input type="checkbox" name="milk" id="soymilk" value="soja">
         </label>
-  
-        <label >Amande
+
+        <label>Amande
           <input type="checkbox" name="milk" id="almondmilk" value="amande">
         </label>
       </fieldset>
       <fieldset>
         <h3>Suppléments</h3>
-        <label >Vanille
+        <label>Vanille
           <input type="checkbox" name="supplements" id="vanilla" value="Vanille">
         </label>
-  
-        <label >Caramel
+
+        <label>Caramel
           <input type="checkbox" name="supplements" id="caramel" value="Caramel">
         </label>
-  
-        <label >Noisette
+
+        <label>Noisette
           <input type="checkbox" name="supplements" id="noisette" value="Noisette">
         </label>
         <button type="button" id="previous1"> Previous </button>
-        <button type="button" id="next2"> NEXT </button>
+        <button class="border-4 border-indigo-500" type="button" id="next2"> NEXT </button>
       </fieldset>
-    </div>
+    </fieldset >
 
-    <section id="thirdRange" class="hidden">
+    <section id="thirdRange">
 
     </section>
   </form>
