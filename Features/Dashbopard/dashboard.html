@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/assets/icons/logo.png" aria-details="coffe logo">
   <title>BRUM</title>
+  <link rel="icon" href="/assets/icons/logo.png" aria-details="coffe logo">
   <script src="./admin/admin.js" async></script>
   <script src="./wizard/wizard.js" async></script>
   <script src="./forms/forms.js" async></script>
@@ -28,9 +28,9 @@
 
       <label> Base price
         <h3 class="bg-blue-500 text-red-800 " id="priceMessage"></h3>
-        <input type="number"  class="border-4 border-indigo-500" id="basePrice" name="baseprice">
+        <input type="number" class="border-4 border-indigo-500" id="basePrice" name="baseprice">
       </label>
-
+      <h3 class="bg-blue-500 text-red-800 " id="descriptionMsg"></h3>
       <textarea class="border-4 border-indigo-500" name="description" id="description">description</textarea>
 
       <label>product image
@@ -38,28 +38,30 @@
       </label>
 
       <label>product promotion
+          <h3 class="bg-blue-500 text-red-800 " id="imageMessage"></h3>
         <input type="checkbox" class="border-4 border-indigo-500" id="promotion" name="promotion">
       </label>
+
+      <span id="ShowedIfPromotionCheckedSpn" style="display: none;">
+        <label> discount percentage
+          <input class="border-4 border-indigo-500" type="number" id="discount" name="discount">
+        </label>
+
+        <label>Date de fin
+          <input class="border-4 border-indigo-500" type="date" id="expireDate" name="expireDate">
+
+        </label>
+        <button class="border-4 border-indigo-500" id="next1">NEXT</button>
+      </span>
     </fieldset>
 
-    <fieldset>
-      <label> discount pourcentage
-        <input class="border-4 border-indigo-500" type="number" id="discount" name="discount">
-      </label>
-
-      <label>Date de fin
-        <input class="border-4 border-indigo-500" type="date" id="expireDate" name="expireDate">
-
-      </label>
-      <button class="border-4 border-indigo-500" id="next1">NEXT</button>
-    </fieldset>
 
     <fieldset id="secondRange">
 
       <legend> Caractéristiques & Options </legend>
       <label> Origine des grains
         <select class="border-4 border-indigo-500" name="origin" id="origin">
-          <option value="">choose an origin</option>
+          <option value="" selected disabled>choose an origin</option>
           <option value="colombia">colombie</option>
           <option value="ethiopia"> ethiopie</option>
           <option value="brazil">Bresil</option>
@@ -70,7 +72,7 @@
         <input class="border-4 border-indigo-500" type="range" id="intensity" name="intensity" min="1" max="10">
       </label>
 
-      <fieldset>
+      <span>
         <h3>Température</h3>
         <label>chaud
           <input type="radio" id="hot" name="Temperature" value="chaud">
@@ -78,10 +80,10 @@
         <label> glacé
           <input type="radio" name="Temperature" id="iced" value="glacé">
         </label>
-      </fieldset>
-      <h2 class="bg-blue-500">FORM2</h2>
-      <h3> Tailles disponibles </h3>
-      <fieldset>
+      </span>
+
+      <span>
+        <h3> Tailles disponibles </h3>
         <label>Small
           <input type="checkbox" id="small" name="sizes" value="small">
         </label>
@@ -92,8 +94,9 @@
           <input type="checkbox" id="large" name="sizes" value="large">
         </label>
 
-      </fieldset>
-      <fieldset>
+      </span>
+
+      <div>
         <h3> Options de lait </h3>
         <label>Vache
           <input type="checkbox" name="milk" id="cowmilk" value="vache">
@@ -110,8 +113,8 @@
         <label>Amande
           <input type="checkbox" name="milk" id="almondmilk" value="amande">
         </label>
-      </fieldset>
-      <fieldset>
+      </div>
+      <span>
         <h3>Suppléments</h3>
         <label>Vanille
           <input type="checkbox" name="supplements" id="vanilla" value="Vanille">
@@ -126,8 +129,8 @@
         </label>
         <button type="button" id="previous1"> Previous </button>
         <button class="border-4 border-indigo-500" type="button" id="next2"> NEXT </button>
-      </fieldset>
-    </fieldset >
+      </span>
+    </fieldset>
 
     <section id="thirdRange">
 
