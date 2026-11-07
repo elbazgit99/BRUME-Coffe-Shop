@@ -58,7 +58,8 @@ function priceValidator(){
 // get the input 
 let descriptionInput = document.querySelector('#description')
 //pass event to  the element
-descriptionInput.addEventListener('input' , function descriptionValidator(params) {
+descriptionInput.addEventListener('input' , descriptionValidator)
+function descriptionValidator() {
   //get the value
   let descriptionValue = descriptionInput.value
   // get the message element
@@ -76,8 +77,7 @@ descriptionInput.addEventListener('input' , function descriptionValidator(params
   } catch (error) {
     descriptionMsg.textContent = error
   }
-})
-
+}
 
 //get input name 
 let productImageInput = document.querySelector('#productImage')
@@ -117,3 +117,12 @@ function promoValidator(){
   }
 
 }
+
+let selectOriginOptions = document.querySelector(`#selectOrigin`)
+selectOriginOptions.addEventListener('change',function selectedOptionsValidator() {
+  let optionMsg = document.querySelector(`#optionMsg`)
+  isRequired(selectOriginOptions,true)
+  if (selectOriginOptions.valueb == ) {
+    
+  }
+})
