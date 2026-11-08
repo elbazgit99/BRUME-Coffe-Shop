@@ -1,3 +1,6 @@
+// TOASTIFY FUNCTIONS FOR SUCCESS AND ERROR
+
+
 
 let PreventFormSubmite = document.querySelector('form')
 PreventFormSubmite.addEventListener('submit', (event) => {
@@ -10,11 +13,11 @@ function isPrice(price){return /^\d{1,2}(?:[.,]\d{0,2})?$/.test(price)} // check
 
 // function isEmptyCheck(input){return if (input) {}} // avoid assigning a variable to a string value like textContent
 
-let productNameInput = document.querySelector('#productName')
+let productNameInput = document.querySelector('#coffeName')
 productNameInput.addEventListener("input", productNameValidator)
 function productNameValidator() {
   let productValue = productNameInput.value
-  let productMessage = document.querySelector('#productMessage')
+  let productMessage = document.querySelector('#coffeMessage')
 
   //this is invalid because the referense only check the reference not the string : 
   //let msgContent = productMessage.textContent //NOTE : forget this+
@@ -25,6 +28,7 @@ function productNameValidator() {
     if (productValue == '') { productMessage.textContent = '' }
   }catch(error) { productMessage.textContent = error }
 }
+
 
 
 

@@ -8,7 +8,6 @@
   },
   "scripts": {
     "dev": "tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
-
   },
   "repository": {
     "type": "git",
@@ -23,6 +22,7 @@
   },
   "homepage": "https://github.com/elbazgit99/BRUME-Coffe-Shop#readme",
   "dependencies": {
-    "tailwindcss": "^4.3.4"
+    "tailwindcss": "^4.3.4",
+    "toastify-js": "^1.12.0"
   }
 }
