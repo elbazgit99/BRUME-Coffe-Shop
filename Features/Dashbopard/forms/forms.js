@@ -85,7 +85,7 @@ let productImageInput = document.querySelector('#productImage')
 productImageInput.addEventListener('input', imageValidator);
 function imageValidator(){
   // get input value
-  let imageValue = productImageInput.valueput
+  let imageValue = productImageInput.value
   // get the message element
   let imageMessage = document.querySelector(`#imageMessage`)
 
@@ -119,10 +119,18 @@ function promoValidator(){
 }
 
 let selectOriginOptions = document.querySelector(`#selectOrigin`)
-selectOriginOptions.addEventListener('change',function selectedOptionsValidator() {
+selectOriginOptions.addEventListener('change',selectedOptionsValidator)
+
+function selectedOptionsValidator() {
   let optionMsg = document.querySelector(`#optionMsg`)
-  isRequired(selectOriginOptions,true)
-  if (selectOriginOptions.valueb == ) {
-    
+  try {
+      isRequired(selectOriginOptions,true)
+      if (selectOriginOptions.valueb == ``) {
+        throw new Error(`select origin option is a Must`)
+      }
+  } catch (error) {
+    optionMsg.textContent = error
   }
-})
+
+
+}
