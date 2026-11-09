@@ -112,11 +112,25 @@ function discountValidator() {
 let expireDateInpt = document.querySelector(`#expireDate`)
 expireDateInpt.addEventListener(`input`, expireDateValidator)
 function expireDateValidator() {
-
+  let today = new Date()
+  let expireDateValue = expireDateInpt.value
+  let endDateMsg = document.querySelector(`#endDateMsg`)
+  let currentDate = `${today.getDate()}/${today.getMonth()+1}/${today.getFullYear()}at : ${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`
+try {
+  if (expireDateValue <  currentDate) {
+    throw new Error('Select Valid Date')
+  }
+  if (expireDateValue == ``) {
+    endDateMsg.textContent = ``
+  }
+} catch (error) {
+  endDateMsg.textContent = error
+}
 }
 
 
 
+//SECOND FIELDSET
 let selectOriginOptions = document.querySelector(`#selectOrigin`)
 selectOriginOptions.addEventListener('change', selectedOptionsValidator)
 
@@ -132,9 +146,20 @@ function selectedOptionsValidator() {
 }
 
 let intensityRangeInpt = document.querySelector('#intensity')
+intensityRangeInpt.addEventListener('change', intensetyRangeValidator)
 function intensetyRangeValidator() {
-
+  let rangeValue = intensityRangeInpt.value
+  
 }
+
+
+
+let temperatureRadioInpts = document.querySelectorAll(`input[name="temperature"]`)
+temperatureRadioInpts.forEach((tempRadio) => {
+  tempRadio.addEventListener(`change`, function temperatureValidature(){
+
+  })
+})
 
 
 
@@ -165,12 +190,8 @@ function mainValidator() {
 let formSubmission = document.querySelector('form')
 formSubmission.addEventListener('submit', (event) => {
   event.preventDefault()
-  try {
     if (!mainValidator()) {
       return
     }
-  } catch (error) {
-
-  }
 
 })
