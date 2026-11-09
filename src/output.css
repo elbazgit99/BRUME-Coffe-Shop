@@ -11,6 +11,9 @@
     --color-red-800: oklch(44.4% 0.177 26.899);
     --spacing: 0.25rem;
     --container-3xs: 16rem;
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --font-weight-bold: 700;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -207,6 +210,14 @@
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
   }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
   .text-red-800 {
     color: var(--color-red-800);
   }
@@ -215,8 +226,12 @@
   font-family: DM-Sans-Bold;
   src: url(/fonts/DMSans_18pt-Bold.ttf);
 }
+@font-face {
+  font-family: DM-Sans-Regular;
+  src: url(/fonts/DMSans_18pt-Regular.ttf);
+}
 * {
-  font-family: 'DM-Sans-Bold';
+  font-family: 'DM-Sans-Regular';
 }
 form {
   display: flex;
@@ -235,10 +250,12 @@ form {
   }
   input[type="checkbox"],input[type="radio"] {
     margin-bottom: 0;
-    width: 3rem;
+    width: 2rem;
     height: 2rem;
-    margin: 0 5% 0 5%;
+    margin: 0 2% 0 2%;
     border: #394B32 solid 3px;
+    position: relative;
+    top: 0.5rem;
   }
   input[type="range"] {
     accent-color: #394B32;
@@ -255,20 +272,22 @@ form {
   }
   input:checked::after {
     content: "✓";
+    display: flex;
+    justify-self: center;
+    align-items: center;
     font-weight: bolder;
     font-size: larger;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
   }
   label {
-    font-size: 15px;
-    position: relative;
+    font-size: 1rem;
+    font-weight: lighter;
     width: 100%;
   }
   small {
+    font-family: "DM-Sans-Regular";
+    font-size: x-small;
     font-size: 12px;
-    position: relative;
     top: 3px;
   }
 }
@@ -300,12 +319,17 @@ legend {
   inherits: false;
   initial-value: 0;
 }
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: block))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
+      --tw-font-weight: initial;
     }
   }
 }

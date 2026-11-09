@@ -13,13 +13,16 @@
   <link rel="stylesheet" href="public/style.css">
 </head>
 
-<body class="bg-oklch-(75% 0.183 55.934)">
+<body >
 
   <!-- npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch -->
   <form class="flex flex-col  gap-y-1 px-100 py-10" id="mainFormWrapper">
+    <progress></progress>
+
+
     <!-- FIRST PAGE -->
     <fieldset class="flex  flex-col gap-x-10 gap-y-7 " id="firstRang">
-      <legend  class="absolute left-1/2 -translate-x-1/2" >General Information</legend>
+      <legend >General Information</legend>
       <!-- Error message -->
       <label> Coffe Name
         <small class=" text-red-800 " id="coffeMessage"></small>
@@ -41,13 +44,13 @@
         <input type="url"  id="productImage" name="productimage">
       </label>
 
-      <label class="flex">Coffe <br>Promotion ?
+      <label class="flex">Coffe  <br> Promotion ?
         <input type="checkbox" class="w-24" id="promotion" name="promotion">
       </label>
 
       <!-- if checkbox checked then show discount percentage -->
       <div id="ShowedIfPromoCheckedSpn" style="display: none;">
-        <label> Discount Percentage
+        <label> Discount Percentage %
           <small class=" text-red-800 " id="discountMsg"></small>
           <input type="text"  id="discount" name="discount">
         </label>
@@ -56,7 +59,7 @@
           <input type="date"  id="expireDate" name="expireDate">
         </label>
       </div>
-      <button type="button"  id="next1">NEXT</button>
+      <button type="button"  id="next1">Next</button>
 
     </fieldset>
 
@@ -66,7 +69,7 @@
     <fieldset class="flex  flex-col gap-x-10 gap-y-7 " id="secondRange">
 
       <legend>Features & Options</legend>
-      <label>Origin of grains:
+      <label> <h4 class="text-xl font-bold" style="display: inline-block;" >Origin of grains  :</h4>
         <select  name="origin" id="selectOrigin">
           <!-- "disabled" for insuring this option is unclickable "selected" default selected -->
           <option value="" disabled selected>Select Origin of grains:</option>
@@ -77,12 +80,13 @@
         </select>
       </label>
 
-      <label class="flex  flex-row gap-x-10 gap-y-7 " style="display: inline-block;">Roasting level /Intensity:
+      <label class="flex  flex-row gap-x-10 gap-y-7 " style="display: inline-block;">
+        <h4 class="text-xl font-bold" style="display: inline-block;"  >Roasting level /Intensity:</h4>
         <input type="range"  id="intensity" name="intensity" step="1" min="1" max="10">
       </label>
 
       <span>
-        <h4>Temperature</h4>
+        <h4 class="text-xl font-bold ">Temperature</h4>
         <label>Hot
           <input type="radio" name="temperature" id="hot" value="Hot">
         </label>
@@ -92,7 +96,7 @@
       </span>
 
       <span>
-        <h4>Available sizes</h4>
+        <h4 class="text-xl font-bold" >Available sizes</h4>
         <label>Small
           <input type="checkbox" id="small" name="sizes" value="small">
         </label>
@@ -105,7 +109,7 @@
       </span>
 
       <span>
-        <h4>Milk options</h4>
+        <h4 class="text-xl font-bold" >Milk options</h4>
         <label>Cow
           <input type="checkbox" name="milk" id="Cow" value="Cow">
         </label>
@@ -124,7 +128,7 @@
       </span>
 
       <span>
-        <small>Supplements</small>
+        <h4 class="text-xl font-bold">Supplements</h4>
         <label>Vanilla
           <input type="checkbox" name="supplements" id="vanilla" value="Vanilla">
         </label>
@@ -138,14 +142,14 @@
         </label>
 
       </span>
-      <span class="gap-x-10 gap-y-7" >
+      <span class=" flex gap-x-10 gap-y-7" >
         <button  id="optionsPreviousBtn"> Previous </button>
         <button  id="optionsNextBtn"> Next</button>
       </span>
     </fieldset>
 
     <section class="DisplaySummarySection" class="ThirdRange" >
-      <h4>Displayed Forms</h4>
+      <h4 class="text-xl font-bold" >Displayed Forms</h4>
     </section>
   </form>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>

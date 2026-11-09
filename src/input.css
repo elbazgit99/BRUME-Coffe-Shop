@@ -4,15 +4,19 @@
   font-family: DM-Sans-Bold;
   src: url(/fonts/DMSans_18pt-Bold.ttf);
 }
+@font-face {
+  font-family: DM-Sans-Regular;
+  src: url(/fonts/DMSans_18pt-Regular.ttf);
+}
 *{
-  font-family:'DM-Sans-Bold' ;
+  font-family:'DM-Sans-Regular' ;
 }
 form {
   display: flex;
   justify-content: space-between;
   column-gap: 0.5rem;
   margin-bottom: 0.3rem;
-
+  
   input,textarea {
     background-color: #FFFFFF;
     appearance: none;
@@ -25,16 +29,17 @@ form {
   }
   input[type="checkbox"],input[type="radio"]{
     margin-bottom: 0;
-    width: 3rem;
+    width: 2rem;
     height: 2rem;
-    margin:0 5% 0 5%;
+    margin:0 2% 0 2%;
     border: #394B32 solid 3px;
+    position: relative;
+    top: 0.5rem;
   }
   input[type="range"]{
     accent-color: #394B32;
-    animation: 1s;
     width: 50%;
-    height: 1rem;
+    height: 0.7rem;
     margin:0 5%;
     padding: 0;
     border: #394B32 solid 3px;
@@ -46,23 +51,26 @@ form {
 
   input:checked::after {
     content: "✓";
+    display: flex;
+    justify-self: center;
+    align-items: center;
     font-weight: bolder;
     font-size: larger;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+
   }
 
 
   label {
-    font-size: 15px;
-    position: relative;
+    font-size: 1rem;
+    font-weight: lighter;
     width: 100%;
   }
 
   small {
+    font-family: "DM-Sans-Regular";
+    font-size: x-small;
     font-size: 12px;
-    position: relative;
     top: 3px;
   }
 
