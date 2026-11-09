@@ -6,84 +6,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/assets/icons/logo.png" aria-details="coffe logo">
   <title>BRUM</title>
-  <script src="./admin/admin.js" async></script>
-  <script src="./wizard/wizard.js" async></script>
-  <script src="./forms/forms.js" async></script>
-  <link rel="stylesheet" href="../../src/output.css">
+  <script src="./admin/admin.js" defer></script>
+  <script src="./wizard/wizard.js" defer></script>
+  <script src="./forms/forms.js" defer></script>
+  <link rel="stylesheet" href="/src/output.css">
   <link rel="stylesheet" href="public/style.css">
 </head>
 
-<body>
+<body class="bg-oklch-(75% 0.183 55.934)">
 
   <!-- npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch -->
-  <form class="grid h-56 grid-cols-3 content-start gap-4 " id="mainFormWrapper">
+  <form class="flex flex-col  gap-y-1 px-100 py-10" id="mainFormWrapper">
     <!-- FIRST PAGE -->
-    <fieldset class="flex flex-col" id="firstRang">
-      <legend>General Information</legend>
+    <fieldset class="flex  flex-col gap-x-10 gap-y-7 " id="firstRang">
+      <legend  class="absolute left-1/2 -translate-x-1/2" >General Information</legend>
       <!-- Error message -->
       <label> Coffe Name
-        <h3 class="bg-blue-500 text-red-800 " id="coffeMessage"></h3>
-        <input type="text" class="border-4 border-indigo-500" id="coffeName" name="coffeName">
-        <h2> Informations Générales </h2>
+        <small class=" text-red-800 " id="coffeMessage"></small>
+        <input type="text"  id="coffeName" name="coffeName">
       </label>
 
       <label> Base Price
-        <h3 class="bg-blue-500 text-red-800 " id="priceMessage"></h3>
-        <input type="number" min="0" step="0.01" class="border-4 border-indigo-500" id="basePrice" name="basePrice">
+        <small class=" text-red-800 " id="priceMessage"></small>
+        <input type="text" min="0" step="0.01"  id="basePrice" name="basePrice">
       </label>
 
-      <textarea class="border-4 border-indigo-500" name="description" id="description">description</textarea>
+      <label >Description
+        <small class=" text-red-800 " id="descriptionMsg"></small>
+        <textarea style="display: block;"  class="basis-3xs"  name="description" id="description"></textarea>
+      </label>
 
       <label>Product Image
-        <input type="url" class="border-4 border-indigo-500" id="productImage" name="productimage">
+        <small class=" text-red-800 " id="imageMsg"></small>
+        <input type="url"  id="productImage" name="productimage">
       </label>
-      <!-- if this checked then show discount percentage -->
-      <label>Coffe Promotion
-        <input type="checkbox" class="border-4 border-indigo-500" id="promotion" name="promotion">
+
+      <label class="flex">Coffe <br>Promotion ?
+        <input type="checkbox" class="w-24" id="promotion" name="promotion">
       </label>
 
       <!-- if checkbox checked then show discount percentage -->
-      <label> Discount Percentage
-        <input type="number" class="border-4 border-indigo-500" id="discount" name="discount">
-      </label>
-      <!-- if checkbox checked then show End Date -->
-      <label>End Date
-        <input type="date" class="border-4 border-indigo-500" id="expireDate" name="expireDate">
-      </label>
+      <div id="ShowedIfPromoCheckedSpn" style="display: none;">
+        <label> Discount Percentage
+          <small class=" text-red-800 " id="discountMsg"></small>
+          <input type="text"  id="discount" name="discount">
+        </label>
 
-      <button class="border-4 border-indigo-500" id="next1">NEXT</button>
+        <label>End Date
+          <input type="date"  id="expireDate" name="expireDate">
+        </label>
+      </div>
+      <button type="button"  id="next1">NEXT</button>
 
     </fieldset>
 
-    <!-- SECOND PAGE -->
-    <fieldset id="secondRange">
 
-<<<<<<< HEAD
+
+    <!-- SECOND PAGE -->
+    <fieldset class="flex  flex-col gap-x-10 gap-y-7 " id="secondRange">
+
       <legend>Features & Options</legend>
       <label>Origin of grains:
-        <select class="border-4 border-indigo-500" name="origin" id="origin">
+        <select  name="origin" id="selectOrigin">
           <!-- "disabled" for insuring this option is unclickable "selected" default selected -->
           <option value="" disabled selected>Select Origin of grains:</option>
           <option value="colombia">Colombia</option>
           <option value="ethiopia"> Ethiopia</option>
           <option value="brazil">Brazil</option>
           <option value="mix">Homemade Blend</option>
-=======
-      <legend> Caractéristiques & Options </legend>
-      <label> Origine des grains
-        <h3 class="bg-blue-500 text-red-800 " id="optionMsg"></h3>
-        <select class="border-4 border-indigo-500" name="origin" id="selectOrigin">
-          <option value="" selected disabled>choose an origin</option>
-          <option value="colombia">colombie</option>
-          <option value="ethiopia"> ethiopie</option>
-          <option value="brazil">Bresil</option>
-          <option value="mix">melange maison</option>
->>>>>>> e885c1f (add : select option)
         </select>
       </label>
 
-      <label>Roasting level /Intensity:
-        <input type="range" class="border-4 border-indigo-500" id="intensity" name="intensity" min="1" max="10">
+      <label class="flex  flex-row gap-x-10 gap-y-7 " style="display: inline-block;">Roasting level /Intensity:
+        <input type="range"  id="intensity" name="intensity" step="1" min="1" max="10">
       </label>
 
       <span>
@@ -129,7 +124,7 @@
       </span>
 
       <span>
-        <h3>Supplements</h3>
+        <small>Supplements</small>
         <label>Vanilla
           <input type="checkbox" name="supplements" id="vanilla" value="Vanilla">
         </label>
@@ -143,9 +138,9 @@
         </label>
 
       </span>
-      <span>
-        <button class="border-4 border-indigo-500" id="optionsPreviousBtn"> Previous </button>
-        <button class="border-4 border-indigo-500" id="optionsNextBtn"> Next</button>
+      <span class="gap-x-10 gap-y-7" >
+        <button  id="optionsPreviousBtn"> Previous </button>
+        <button  id="optionsNextBtn"> Next</button>
       </span>
     </fieldset>
 

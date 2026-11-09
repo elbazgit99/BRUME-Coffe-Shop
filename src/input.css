@@ -1,4 +1,83 @@
-@import "tailwindcss";
-@import Toastify from 'toastify-js'
-
 /* npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch    */
+@import "tailwindcss";
+@font-face {
+  font-family: DM-Sans-Bold;
+  src: url(/fonts/DMSans_18pt-Bold.ttf);
+}
+*{
+  font-family:'DM-Sans-Bold' ;
+}
+form {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 0.5rem;
+  margin-bottom: 0.3rem;
+
+  input,textarea {
+    background-color: #FFFFFF;
+    appearance: none;
+    border: solid 1px #DFD5C8;
+    height: 2.5rem;
+    width: 100%;
+    border-radius: 1rem;
+    cursor: pointer;
+    padding: 0 1rem;
+  }
+  input[type="checkbox"],input[type="radio"]{
+    margin-bottom: 0;
+    width: 3rem;
+    height: 2rem;
+    margin:0 5% 0 5%;
+    border: #394B32 solid 3px;
+  }
+  input[type="range"]{
+    accent-color: #394B32;
+    animation: 1s;
+    width: 50%;
+    height: 1rem;
+    margin:0 5%;
+    padding: 0;
+    border: #394B32 solid 3px;
+  }
+  input:checked {
+    border-color: 5px var(--border-checked);
+    background-color: var(--radio-checked-clr);
+  }
+
+  input:checked::after {
+    content: "✓";
+    font-weight: bolder;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  label {
+    font-size: 15px;
+    position: relative;
+    width: 100%;
+  }
+
+  small {
+    font-size: 12px;
+    position: relative;
+    top: 3px;
+  }
+
+}
+
+button{
+    color: #FFFFFF;
+    background-color: #394B32;
+    border-radius: 1rem;
+    height: 2.5rem;
+    width: 50%;
+    border: #394B32;
+    cursor: pointer;
+}
+legend{
+  margin-bottom: 2rem !important;
+  font-size: xx-large;
+}
