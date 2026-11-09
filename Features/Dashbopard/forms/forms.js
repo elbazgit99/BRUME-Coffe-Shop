@@ -1,20 +1,37 @@
 function isRejectedToast(msg) {
   Toastify({
-    text: msg,
-    duration: 3000,
-    gravity: "top",
-    position: "right",
-    background: "#dc2626"
+        text: msg,
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+            background: "linear-gradient(to right, #ff5f6d, #c31432)",
+            borderRadius: "8px",
+            padding: "12px 20px",
+            fontSize: "14px",
+            fontWeight: "500"
+        }
   }).showToast()
 }
 
+
 function isSuccessToast(msg) {
   Toastify({
-    text: msg,
-    duration: 3000,
-    gravity: "top",
-    position: "right",
-    background: "#16a34a"
+        text: msg,
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+            borderRadius: "8px",
+            padding: "12px 20px",
+            fontSize: "14px",
+            fontWeight: "500"
+        }
   }).showToast()
 }
 
@@ -132,7 +149,7 @@ function expireDateValidator() {
   let today = new Date()
   let expireDateValue = expireDateInpt.value
   let endDateMsg = document.querySelector(`#endDateMsg`)
-  let currentDate = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`
+  let currentDate = `${today.getFullYear()}/${today.getMonth() + 1}/${today.getDate()}`
   try {
     if (expireDateValue == ``) { throw new Error(`Select Expiration Date`) }
     if (expireDateValue < currentDate) { throw new Error(`Select Valid Date`) }
@@ -257,5 +274,5 @@ function DisplayForm() {
     productList.append(li)
   })
 
-  console.log(db)
+
 }
