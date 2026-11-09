@@ -232,6 +232,30 @@
 * {
   font-family: 'DM-Sans-Regular';
 }
+.progress {
+  display: flex;
+  align-items: center;
+  width: 20rem;
+  margin-bottom: 2rem;
+}
+.step {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #cfcbcb;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.step.active {
+  background: black;
+}
+.line {
+  flex-grow: 1;
+  height: 3px;
+  background: #d0cdcd;
+}
 form {
   display: flex;
   justify-content: space-between;

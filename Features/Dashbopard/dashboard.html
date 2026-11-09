@@ -17,28 +17,37 @@
 <body>
 <!-- npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch  -->
   <form class="flex flex-col justify-center items-center gap-y-1 px-100 py-10" id="mainFormWrapper">
+    
+<div class="progress">
+    <div class="step active">1</div>
+    <div class="line"></div>
+    <div class="step">2</div>
+    <div class="line"></div>
+    <div class="step">3</div>
+</div>
+
 
     <fieldset class="flex flex-col gap-x-10 gap-y-7" id="generalInformationForm">
       <legend>General Information</legend>
 
       <label>Coffee Name
         <small class="text-red-800" id="coffeMessage"></small>
-        <input type="text" id="coffeName" name="coffeName" maxlength="40" required>
+        <input type="text" id="coffeName" name="coffeName" maxlength="40" >
       </label>
 
       <label>Base Price
         <small class="text-red-800" id="priceMessage"></small>
-        <input type="text" id="basePrice" name="basePrice" maxlength="5" required>
+        <input type="text" id="basePrice" name="basePrice" maxlength="5" >
       </label>
 
       <label>Description
         <small class="text-red-800" id="descriptionMsg"></small>
-        <textarea style="display: block;" class="basis-3xs" name="description" id="description" maxlength="500" required></textarea>
+        <textarea style="display: block;" class="basis-3xs" name="description" id="description" maxlength="500" ></textarea>
       </label>
 
       <label>Product Image
         <small class="text-red-800" id="imageMsg"></small>
-        <input type="url" id="productImage" name="productimage" required>
+        <input type="url" id="productImage" name="productimage" >
       </label>
 
       <label class="flex">Coffee <br> Promotion?
@@ -66,7 +75,7 @@
 
       <label>
         <h4 class="text-xl font-bold" id="optionMsg" style="display: inline-block;">Origin of grains:</h4>
-        <select name="origin" id="selectOrigin" required>
+        <select name="origin" id="selectOrigin" >
           <option value="" disabled selected>Select Origin of grains:</option>
           <option value="colombia">Colombia</option>
           <option value="ethiopia">Ethiopia</option>
@@ -139,10 +148,10 @@
 
     </fieldset>
 
-    <section id="DisplaySummarySection" class="ThirdRange" style="display: none;">
+    <section id="DisplaySummarySection" class="ThirdRange" >
       <h4 class="text-xl font-bold">Displayed Forms</h4>
       <ul id="productList"></ul>
-      <button type="reset" id="resetBtn" style="width: 100%;">Back Home</button>
+      <button type="reset" id="resetBtn" style="width: 100%;">Reset</button>
     </section>
 
   </form>

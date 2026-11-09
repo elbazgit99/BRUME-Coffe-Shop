@@ -39,7 +39,7 @@ function isLetters(name) { return /^[A-Za-z]+(?: [A-Za-z]*)?$/.test(name) }
 function isMaxLength(inputName, MaxLengthNum) { return inputName.maxLength = MaxLengthNum }
 function isPrice(price) { return /^\d{1,2}(?:[.,]\d{0,2})?$/.test(price) }
 function isDescription(dscrip) { return /^[\p{L}\p{N} .,:\n]*$/u.test(dscrip) }
-function isUrl(url) { return /^(https?:\/\/.+|\.{0,2}\/.*|[\w-]+(?:\/[\w.-]+)*)\.(jpg|jpeg|png|gif|webp|svg)$/i.test(url) }
+function isUrl(url) { return /^(?:\/|\.{1,2}\/)?[\w.-]+(?:\/[\w.-]+)*\.(?:jpg|jpeg|png|gif|webp|svg)$/i.test(url) }
 function isRequired(inputName, boolean) { return inputName.required = boolean }
 function isDiscount(des) { return /^(100|[1-9]?\d)%$/.test(des) }
 
@@ -60,6 +60,7 @@ function coffeNameValidator() {
   } catch (error) { coffeMessage.textContent = error.message; return false }
 }
 
+
 let basePriceInput = document.querySelector(`#basePrice`)
 basePriceInput.addEventListener(`input`, priceValidator)
 
@@ -75,6 +76,7 @@ function priceValidator() {
     return true
   } catch (error) { priceMessage.textContent = error.message; return false }
 }
+
 
 let descriptionInput = document.querySelector(`#description`)
 descriptionInput.addEventListener('input', descriptionValidator)
@@ -92,6 +94,7 @@ function descriptionValidator() {
   } catch (error) { descriptionMsg.textContent = error.message; return false }
 }
 
+
 let productImageInput = document.querySelector('#productImage')
 productImageInput.addEventListener('input', imageValidator)
 
@@ -99,13 +102,14 @@ function imageValidator() {
   let imageValue = productImageInput.value
   let imageMessage = document.querySelector(`#imageMsg`)
   try {
-    isRequired(productImageInput, true)
+    isRequired(productImageInput, false)
     if (imageValue.trim() == ``) { throw new Error(`Enter Image URL`) }
     if (!isUrl(imageValue)) { throw new Error(`The Image Must be a URL Format`) }
     imageMessage.textContent = ``
     return true
   } catch (error) { imageMessage.textContent = error.message; return false }
 }
+
 
 let promoCheckbox = document.querySelector(`#promotion`)
 promoCheckbox.addEventListener('change', promoValidator)
@@ -126,6 +130,7 @@ function promoValidator() {
   }
 }
 
+
 let discountInpt = document.querySelector(`#discount`)
 discountInpt.addEventListener('input', discountValidator)
 
@@ -141,6 +146,7 @@ function discountValidator() {
     return true
   } catch (error) { discountMsg.textContent = error.message; return false }
 }
+
 
 let expireDateInpt = document.querySelector(`#expireDate`)
 expireDateInpt.addEventListener(`input`, expireDateValidator)
@@ -158,6 +164,7 @@ function expireDateValidator() {
   } catch (error) { endDateMsg.textContent = error.message; return false }
 }
 
+
 let selectOriginOptions = document.querySelector(`#selectOrigin`)
 selectOriginOptions.addEventListener('change', selectedOptionsValidator)
 
@@ -171,10 +178,12 @@ function selectedOptionsValidator() {
   } catch (error) { optionMsg.textContent = error.message; return false }
 }
 
+
 let intensityRangeInpt = document.querySelector('#intensity')
 intensityRangeInpt.addEventListener('change', intensetyRangeValidator)
 
 function intensetyRangeValidator() { return intensityRangeInpt.value >= 1 && intensityRangeInpt.value <= 10 }
+
 
 let temperatureRadioInpts = document.querySelectorAll(`input[name="temperature"]`)
 temperatureRadioInpts.forEach((tempRadio) => { tempRadio.addEventListener(`change`, temperatureValidature) })
@@ -184,6 +193,7 @@ function temperatureValidature() {
   temperatureRadioInpts.forEach((tempRadio) => { if (tempRadio.checked) { isTemperatureSelected = true } })
   return isTemperatureSelected
 }
+
 
 function mainValidator() {
   let isCoffeNameValid = coffeNameValidator()
@@ -201,6 +211,7 @@ function mainValidator() {
 
   return true
 }
+
 
 let formSubmission = document.querySelector('form')
 
@@ -220,16 +231,19 @@ formSubmission.addEventListener('submit', (event) => {
   DisplaySummarySection.style.display = "block"
 })
 
+
 let featuresSection = document.querySelector(`#featuresSection`)
 let generalInformationForm = document.querySelector(`#generalInformationForm`)
 let DisplaySummarySection = document.querySelector(`#DisplaySummarySection`)
 let firstNextBtn = document.querySelector(`#Next1`)
+
 
 firstNextBtn.addEventListener('click', function firstBtnNavigation() {
   generalInformationForm.style.display = "none"
   featuresSection.style.display = "block"
   DisplaySummarySection.style.display = "none"
 })
+
 
 let secondNextBtn = document.querySelector(`#optionsNextBtn`)
 let optionsPreviousBtn = document.querySelector(`#optionsPreviousBtn`)
@@ -242,6 +256,7 @@ optionsPreviousBtn.addEventListener('click', function previeceBtn() {
   DisplaySummarySection.style.display = "none"
 })
 
+
 let resetBtn = document.querySelector('#resetBtn')
 
 resetBtn.addEventListener(`click`, function resetBtnNavigation() {
@@ -250,10 +265,11 @@ resetBtn.addEventListener(`click`, function resetBtnNavigation() {
   DisplaySummarySection.style.display = "none"
 })
 
-let  db = []
+
+let db = []
 
 function DisplayForm() {
- db = []
+  db = []
 
   let allInputs = document.querySelectorAll(`input, textarea, select`)
 
@@ -273,6 +289,4 @@ function DisplayForm() {
     li.textContent = product
     productList.append(li)
   })
-
-
 }
