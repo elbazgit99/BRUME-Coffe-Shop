@@ -220,3 +220,10 @@ optionsPreviousBtn.addEventListener('click', function previeceBtn(){
   generalInformationForm.style.display = "none"
   DisplaySummarySection.style.display = "none"
 })
+
+let resetBtn = document.querySelector('#resetBtn')
+resetBtn.addEventListener(`click`, function resetBtn(){
+  generalInformationForm.style.display = "block"
+  featuresSection.style.display = "none"
+  DisplaySummarySection.style.display = "none"
+})
