@@ -248,8 +248,6 @@ firstNextBtn.addEventListener('click', function firstBtnNavigation() {
 let secondNextBtn = document.querySelector(`#optionsNextBtn`)
 let optionsPreviousBtn = document.querySelector(`#optionsPreviousBtn`)
 
-optionsPreviousBtn.type = `button`
-
 optionsPreviousBtn.addEventListener('click', function previeceBtn() {
   featuresSection.style.display = "none"
   generalInformationForm.style.display = "block"
