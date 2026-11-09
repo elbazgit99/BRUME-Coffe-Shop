@@ -3,7 +3,6 @@ function isRejectedToast(msg) {
     Toastify({
         text: msg,
         duration: 3000,
-        close: true,
         gravity: "top",
         position: "right",
         stopOnFocus: true,
@@ -21,7 +20,6 @@ function isSuccessToast(msg) {
     Toastify({
         text: msg,
         duration: 3000,
-        close: true,
         gravity: "top",
         position: "right",
         stopOnFocus: true,
@@ -167,13 +165,14 @@ let expireDateInpt = document.querySelector(`#expireDate`)
 expireDateInpt.addEventListener(`change`, expireDateValidator)
 
 function expireDateValidator() {
-    let expireDateValue = expireDateInpt.value
+    let expireDateValue = expireDateInpt.valueAsNumber
     let endDateMsg = document.querySelector(`#endDateMsg`)
     let today = new Date()
     let currentDate = `${Number(today.getFullYear())}/${Number(today.getMonth() + 1)}/${Number(today.getDate())}`
 
   
     try {
+        isRequired(expireDateInpt, false)
         if (expireDateValue == ``) { throw new Error(`Select Expiration Date`) }
         if (expireDateValue < currentDate) { throw new Error(`Select Valid Date`) }
         endDateMsg.textContent = ``
@@ -224,15 +223,14 @@ function temperatureValidature() {
   })
 }
 
-
-
 let featuresSection = document.querySelector(`#featuresSection`)
 let generalInformationForm = document.querySelector(`#generalInformationForm`)
 let DisplaySummarySection = document.querySelector(`#DisplaySummarySection`)
 
 let firstNextBtn = document.querySelector(`#Next1`)
 
-firstNextBtn.addEventListener('click', function() {
+firstNextBtn.addEventListener('click', function(event) {
+  event.preventDefault()
     let isGeneralValid = coffeNameValidator() && priceValidator() &&
         descriptionValidator() && imageValidator() && promoValidator()
 
@@ -258,20 +256,20 @@ optionsPreviousBtn.addEventListener('click',backToGeneralSection)
 
 secondNextBtn.addEventListener('click', function() {
 
-    if (!mainValidator()) {
-        isRejectedToast("Please check your forms")
-        return false
-    }else{
-        isSuccessToast("Product added successfully ")
-        generalInformationForm.style.display = "none"
-        featuresSection.style.display = "none"
-        DisplaySummarySection.style.display = "block"
-    }
+    // if (!mainValidator()) {
+    //     isRejectedToast("Please check feature forms")
+    //     return false
+    // }else{
+    //     isSuccessToast("Product added successfully ")
+    //     generalInformationForm.style.display = "none"
+    //     featuresSection.style.display = "none"
+    //     DisplaySummarySection.style.display = "block"
+    // }
 
-    DisplayForm()
-    featuresSection.style.display = "none"
-    generalInformationForm.style.display = "none"
-    DisplaySummarySection.style.display = "block"
+    // DisplayForm()
+    // featuresSection.style.display = "none"
+    // generalInformationForm.style.display = "none"
+    // DisplaySummarySection.style.display = "block"
 })
 
 
