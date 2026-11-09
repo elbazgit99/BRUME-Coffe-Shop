@@ -21,7 +21,7 @@
 
 
     <!-- FIRST PAGE -->
-    <fieldset class="flex  flex-col gap-x-10 gap-y-7 " id="firstRang">
+    <fieldset class="flex  flex-col gap-x-10 gap-y-7 " id="generalInformationForm">
       <legend >General Information</legend>
       <!-- Error message -->
       <label> Coffe Name
@@ -60,14 +60,14 @@
           <input type="date"  id="expireDate" name="expireDate">
         </label>
       </div>
-      <button type="button"  id="next1">Next</button>
+      <button type="button"  id="Next1">Next</button>
 
     </fieldset>
 
 
 
     <!-- SECOND PAGE -->
-    <fieldset class="flex  flex-col gap-x-10 gap-y-7 " id="secondRange">
+    <fieldset class="flex  flex-col gap-x-10 gap-y-7 " id="featuresSection">
 
       <legend>Features & Options</legend>
       <label> <h4 class="text-xl font-bold" style="display: inline-block;" >Origin of grains  :</h4>
@@ -89,7 +89,7 @@
       <span>
         <h4 class="text-xl font-bold ">Temperature</h4>
         <label>Hot
-          <input type="radio" name="temperature" id="hot" value="Hot">
+          <input type="radio" name="temperature" id="hot" value="Hot" checked>
         </label>
         <label> Frozen
           <input type="radio" name="temperature" id="Frozen" value="Frozen">
@@ -99,7 +99,7 @@
       <span>
         <h4 class="text-xl font-bold" >Available sizes</h4>
         <label>Small
-          <input type="checkbox" id="small" name="sizes" value="small">
+          <input type="checkbox" id="small" name="sizes" value="small" checked>
         </label>
         <label>Medium
           <input type="checkbox" id="meduim" name="sizes" value="medium">
@@ -112,7 +112,7 @@
       <span>
         <h4 class="text-xl font-bold" >Milk options</h4>
         <label>Cow
-          <input type="checkbox" name="milk" id="Cow" value="Cow">
+          <input type="checkbox" name="milk" id="Cow" value="Cow" checked>
         </label>
 
         <label>Oats
@@ -149,7 +149,7 @@
       </span>
     </fieldset>
 
-    <section class="DisplaySummarySection" class="ThirdRange" >
+    <section id="DisplaySummarySection" class="ThirdRange" >
       <h4 class="text-xl font-bold" >Displayed Forms</h4>
       <button type="reset"></button>
     </section>

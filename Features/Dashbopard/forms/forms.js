@@ -157,7 +157,8 @@ function intensetyRangeValidator() {
 let temperatureRadioInpts = document.querySelectorAll(`input[name="temperature"]`)
 temperatureRadioInpts.forEach((tempRadio) => {
   tempRadio.addEventListener(`change`, function temperatureValidature(){
-
+    console.log(tempRadio.value);
+    
   })
 })
 
@@ -194,4 +195,28 @@ formSubmission.addEventListener('submit', (event) => {
       return
     }
 
+})
+
+let generalInformationForm = document.querySelector(`#generalInformationForm`)
+let firstNextBtn = document.querySelector(`#Next1`)
+
+firstNextBtn.addEventListener('click', function firstBtnNavigation(){
+
+  generalInformationForm.style.display = "none"
+  DisplaySummarySection.style.display = "none"
+})
+let featuresSection = document.querySelector(`#featuresSection`)
+let secondNextBtn = document.querySelector(`#optionsNextBtn`)
+let optionsPreviousBtn = document.querySelector(`#optionsPreviousBtn`)
+secondNextBtn.addEventListener('click', function secondBtnNavigation(){
+  featuresSection.style.display = "none"
+  generalInformationForm.style.display = "none"
+  DisplaySummarySection.style.display = "block"
+})
+
+
+optionsPreviousBtn.addEventListener('click', function previeceBtn(){
+  featuresSection.style.display = "block"
+  generalInformationForm.style.display = "none"
+  DisplaySummarySection.style.display = "none"
 })
