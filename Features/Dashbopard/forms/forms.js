@@ -256,20 +256,20 @@ optionsPreviousBtn.addEventListener('click',backToGeneralSection)
 
 secondNextBtn.addEventListener('click', function() {
 
-    // if (!mainValidator()) {
-    //     isRejectedToast("Please check feature forms")
-    //     return false
-    // }else{
-    //     isSuccessToast("Product added successfully ")
-    //     generalInformationForm.style.display = "none"
-    //     featuresSection.style.display = "none"
-    //     DisplaySummarySection.style.display = "block"
-    // }
+    if (!mainValidator()) {
+        isRejectedToast("Please check feature forms")
+        return false
+    }else{
+        isSuccessToast("Product added successfully ")
+        generalInformationForm.style.display = "none"
+        featuresSection.style.display = "none"
+        DisplaySummarySection.style.display = "block"
+    }
 
-    // DisplayForm()
-    // featuresSection.style.display = "none"
-    // generalInformationForm.style.display = "none"
-    // DisplaySummarySection.style.display = "block"
+    DisplayForm()
+    featuresSection.style.display = "none"
+    generalInformationForm.style.display = "none"
+    DisplaySummarySection.style.display = "block"
 })
 
 
