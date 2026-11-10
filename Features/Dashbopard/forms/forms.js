@@ -274,7 +274,7 @@ secondNextBtn.addEventListener('click', function() {
         featuresSection.style.display = "none"
         DisplaySummarySection.style.display = "block"
     }
-        progressBar.value = 3
+    progressBar.value = 3
     DisplayForm()
     featuresSection.style.display = "none"
     generalInformationForm.style.display = "none"
@@ -314,11 +314,14 @@ function DisplayForm() {
         }
     })
  
-    let productList = document.querySelector(`#productList`)
+    let productList = document.querySelector(`.productList`)
     productList.innerHTML = ``
  
     db.forEach((product) => {
         let li = document.createElement(`li`)
+        li.classList = "coffeList"
+        // let img = document.createElement(`img`)
+        // img.src = product
         li.textContent = product
         productList.append(li)
     })
