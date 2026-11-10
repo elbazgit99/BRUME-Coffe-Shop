@@ -1,4 +1,3 @@
-
 function isRejectedToast(msg) {
     Toastify({
         text: msg,
@@ -15,7 +14,7 @@ function isRejectedToast(msg) {
         }
     }).showToast()
 }
-
+ 
 function isSuccessToast(msg) {
     Toastify({
         text: msg,
@@ -32,7 +31,7 @@ function isSuccessToast(msg) {
         }
     }).showToast()
 }
-
+ 
 function isLetters(name) { return /^[A-Za-z]+(?: [A-Za-z]*)?$/.test(name) }
 function isMaxLength(inputName, MaxLengthNum) { return inputName.maxLength = MaxLengthNum }
 function isPrice(price) { return /^\d{1,2}(?:[.,]\d{0,2})?$/.test(price) }
@@ -40,10 +39,10 @@ function isDescription(dscrip) { return /^[\p{L}\p{N} .,:\n]*$/u.test(dscrip) }
 function isUrl(url) { return /^https:\/\/.+$/i.test(url) }
 function isRequired(inputName, boolean) { return inputName.required = boolean }
 function isDiscount(des) { return /^(100|[1-9]?\d)%$/.test(des) }
-
+ 
 let coffeNameInput = document.querySelector('#coffeName')
 coffeNameInput.addEventListener("input", coffeNameValidator)
-
+ 
 function coffeNameValidator() {
     let coffeMessage = document.querySelector('#coffeMessage')
     let coffeValue = coffeNameInput.value
@@ -61,10 +60,10 @@ function coffeNameValidator() {
         return false
     }
 }
-
+ 
 let basePriceInput = document.querySelector(`#basePrice`)
 basePriceInput.addEventListener(`input`, priceValidator)
-
+ 
 function priceValidator() {
     let priceValue = basePriceInput.value
     let priceMessage = document.querySelector(`#priceMessage`)
@@ -81,10 +80,10 @@ function priceValidator() {
         return false
     }
 }
-
+ 
 let descriptionInput = document.querySelector(`#description`)
 descriptionInput.addEventListener('input', descriptionValidator)
-
+ 
 function descriptionValidator() {
     let descriptionValue = descriptionInput.value
     let descriptionMsg = document.querySelector('#descriptionMsg')
@@ -101,10 +100,10 @@ function descriptionValidator() {
         return false
     }
 }
-
+ 
 let productImageInput = document.querySelector('#productImage')
 productImageInput.addEventListener('change', imageValidator)
-
+ 
 function imageValidator() {
     let imageValue = productImageInput.value
     let imageMessage = document.querySelector(`#imageMsg`)
@@ -123,15 +122,15 @@ function imageValidator() {
         return false
     }
 }
-
+ 
 let promoCheckbox = document.querySelector(`#promotion`)
 promoCheckbox.addEventListener('change', promoValidator)
-
+ 
 function promoValidator() {
     let isPromoChecked = promoCheckbox.checked
     let promoChoices = document.querySelector(`#ShowedIfPromoCheckedSpn`)
     isRequired(promoCheckbox, false)
-
+ 
     if (isPromoChecked) {
         promoChoices.style.display = "block"
         return discountValidator() && expireDateValidator()
@@ -140,10 +139,10 @@ function promoValidator() {
         return 
     }
 }
-
+ 
 let discountInpt = document.querySelector(`#discount`)
 discountInpt.addEventListener('input', discountValidator)
-
+ 
 function discountValidator() {
     let discountValue = discountInpt.value
     let discountMsg = document.querySelector(`#discountMsg`)
@@ -160,16 +159,16 @@ function discountValidator() {
         return false
     }
 }
-
+ 
 let expireDateInpt = document.querySelector(`#expireDate`)
 expireDateInpt.addEventListener(`change`, expireDateValidator)
-
+ 
 function expireDateValidator() {
     let expireDateValue = expireDateInpt.valueAsNumber
     let endDateMsg = document.querySelector(`#endDateMsg`)
     let today = new Date()
     let currentDate = `${Number(today.getFullYear())}/${Number(today.getMonth() + 1)}/${Number(today.getDate())}`
-
+ 
   
     try {
         isRequired(expireDateInpt, false)
@@ -183,13 +182,13 @@ function expireDateValidator() {
         return false
     }
 }
-
+ 
 let selectOriginOptions = document.querySelector(`#selectOrigin`)
 selectOriginOptions.addEventListener('change', selectedOptionsValidator)
-
+ 
 function selectedOptionsValidator() {
     let optionMsg = document.querySelector(`#optionMsg`)
-
+ 
     try {
         isRequired(selectOriginOptions, true)
         if (selectOriginOptions.value == ``) { throw new Error(`Select Origin Option is a Must`) }
@@ -201,39 +200,38 @@ function selectedOptionsValidator() {
         return false
     }
 }
-
+ 
 let intensityRangeInpt = document.querySelector('#intensity')
 intensityRangeInpt.addEventListener('change', intensetyRangeValidator)
-
+ 
 function intensetyRangeValidator() {
   localStorage.getItem("rangeINtensety", intensityRangeInpt.value)
     return intensityRangeInpt.value
 }
-
+ 
 let temperatureRadioInpts = document.querySelectorAll(`input[name="temperature"]`)
 temperatureRadioInpts.forEach((tempRadio) => {
     tempRadio.addEventListener(`change`, temperatureValidature)
 })
-
+ 
 function temperatureValidature() {
   temperatureRadioInpts.forEach(radio => {
     if(radio.checked){return radio.value}
     else{return false}
-
+ 
   })
 }
-
+ 
 let featuresSection = document.querySelector(`#featuresSection`)
 let generalInformationForm = document.querySelector(`#generalInformationForm`)
 let DisplaySummarySection = document.querySelector(`#DisplaySummarySection`)
-
+ 
 let firstNextBtn = document.querySelector(`#Next1`)
-
+ 
 firstNextBtn.addEventListener('click', function(event) {
   event.preventDefault()
-    let isGeneralValid = coffeNameValidator() && priceValidator() &&
-        descriptionValidator() && imageValidator() && promoValidator()
-
+    let isGeneralValid = generalValidator()
+ 
     if (!isGeneralValid) {
         isRejectedToast("Please check general information")
         return false
@@ -242,20 +240,20 @@ firstNextBtn.addEventListener('click', function(event) {
     featuresSection.style.display = "block"
     DisplaySummarySection.style.display = "none"
 })
-
+ 
 let secondNextBtn = document.querySelector(`#optionsNextBtn`)
 let optionsPreviousBtn = document.querySelector(`#optionsPreviousBtn`)
-
+ 
 optionsPreviousBtn.addEventListener('click',backToGeneralSection)
-
+ 
  function backToGeneralSection() {
     featuresSection.style.display = "none"
     generalInformationForm.style.display = "block"
     DisplaySummarySection.style.display = "none"
 }
-
+ 
 secondNextBtn.addEventListener('click', function() {
-
+ 
     if (!mainValidator()) {
         isRejectedToast("Please check feature forms")
         return false
@@ -265,15 +263,14 @@ secondNextBtn.addEventListener('click', function() {
         featuresSection.style.display = "none"
         DisplaySummarySection.style.display = "block"
     }
-
+ 
     DisplayForm()
     featuresSection.style.display = "none"
     generalInformationForm.style.display = "none"
     DisplaySummarySection.style.display = "block"
 })
-
-
-
+ 
+ 
 
 let resetBtn = document.querySelector('#resetBtn')
 resetBtn.addEventListener(`click`,resetButton )
@@ -282,20 +279,20 @@ function resetButton() {
     featuresSection.style.display = "none"
     DisplaySummarySection.style.display = "none"
 }
-
+ 
 let formSubmission = document.querySelector('form')
 formSubmission.addEventListener('submit', (event) => {
     event.preventDefault()
-
+ 
 })
-
+ 
 let db = []
-
+ 
 function DisplayForm() {
     db = []
-
+ 
     let allInputs = document.querySelectorAll(`input, textarea, select`)
-
+ 
     allInputs.forEach(function(input) {
         if (input.type === "checkbox" || input.type === "radio") {
             if (input.checked) {
@@ -305,26 +302,32 @@ function DisplayForm() {
             db.push(input.value)
         }
     })
-
+ 
     let productList = document.querySelector(`#productList`)
     productList.innerHTML = ``
-
+ 
     db.forEach((product) => {
         let li = document.createElement(`li`)
         li.textContent = product
         productList.append(li)
     })
 }
-
-
-function mainValidator() {
-  let isMainValid = coffeNameValidator() && priceValidator() && descriptionValidator() &&
-                    imageValidator() && promoValidator() && selectedOptionsValidator() && 
-                    intensetyRangeValidator() && temperatureValidature()
-
-    if (!isMainValid) {
-        return false
+ 
+function generalValidator() {
+    if (coffeNameInput.value.trim() == ``) { return false }
+    if (basePriceInput.value.trim() == ``) { return false }
+    if (descriptionInput.value.trim() == ``) { return false }
+    if (promoCheckbox.checked) {
+        if (discountInpt.value.trim() == ``) { return false }
+        if (expireDateInpt.value == ``) { return false }
     }
-
+ 
+    return true
+}
+ 
+function mainValidator() {
+    if (!generalValidator()) { return false }
+    if (selectOriginOptions.value == ``) { return false }
+ 
     return true
 }

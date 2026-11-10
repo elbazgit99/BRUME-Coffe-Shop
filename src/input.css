@@ -30,7 +30,7 @@
     align-items: center;
 }
 
-.step.active {
+.step{
     background: black;
 }
 
