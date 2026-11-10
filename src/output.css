@@ -167,6 +167,9 @@
   }
 }
 @layer utilities {
+  .fixed {
+    position: fixed;
+  }
   .block {
     display: block;
   }
@@ -247,8 +250,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.step.active {
   background: black;
 }
 .line {
@@ -325,6 +326,22 @@ button {
 legend {
   margin-bottom: 2rem !important;
   font-size: xx-large;
+}
+progress {
+  width: 300px;
+  height: 15px;
+  appearance: none;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+progress::-webkit-progress-bar {
+  background-color: #ddd;
+  border-radius: 10px;
+}
+progress::-webkit-progress-value {
+  background-color: #4c783b;
+  border-radius: 10px;
 }
 @property --tw-font-weight {
   syntax: "*";

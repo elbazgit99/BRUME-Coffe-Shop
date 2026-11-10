@@ -31,7 +31,12 @@ function isSuccessToast(msg) {
         }
     }).showToast()
 }
- 
+let progressBar = document.querySelector(`progress`)
+let firstNextBtn = document.querySelector(`#Next1`)
+let step = document.querySelector(`.step`)
+let line = document.querySelector(`#line`)
+
+
 function isLetters(name) { return /^[A-Za-z]+(?: [A-Za-z]*)?$/.test(name) }
 function isMaxLength(inputName, MaxLengthNum) { return inputName.maxLength = MaxLengthNum }
 function isPrice(price) { return /^\d{1,2}(?:[.,]\d{0,2})?$/.test(price) }
@@ -225,20 +230,25 @@ function temperatureValidature() {
 let featuresSection = document.querySelector(`#featuresSection`)
 let generalInformationForm = document.querySelector(`#generalInformationForm`)
 let DisplaySummarySection = document.querySelector(`#DisplaySummarySection`)
- 
-let firstNextBtn = document.querySelector(`#Next1`)
+
  
 firstNextBtn.addEventListener('click', function(event) {
   event.preventDefault()
     let isGeneralValid = generalValidator()
- 
+    
     if (!isGeneralValid) {
         isRejectedToast("Please check general information")
+        
         return false
     }
+    // step.style.position = "fixed";
+    // step.style.left = "2rem";
+    progressBar.value = 2
+
     generalInformationForm.style.display = "none"
     featuresSection.style.display = "block"
     DisplaySummarySection.style.display = "none"
+    
 })
  
 let secondNextBtn = document.querySelector(`#optionsNextBtn`)
@@ -250,6 +260,7 @@ optionsPreviousBtn.addEventListener('click',backToGeneralSection)
     featuresSection.style.display = "none"
     generalInformationForm.style.display = "block"
     DisplaySummarySection.style.display = "none"
+
 }
  
 secondNextBtn.addEventListener('click', function() {
@@ -263,7 +274,7 @@ secondNextBtn.addEventListener('click', function() {
         featuresSection.style.display = "none"
         DisplaySummarySection.style.display = "block"
     }
- 
+        progressBar.value = 3
     DisplayForm()
     featuresSection.style.display = "none"
     generalInformationForm.style.display = "none"
